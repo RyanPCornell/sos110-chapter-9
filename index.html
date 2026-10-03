@@ -258,6 +258,71 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 
 
 
+/* ── 10-02: Material World book lead-in (parchment, like the slide after it) ── */
+.slide.mw-slide{background:linear-gradient(158deg,#faf7f0,#f1ebdd);}
+.mw-slide > *{--accent:#8a6a2f; --line:rgba(120,100,60,.3);}
+.mw-slide .eyebrow{color:#8a6a2f;} .mw-slide .eyebrow::before{background:#8a6a2f;}
+.mw-slide .heading{color:#3b3222; margin-bottom:0;}
+.mw-inner{height:100%; padding-bottom:1.4rem;}
+.mw-grid{display:grid; grid-template-columns:minmax(0,.58fr) minmax(0,1.6fr); gap:clamp(1.2rem,3.2vw,3rem); align-items:center; height:100%;}
+.mw-book{margin:0; display:flex; justify-content:center;}
+.mw-book img{max-width:100%; max-height:min(74vh,560px); width:auto; height:auto; border-radius:3px; transform:rotate(-2.2deg);
+  box-shadow:0 2px 0 rgba(255,255,255,.6) inset, 0 18px 36px -14px rgba(60,40,10,.5), 0 4px 10px rgba(60,40,10,.18);}
+.mw-main{display:flex; flex-direction:column; gap:clamp(.4rem,1.1vh,.7rem); min-width:0;}
+.mw-six{display:flex; flex-wrap:wrap; gap:.4rem;}
+.mw-six span{display:inline-flex; align-items:center; gap:.4rem; background:#fffdf6; border:1px solid rgba(120,100,60,.3);
+  border-radius:999px; padding:.22rem .7rem .22rem .32rem; font-weight:700; font-size:clamp(.72rem,1.15vw,.86rem); color:#3b3222;}
+.mw-six i{width:1.05rem; height:1.05rem; border-radius:50%; border:1px solid rgba(60,40,10,.35); display:inline-block;}
+.mw-facts{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(.45rem,1vw,.7rem);}
+.mw-slide .mw-card.stage-item{opacity:1;}
+.mw-card{display:flex; flex-direction:column; align-items:flex-start; gap:.15rem; text-align:left; cursor:pointer;
+  background:#fffdf6; border:1.5px solid rgba(120,100,60,.28); border-radius:8px; padding:clamp(.5rem,1.2vh,.75rem) .85rem;
+  outline:1px solid rgba(138,106,47,.18); outline-offset:-5px; transition:border-color .2s, box-shadow .2s; font:inherit; color:#3b3222;}
+.mw-card:hover{border-color:#8a6a2f;}
+.mw-card.shown{border-color:#8a6a2f; box-shadow:0 8px 18px -12px rgba(60,40,10,.4);}
+.mw-num{font-family:'Merriweather',Georgia,serif; font-weight:900; font-size:clamp(1.25rem,2.6vw,1.9rem); line-height:1.05; color:#8a6a2f;}
+.mw-tease{font-family:'Merriweather',serif; font-style:italic; font-size:clamp(.78rem,1.25vw,.95rem); color:#5e5340;}
+.mw-back{font-size:clamp(.74rem,1.15vw,.88rem); line-height:1.4; color:#2c2519; opacity:0; transition:opacity .35s ease;}
+.mw-card.shown .mw-back{opacity:1;}
+.mw-next{display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+  background:#3b3222; color:#f6efe0; border-radius:8px; padding:.6rem .95rem; font-size:clamp(.8rem,1.3vw,.98rem);}
+.mw-next b{color:#f2d24b;} .mw-go{font-family:'Merriweather',serif; white-space:nowrap;}
+.mw-src{font-size:clamp(.6rem,.9vw,.7rem); color:#7a7260; line-height:1.35;}
+@media(max-width:900px){.mw-grid{grid-template-columns:1fr;} .mw-book img{max-height:34vh;} .mw-facts{grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce){.mw-back{transition:none;}}
+
+/* ── 10-02: What's in Your Tech? hand-drawn tab icons ── */
+.re-tab{display:inline-flex; align-items:center; gap:.42rem;}
+.re-ico{width:1.2em; height:1.2em; flex:none; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round;}
+
+/* ── 10-02: CLORPT slide, the Sustainability line under the figure ── */
+.bleed-media.sus-media{flex-direction:column; gap:clamp(.8rem,2.2vh,1.4rem);}
+.bleed-media.sus-media img{max-height:68%;}
+.sus-callout{margin:0; max-width:36rem; background:#fffdf6; border:1px solid var(--line); border-left:5px solid var(--accent);
+  border-radius:10px; padding:.7rem .95rem; font-size:clamp(.9rem,1.45vw,1.06rem); line-height:1.45; color:#2c3a34;
+  box-shadow:0 8px 22px rgba(20,40,30,.10);}
+.sus-callout b{color:var(--forest);}
+
+/* ── 10-02: Soil Erosion, two photos + a video sized to fit the media column ── */
+.er-slide .bleed-grid{grid-template-columns:.86fr 1.14fr;}
+.bleed-media.er-media{container-type:size; display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(155deg,#eef6f1,#dfeee6);
+  padding:clamp(.8rem,2vw,1.4rem) clamp(.8rem,2vw,1.4rem) clamp(2.8rem,6.5vh,3.6rem);}
+.er-grid{display:flex; gap:.7rem; height:min(100cqh, calc((100cqw - 1rem) / .94));}
+.er-photos{display:flex; flex-direction:column; gap:.7rem; height:100%;}
+.er-ph{height:calc((100% - .7rem) / 2); aspect-ratio:3/4; padding:0; border:0; border-radius:12px; overflow:hidden;
+  cursor:zoom-in; background:#d9cdb8; box-shadow:0 10px 24px rgba(20,40,30,.18);}
+.er-ph img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s ease;}
+.er-ph:hover img{transform:scale(1.03);}
+.er-vid{height:100%; aspect-ratio:9/16; border-radius:12px; overflow:hidden; background:#1f1a14; box-shadow:0 10px 24px rgba(20,40,30,.22);}
+.er-video{width:100%; height:100%; object-fit:cover; display:block; background:#1f1a14;}
+.er-lb{position:absolute; inset:0; z-index:40; display:flex; align-items:center; justify-content:center;
+  background:rgba(20,26,24,.92); cursor:zoom-out; padding:2rem;}
+.er-lb[hidden]{display:none;}
+.er-lb img{max-width:96%; max-height:96%; object-fit:contain; border-radius:10px; box-shadow:0 18px 50px rgba(0,0,0,.5);}
+.er-x{position:absolute; top:1rem; right:1.4rem; color:#fff; font-size:2rem; line-height:1;}
+@media(max-width:900px){.bleed-media.er-media{container-type:normal; min-height:56vh;} .er-grid{height:52vh;}}
+
 /* ── Oct 2026: the four Ch9 tools (and the soil gallery) in the Ch7/Ch8 parchment register ── */
 .slide.rc-slide,.slide.re-slide,.slide.sm-slide,.slide.cp-slide,.slide.sg-slide{background:linear-gradient(158deg,#faf7f0,#f1ebdd);}
 .rc-slide > *,.re-slide > *,.sm-slide > *,.cp-slide > *,.sg-slide > *{--accent:#8a6a2f; --line:rgba(120,100,60,.3);}
@@ -647,6 +712,92 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   .slide.ac-live .gu-grid,.slide.ac-live .rk-list,.slide.ac-live .wc-foot,.slide.ac-live .rk-foot,.slide.ac-live .rk-toolbar{max-width:100%;}
 }
 
+/* ── Beyond the Lungs (slide 11: four host-run research questions) ──────── */
+.pp-slide .pp-defs{position:absolute; width:0; height:0; overflow:hidden;}
+.pp-slide .bleed-media.pp-media{background:linear-gradient(160deg,#fbf7ee,#f3ecdc); display:flex; align-items:stretch;
+  justify-content:center; padding:clamp(.8rem,2.2vh,1.6rem) clamp(.8rem,1.8vw,1.6rem); overflow:hidden;}
+.pp-panel{position:relative; flex:1; min-width:0; display:flex; flex-direction:column; gap:clamp(.35rem,1vh,.65rem);
+  background:#fffdf7; border:1.5px solid rgba(120,100,60,.32); border-radius:16px;
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset, 0 10px 30px rgba(60,45,20,.10);
+  padding:clamp(.7rem,1.8vh,1.2rem) clamp(.8rem,1.6vw,1.3rem); overflow:auto; color:#3b3222;}
+.pp-svg{display:block; width:100%; height:auto;}
+/* the pollutant card the question is about lights up; the others step back */
+.pp-slide .pair{transition:opacity .35s ease, box-shadow .35s ease, transform .35s ease;}
+.pp-slide .pair.pp-lit{box-shadow:0 0 0 2.5px var(--accent), 0 10px 26px rgba(60,45,20,.16); transform:translateX(4px);}
+.pp-slide .pair.pp-dim{opacity:.42;}
+
+.pp-intro{display:flex; flex-direction:column; align-items:center; text-align:center; gap:clamp(.4rem,1.1vh,.8rem); margin:auto 0;}
+.pp-kick{font-family:'Inter',sans-serif; font-weight:800; letter-spacing:.09em; text-transform:uppercase;
+  font-size:clamp(.66rem,1vw,.78rem); color:var(--accent);}
+.pp-title{font-family:'Merriweather',Georgia,serif; font-style:italic; font-weight:900; line-height:1.05;
+  font-size:clamp(1.7rem,3.4vw,2.7rem); transform:skewX(-6deg); filter:url(#ppNib);}
+.pp-title.sm{font-size:clamp(1.25rem,2.4vw,1.85rem);}
+.pp-lead{font-size:clamp(.85rem,1.3vw,1rem); color:#5e5340; max-width:42ch; margin:0;}
+.pp-tiles{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(.4rem,1vw,.7rem); width:100%; max-width:34rem;}
+.pp-tile{background:#fbf6ea; border:1px solid rgba(120,100,60,.22); border-radius:12px; padding:.35rem .45rem .45rem;}
+.pp-tile span{display:block; font-family:'Merriweather',serif; font-weight:700; font-size:clamp(.72rem,1.05vw,.86rem); margin-top:.15rem;}
+.pp-tart .pp-svg{max-height:clamp(52px,9vh,84px); width:auto; margin:0 auto;}
+.pp-btn{font-family:'Inter',sans-serif; font-weight:800; cursor:pointer; border:none; color:#fff; background:var(--accent);
+  border-radius:12px; padding:.7rem 1.4rem; font-size:clamp(.9rem,1.4vw,1.05rem); transition:filter .15s, transform .08s;}
+.pp-btn:hover{filter:brightness(1.07);} .pp-btn:active{transform:translateY(1px);}
+.pp-btn.ghost{background:#fff; color:#3b3222; border:1.5px solid rgba(120,100,60,.38);}
+.pp-hint{font-size:clamp(.7rem,1vw,.8rem); color:#8a8069; font-style:italic;}
+.pp-wait,.pp-me{font-family:'Merriweather',serif; font-style:italic; color:#6b6350; font-size:clamp(.82rem,1.25vw,.96rem);}
+.pp-me{text-align:center;} .pp-me b{color:var(--accent); font-style:normal;}
+
+.pp-top{display:flex; justify-content:space-between; align-items:baseline; gap:.8rem;}
+.pp-tag{font-family:'Inter',sans-serif; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+  font-size:clamp(.66rem,1vw,.78rem); color:var(--accent);}
+.pp-count{font-family:'Inter',sans-serif; font-size:clamp(.72rem,1.05vw,.84rem); color:#6b6350;}
+.pp-count b{font-family:'Merriweather',serif; color:#3b3222; font-size:1.15em;}
+.pp-art{background:#fbf6ea; border:1px solid rgba(120,100,60,.2); border-radius:12px; padding:.3rem .5rem;}
+.pp-art .pp-svg{max-height:clamp(120px,27vh,250px); width:auto; max-width:100%; margin:0 auto;}
+.pp-art.ev{animation:pp-in .55s ease both;}
+@keyframes pp-in{from{opacity:0; transform:scale(.97);} to{opacity:1; transform:none;}}
+.pp-q{font-family:'Merriweather',Georgia,serif; font-weight:800; line-height:1.25; font-size:clamp(.98rem,1.7vw,1.3rem);}
+.pp-opts{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(.35rem,.8vw,.55rem);}
+.pp-opt{position:relative; overflow:hidden; display:flex; align-items:center; gap:.55rem; text-align:left; cursor:pointer;
+  background:#fff; border:1.5px solid #e4dcc9; border-radius:12px; padding:clamp(.45rem,1.1vh,.7rem) .7rem;
+  font-family:'Inter',sans-serif; font-size:clamp(.8rem,1.2vw,.95rem); color:#2c2519; transition:border-color .15s, background .15s;}
+.pp-opt:hover:not(:disabled){border-color:var(--accent); background:#fffaf0;}
+.pp-opt:disabled{cursor:default;}
+.pp-l{flex:none; width:1.6em; height:1.6em; border-radius:7px; display:inline-flex; align-items:center; justify-content:center;
+  background:#f3ead6; font-family:'Merriweather',serif; font-weight:900; color:#8a6a2f; position:relative; z-index:1;}
+.pp-t{position:relative; z-index:1; flex:1;}
+.pp-opt.mine{border-color:var(--accent); background:#fff7e6;}
+.pp-bar{position:absolute; left:0; top:0; bottom:0; background:rgba(120,100,60,.10); z-index:0; transition:width .7s ease;}
+.pp-share{position:relative; z-index:1; font-family:'Merriweather',serif; font-weight:900; font-size:.9em; color:#6b6350;}
+.pp-opt.right{border-color:#2D6A4F; background:#eef6f0;}
+.pp-opt.right .pp-bar{background:rgba(45,106,79,.16);}
+.pp-opt.right .pp-l{background:#2D6A4F; color:#fff;}
+.pp-opt.right .pp-share{color:#2D6A4F;}
+.pp-opt.wrong{opacity:.6;}
+.pp-tick{position:relative; z-index:1; width:1.3em; height:1.3em; color:#2D6A4F; flex:none;}
+.pp-exp{font-size:clamp(.78rem,1.15vw,.9rem); line-height:1.45; color:#3b3222; animation:pp-in .5s ease both;}
+.pp-exp p{margin:.15rem 0;}
+.pp-class{font-family:'Merriweather',serif; font-style:italic;} .pp-class b{color:#2D6A4F; font-style:normal;}
+.pp-cite{font-size:.86em; color:#6b6350; border-top:1px solid rgba(120,100,60,.22); padding-top:.3rem;}
+.pp-ctl{display:flex; align-items:center; gap:.8rem; flex-wrap:wrap; justify-content:center; margin-top:auto;}
+
+.pp-sums{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(.4rem,1vw,.7rem); width:100%; text-align:left;}
+.pp-sum{display:flex; gap:.55rem; align-items:center; background:#fbf6ea; border:1px solid rgba(120,100,60,.22); border-radius:12px; padding:.45rem .55rem;}
+.pp-sum .pp-tart{flex:none; width:38%;}
+.pp-sum .pp-tart .pp-svg{max-height:70px;}
+.pp-sumtag{font-family:'Inter',sans-serif; font-weight:800; letter-spacing:.05em; text-transform:uppercase; font-size:.68rem; color:var(--accent);}
+.pp-sumans{font-family:'Merriweather',serif; font-weight:800; font-size:clamp(.8rem,1.15vw,.95rem); line-height:1.25;}
+.pp-sumpct{font-size:.74rem; color:#2D6A4F; font-style:italic; margin-top:.1rem;}
+@media(max-width:760px){ .pp-opts,.pp-sums{grid-template-columns:1fr;} .pp-art .pp-svg{max-height:180px;} }
+@media(prefers-reduced-motion:reduce){ .pp-art.ev,.pp-exp,.pp-bar,.pp-slide .pair{animation:none; transition:none;} }
+
+/* ── Behind the Screen (Ch9 rare earths): bullets instead of cards, five findings ── */
+.pp-slide .bleed-text .bullets > li{border-radius:10px; transition:opacity .35s ease, box-shadow .35s ease, background-color .35s ease;}
+.pp-slide .bleed-text .bullets > li.pp-lit{background:#fff7e6; box-shadow:0 0 0 7px #fff7e6, 0 0 0 9.5px var(--accent);}
+.pp-slide .bleed-text .bullets > li.pp-dim{opacity:.4;}
+.pp-slide.rh-five .pp-tiles{grid-template-columns:repeat(3,minmax(0,1fr)); max-width:38rem;}
+.pp-slide.rh-five .pp-tart .pp-svg{max-height:clamp(44px,7.5vh,72px);}
+.pp-slide.rh-five .pp-sums .pp-sum:last-child{grid-column:1 / -1; max-width:60%; justify-self:center;}
+@media(prefers-reduced-motion:reduce){ .pp-slide .bleed-text .bullets > li{transition:none;} }
+
 
 /* announcements / upcoming assignments */
 .slide[data-type="announce"]{background:linear-gradient(160deg,#f7faf8,#eaf1ed);}
@@ -929,6 +1080,51 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
     <div class="an-att" data-at-bar hidden><button class="an-att-btn" type="button" data-at-open>Attendance</button><select class="an-att-sel" data-at-section aria-label="Class section"><option value="MWF0905">MWF 9:05 am</option><option value="MWF1220">MWF 12:20 pm</option><option value="TTH1200">TTh 12:00 pm</option></select><button class="an-att-btn go" type="button" data-at-finalize hidden>Submit Attendance</button><button class="an-att-cancel" type="button" data-at-cancel hidden>Cancel</button><button class="an-att-cancel" type="button" data-at-clear hidden>Clear last roll call</button><span class="an-att-status" data-at-status></span></div>
   </div>
   <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
+</section>
+<section class="slide mw-slide" data-type="content" style="--accent:#36454F">
+  <div class="slide-inner col mw-inner">
+    <div class="mw-grid">
+      <figure class="mw-book"><img data-src="media/material_world.jpg" alt="Cover of Material World: The Six Raw Materials That Shape Modern Civilization, by Ed Conway"></figure>
+      <div class="mw-main">
+        <div class="eyebrow">Chapter 9  ·  Book Spotlight</div>
+        <h2 class="heading">Material World</h2>
+        <p class="tl-sub">Ed Conway (2023) follows six raw materials that shape modern civilization.</p>
+        <div class="mw-six" aria-label="The six materials">
+          <span><i style="background:#d6b77a"></i>Sand</span><span><i style="background:#f1ede4"></i>Salt</span>
+          <span><i style="background:#4a4a52"></i>Iron</span><span><i style="background:#b5653d"></i>Copper</span>
+          <span><i style="background:#1f1f22"></i>Oil</span><span><i style="background:#c9a6d6"></i>Lithium</span>
+        </div>
+        <div class="mw-facts">
+          <button class="mw-card stage-item" type="button"><span class="mw-num">1950</span>
+            <span class="mw-tease">One year of digging today outweighs&hellip;</span>
+            <span class="mw-back">&hellip;all of human history before 1950. Each year, humanity now mines, drains and blasts more out of the ground than it did in total from the dawn of our species to 1950.</span></button>
+          <button class="mw-card stage-item" type="button"><span class="mw-num">6 t</span>
+            <span class="mw-tease">For every tonne of fossil fuel we extract&hellip;</span>
+            <span class="mw-back">&hellip;we extract six tonnes of other materials: sand, stone, wood and metal. Fossil fuels are only about a seventh of what we dig up.</span></button>
+          <button class="mw-card stage-item" type="button"><span class="mw-num">60% vs. &lt;1%</span>
+            <span class="mw-tease">Iron ore vs. copper ore</span>
+            <span class="mw-back">Iron ore is about 60% iron. Copper ore has fallen from over 5% copper to under 1%, so every bit of copper means moving and crushing far more rock.</span></button>
+          <button class="mw-card stage-item" type="button"><span class="mw-num">4 km</span>
+            <span class="mw-tease">Bingham Canyon copper mine, Utah</span>
+            <span class="mw-back">More than 4 km long, 2.5 km wide and 1 km deep, it yields more copper each year than the whole world did annually before its open-pit era began in the early 1900s.</span></button>
+        </div>
+        <div class="mw-next stage-item"><span>Your phone holds about <b>6 grams of copper</b>. So how much rock had to move to make it?</span><b class="mw-go">Next: Mine to Phone &rsaquo;</b></div>
+        <div class="mw-src">Click a card, or press &rarr;, to reveal. Sources: Ed Conway, <i>Material World</i> (2023) and its publisher&rsquo;s summary; Conway&rsquo;s <i>Material World</i> newsletter (copper ore grades) and <i>Works in Progress</i> excerpt (Bingham Canyon); copper per phone as reported in <i>Foreign Policy</i>&rsquo;s review.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
+  <script>(function(){
+    var sec=document.currentScript.closest('.mw-slide'); if(!sec||sec.__mw) return; sec.__mw=1;
+    // clicking a card reveals it and every card before it, matching the clicker's staging
+    sec.addEventListener('click', function(e){
+      var c=e.target.closest('.mw-card'); if(!c) return;
+      var items=[].slice.call(sec.querySelectorAll('.stage-item')), k=items.indexOf(c);
+      var shown=items.filter(function(x){ return x.classList.contains('shown'); }).length;
+      var n=Math.max(shown, k+1);
+      items.forEach(function(x,i){ x.classList.toggle('shown', i<n); });
+    });
+  })();</script>
 </section>
 <section class="slide fp-slide fo-slide fo-value" data-type="game" data-game-id="ch9-mine" style="--accent:#8a6a2f">
   <svg class="fp-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="fpR" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="2" seed="6"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter><filter id="fpW" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".022" numOctaves="3" seed="11"/><feDisplacementMap in="SourceGraphic" scale="9"/><feGaussianBlur stdDeviation=".7"/></filter></defs></svg>
@@ -1528,14 +1724,371 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   </div>
   <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
 </section>
-<section class="slide" data-type="content" style="--accent:#1C7293">
+<section class="slide pp-slide rh-five" data-type="content" style="--accent:#1C7293">
   <div class="bleed-grid">
     <div class="bleed-text">
 <div class="eyebrow">9.3  ·  Why Are Minerals Important, and How Do We Get Them?</div>
 <h2 class="heading">Rare Earth Elements</h2>
 <ul class="bullets"><li>Minerals from Earth's crust are essential for electronics, solar panels, wind turbines, and electric vehicles. Most rare earth metals come from China.</li><li><strong>Global dependence:</strong> rare earth “supply” is geographically concentrated, creating strategic vulnerabilities.</li><li><strong>Environmental cost:</strong> produces radioactive mill tailings, toxic ponds, and waste sludge (causing crop death and community illness).</li><li><strong>Implication:</strong> the 'clean energy' transition requires mining that carries its own environmental justice concerns.</li><li><strong>Sustainability strategy:</strong> recycle and reuse rare earth minerals from consumer electronics to reduce extraction demand.</li></ul>
     </div>
-    <div class="bleed-media contain"><img loading="lazy" decoding="async" data-src="media/image9.jpg" alt=""></div>
+    <div class="bleed-media pp-media"><div class="pp-panel" data-pp-root aria-live="polite"></div>
+<svg class="pp-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+  <filter id="ppNib" x="-6%" y="-6%" width="112%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="2" seed="5" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <pattern id="ppHatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#3b3222" stroke-width="1.1" opacity=".32"/>
+  </pattern>
+  <pattern id="ppHatchG" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)">
+    <line x1="0" y1="0" x2="0" y2="5" stroke="#2D6A4F" stroke-width="1.3" opacity=".55"/>
+  </pattern>
+  <pattern id="ppHatchR" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)">
+    <line x1="0" y1="0" x2="0" y2="5" stroke="#A4373A" stroke-width="1.3" opacity=".55"/>
+  </pattern>
+  <pattern id="ppHatchT" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#5c6f62" stroke-width="1.2" opacity=".55"/>
+  </pattern>
+  <g id="rhTrefoil">
+    <circle r="15" fill="#f2d24b"/>
+    <circle r="2.6" fill="#3b3222" stroke="none"/>
+    <path d="M0,-4.5 L-6.5,-12.5 A14,14 0 0 1 6.5,-12.5 Z" fill="#3b3222" stroke="none"/>
+    <path d="M0,-4.5 L-6.5,-12.5 A14,14 0 0 1 6.5,-12.5 Z" fill="#3b3222" stroke="none" transform="rotate(120)"/>
+    <path d="M0,-4.5 L-6.5,-12.5 A14,14 0 0 1 6.5,-12.5 Z" fill="#3b3222" stroke="none" transform="rotate(240)"/>
+  </g>
+  <g id="rhPin">
+    <path d="M0,0 C-3,-8 -9,-12 -9,-19 A9,9 0 0 1 9,-19 C9,-12 3,-8 0,0 Z" fill="#A4373A"/>
+    <circle cx="0" cy="-19" r="3.4" fill="#fffdf6"/>
+  </g>
+  <g id="rhHouse">
+    <path d="M0,0 V-20 L13,-31 L26,-20 V0 Z" fill="#f3ead6"/>
+    <path d="M9,0 V-10 H17 V0" fill="#fffdf6" stroke-width="1.3"/>
+  </g>
+</defs></svg>
+<script type="application/json" data-pp-qs>[{"card": 0, "tag": "Not so rare", "art": "abund", "q": "Despite the name, how common are rare earth elements in Earth&rsquo;s crust?", "opts": ["Rarer than gold", "About as rare as gold", "Even the scarcest are about 200 times more common than gold", "They exist only in China"], "a": 2, "short": "Even the scarcest are ~200&times; more common than gold", "exp": "The U.S. Geological Survey finds that the more abundant rare earths are about as common in the crust as copper, nickel, zinc or lead, and even the two scarcest, thulium and lutetium, are nearly 200 times more common than gold. What is rare is a deposit worth mining: unlike ordinary metals, rare earths seldom gather into rich ore, so they are spread thin, costly to mine and hard to separate.", "cite": "Haxel, G. B., Hedrick, J. B., &amp; Orris, G. J. (2002). <i>Rare earth elements: Critical resources for high technology</i> (Fact Sheet 087-02). U.S. Geological Survey."}, {"card": 1, "tag": "Global dependence", "art": "chain", "q": "China mines about 60% of the world&rsquo;s magnet rare earths. What share of the world&rsquo;s rare earth <i>magnets</i> does it make?", "opts": ["About 20%", "About 40%", "About 60%, the same as mining", "About 94%"], "a": 3, "short": "94% of the magnets, up from about 50% in 2005", "exp": "The further along the supply chain, the more concentrated it gets. In 2024 China mined 60% of the world&rsquo;s magnet rare earths, refined 91% of them, and made 94% of the sintered permanent magnets that go into motors and wind turbines, up from about 50% in 2005. Whoever controls refining and magnet-making controls the supply, which is why concentration is a strategic vulnerability.", "cite": "International Energy Agency. (2026). <i>Rare earth elements: Pathways to secure and diversified supply chains</i>. IEA, Paris."}, {"card": 2, "tag": "Environmental cost", "art": "waste", "q": "Refining one tonne of rare earths from China&rsquo;s main ore with hot sulfuric acid leaves behind about how much radioactive residue?", "opts": ["A handful: about 1 kilogram", "A bucketful: about 10 kilograms", "About 1 tonne, as much as the rare earths themselves", "None: the process is clean"], "a": 2, "short": "About a tonne of radioactive residue per tonne", "exp": "Rare earth ores often carry thorium and uranium. Figures from the Chinese Society of Rare Earths, cited by the U.S. EPA, put the waste from each tonne of rare earth at about 1 tonne of radioactive residue, about 75 m&sup3; of acidic wastewater, and 9,600 to 12,000 m&sup3; of waste gas laced with dust, hydrofluoric acid and sulfur dioxide. After 40 years, the tailings impoundment at Bayan Obo, the mine behind Baotou, covers 11 km&sup2; and has contaminated nearby soil, groundwater and plants with radioactivity.", "cite": "U.S. Environmental Protection Agency. (2012). <i>Rare earth elements: A review of production, processing, recycling, and associated environmental issues</i> (EPA/600/R-12/572), citing Hurst (2010) and &Ouml;ko-Institut (2011)."}, {"card": 3, "tag": "Environmental justice", "art": "land", "q": "Researchers mapped 5,097 mining projects for the minerals the energy transition needs. How much of that resource base lies on or near the lands of Indigenous and peasant peoples?", "opts": ["Less than 5%", "About 15%", "About a quarter", "More than half"], "a": 3, "short": "More than half", "exp": "Owen and colleagues geo-located 5,097 projects for energy-transition minerals, rare earths among them. More than half of that resource base lies on or near the lands of Indigenous and peasant peoples, groups whose right to be consulted, and to give or withhold consent, is set out in United Nations declarations. For rare earths, 42% of the resource base overlaps both kinds of territory. Clean energy still has a footprint, and it often lands on the communities with the least say.", "cite": "Owen, J. R., Kemp, D., Lechner, A. M., Harris, J., Zhang, R., &amp; L&egrave;bre, &Eacute;. (2023). Energy transition minerals and their intersection with land-connected peoples. <i>Nature Sustainability</i>, 6, 203&ndash;211."}, {"card": 4, "tag": "Recycling", "art": "ewaste", "q": "The world threw out a record 62 million tonnes of electronics in 2022. How much of the demand for rare earths does recycling that e-waste meet?", "opts": ["No more than 1%", "About 10%", "About 25%", "About half"], "a": 0, "short": "No more than 1%", "exp": "E-waste is growing five times faster than documented recycling. In 2022 the world generated a record 62 million tonnes of it, yet no more than 1% of the demand for rare earth elements was met by recycling. Rare earths are used in tiny amounts, alloyed into magnets and coated onto screens, so they are hard to recover. The IEA estimates that recycling could cut the need for newly mined rare earths by up to 35% by 2050.", "cite": "Bald&eacute;, C. P., et al. (2024). <i>The global e-waste monitor 2024</i>. ITU &amp; UNITAR. &middot; International Energy Agency. (2026). <i>Rare earth elements: Pathways to secure and diversified supply chains</i>."}]</script>
+<template data-pp-art="abund"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="A slab of ordinary rock seen in cross-section, with a magnifying glass over its grains and a question mark.">
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1">
+  <path d="M30,82 C120,76 220,86 330,80 L330,212 L30,212 Z" fill="#efe3c4"/>
+  <path d="M30,118 C120,112 220,124 330,116 M30,152 C130,146 220,158 330,150 M30,186 C120,182 230,190 330,184" stroke-width="1.3" opacity=".55"/>
+  <path d="M30,82 C120,76 220,86 330,80" stroke-width="2.6"/>
+  <path d="M60,80 q4,-12 8,-16 M66,80 q-3,-10 -6,-13 M250,82 q4,-12 8,-16 M256,82 q-3,-10 -6,-13" stroke="#4f7a45" stroke-width="2"/>
+  <circle cx="404" cy="122" r="58" fill="#fffdf6"/>
+  <circle cx="404" cy="122" r="50" stroke-width="1.4" opacity=".5"/>
+  <path d="M446,164 L496,214" stroke-width="10"/>
+  <path d="M352,104 C360,92 372,86 386,84" stroke-width="2" opacity=".55"/>
+</g>
+<g><circle cx="70" cy="120" r="2.4" fill="#8a6a2f" stroke="none"/><circle cx="104" cy="150" r="1.8" fill="#5e5340" stroke="none"/><circle cx="140" cy="112" r="2.2" fill="#8a6a2f" stroke="none"/><circle cx="176" cy="168" r="1.6" fill="#5e5340" stroke="none"/><circle cx="214" cy="128" r="2.6" fill="#9a8a6a" stroke="none"/><circle cx="250" cy="160" r="1.8" fill="#8a6a2f" stroke="none"/><circle cx="286" cy="118" r="2.0" fill="#5e5340" stroke="none"/><circle cx="98" cy="184" r="2.2" fill="#9a8a6a" stroke="none"/><circle cx="150" cy="190" r="1.6" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="190" r="2.4" fill="#5e5340" stroke="none"/><circle cx="60" cy="160" r="1.6" fill="#9a8a6a" stroke="none"/><circle cx="196" cy="98" r="1.8" fill="#5e5340" stroke="none"/><circle cx="268" cy="190" r="1.6" fill="#8a6a2f" stroke="none"/><circle cx="122" cy="96" r="1.6" fill="#9a8a6a" stroke="none"/><circle cx="300" cy="152" r="2.2" fill="#8a6a2f" stroke="none"/></g>
+<g fill="#8a6a2f"><circle cx="384" cy="112" r="6"/><circle cx="420" cy="104" r="4.4"/><circle cx="400" cy="146" r="5.2"/><circle cx="430" cy="138" r="3.6"/></g>
+<text x="404" y="132" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="34" text-anchor="middle" fill="#A4373A">?</text>
+<text x="180" y="40" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">a slab of Earth&#8217;s crust</text>
+<text x="404" y="40" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="13" text-anchor="middle">how common?</text>
+</svg></template><template data-pp-art="abund_ev"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="Unit chart: for every one part gold in Earth's crust there are about two hundred parts of thulium or lutetium, the two scarcest rare earths.">
+<text x="260" y="26" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">In Earth&#8217;s crust, for every 1 part gold&#8230;</text>
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+  <rect x="58" y="62" width="104" height="132" rx="6" fill="#fbf6ea"/>
+  <rect x="222" y="62" width="268" height="132" rx="6" fill="#fbf6ea"/>
+</g>
+<circle cx="110" cy="128" r="6" fill="#BC8A2E" stroke="#3b3222" stroke-width="1.4"/>
+<circle cx="232" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="70" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="83" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="96" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="109" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="122" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="135" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="148" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="161" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="174" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="232" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="245" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="258" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="271" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="284" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="297" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="310" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="323" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="336" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="349" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="362" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="375" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="388" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="401" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="414" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="427" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="440" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="453" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="466" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/><circle cx="479" cy="187" r="4.1" fill="#8a6a2f" stroke="none"/>
+<text x="110" y="212" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="15" text-anchor="middle">1 gold</text>
+<text x="356" y="212" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="15" text-anchor="middle" fill="#8a6a2f">&#8776; 200 thulium or lutetium</text>
+<text x="260" y="228" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="10.5" text-anchor="middle" opacity=".8">the scarcest rare earths; the common ones rival copper, nickel and lead</text>
+</svg></template><template data-pp-art="chain"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="A supply chain drawn left to right: an open-pit mine, a refinery, a rare earth magnet, and a wind turbine with an electric motor.">
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1">
+  <path d="M10,176 C140,174 380,178 510,175" stroke-width="2"/>
+  <path d="M12,176 C22,152 36,126 56,110 H68 V124 H82 V138 H96 V152 H110 V164 H126 L134,176 Z" fill="#efe3c4"/>
+  <path d="M56,110 C48,128 40,152 36,176" stroke-width="1.2" opacity=".45"/>
+  <path d="M68,124 L60,124 M82,138 L72,138 M96,152 L84,152 M110,164 L96,164" stroke-width="1.1" opacity=".45"/>
+  <circle cx="74" cy="121" r="2.4" fill="#8a6a2f" stroke="none"/><circle cx="90" cy="135" r="2" fill="#8a6a2f" stroke="none"/>
+  <circle cx="103" cy="149" r="2.6" fill="#8a6a2f" stroke="none"/><circle cx="118" cy="161" r="2" fill="#8a6a2f" stroke="none"/>
+  <path d="M154,176 V118 H186 V176 M194,176 V100 H214 V176" fill="#efe3c4"/>
+  <path d="M204,100 V72 M198,72 H210" stroke-width="2.4"/>
+  <path d="M160,130 H180 M160,146 H180" stroke-width="1.3"/>
+  <path d="M222,176 V140 C222,130 248,130 248,140 V176 Z" fill="#f3ead6"/>
+  <path d="M290,150 V112 C290,96 336,96 336,112 V150 H320 V114 C320,108 306,108 306,114 V150 Z" fill="#fffdf6"/>
+  <path d="M290,150 H306 V138 H290 Z" fill="#A4373A" stroke="#A4373A"/>
+  <path d="M320,150 H336 V138 H320 Z" fill="#2F5D8A" stroke="#2F5D8A"/>
+  <path d="M432,176 L438,96 H446 L452,176 Z" fill="#fffdf6"/>
+  <circle cx="442" cy="92" r="5" fill="#efe3c4"/>
+  <path d="M442,92 C446,70 452,52 458,40 M442,92 C426,84 410,82 396,84 M442,92 C454,104 462,116 466,128" stroke-width="2.6"/>
+  <circle cx="486" cy="158" r="15" fill="#f3ead6"/><circle cx="486" cy="158" r="5"/>
+  <path d="M120,190 h44 M156,186 l8,4 l-8,4 M252,190 h34 M278,186 l8,4 l-8,4 M352,190 h56 M400,186 l8,4 l-8,4" stroke-width="1.8"/>
+</g>
+<text x="300" y="132" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="9" fill="#fffdf6">N</text>
+<text x="326" y="132" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="9" fill="#fffdf6">S</text>
+<text x="74" y="212" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12" text-anchor="middle">mine</text>
+<text x="200" y="212" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12" text-anchor="middle">refine</text>
+<text x="313" y="212" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12" text-anchor="middle">make magnets</text>
+<text x="458" y="212" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12" text-anchor="middle">turbines &amp; motors</text>
+<text x="260" y="34" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">From rock to magnet: who does each step?</text>
+</svg></template><template data-pp-art="chain_ev"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="Bar chart: in 2024 China accounted for 60 percent of mined magnet rare earths, 91 percent of refining, and 94 percent of sintered permanent magnets, up from about 50 percent of magnets in 2005.">
+<text x="260" y="22" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">China&#8217;s share of the world&#8217;s magnet rare earths, 2024</text>
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <path d="M70,196 C200,197 330,195 470,196" stroke-width="2.4"/>
+  <path d="M100,196 V109 H180 V196" fill="url(#ppHatch)"/>
+  <path d="M220,196 V64 H300 V196" fill="url(#ppHatchR)"/>
+  <path d="M340,196 V60 H420 V196" fill="#e9c2b9" stroke="#A4373A"/>
+  <path d="M340,124 H420" stroke-dasharray="5 5" stroke-width="1.6"/>
+</g>
+<text x="140" y="101" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="20" text-anchor="middle">60%</text>
+<text x="260" y="56" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="20" text-anchor="middle" fill="#A4373A">91%</text>
+<text x="380" y="52" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="20" text-anchor="middle" fill="#A4373A">94%</text>
+<text x="380" y="138" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="10.5" text-anchor="middle">2005: about 50%</text>
+<text x="140" y="214" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="13" text-anchor="middle">mining</text>
+<text x="260" y="214" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="13" text-anchor="middle">refining</text>
+<text x="380" y="214" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="13" text-anchor="middle">magnets</text>
+</svg></template><template data-pp-art="waste"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="A refinery pipe pouring grey sludge into a walled tailings pond, a radiation warning sign on a post, and wilted crops beside a farmhouse.">
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1">
+  <path d="M8,186 C150,184 380,188 512,185" stroke-width="1.8"/>
+  <path d="M60,186 L100,124 H330 L370,186" fill="#e7d6b0"/>
+  <path d="M108,132 H322 L350,178 H80 Z" fill="url(#ppHatchT)" stroke-width="1.6"/>
+  <path d="M130,150 q14,-6 28,0 t28,0 M220,162 q14,-6 28,0 t28,0" stroke-width="1.4" opacity=".6"/>
+  <path d="M8,90 H96 C110,90 116,98 116,110 V122" stroke-width="9" opacity=".85"/>
+  <path d="M8,90 H96 C110,90 116,98 116,110 V122" stroke="#fffdf6" stroke-width="3.4"/>
+  <path d="M116,124 C118,134 112,140 114,148" stroke="#7d7a6e" stroke-width="5"/>
+  <path d="M398,186 V112" stroke-width="2.6"/>
+  <path d="M434,186 C434,170 430,160 424,150 M446,186 C447,168 452,160 460,152 M458,186 C458,174 462,166 470,160" stroke="#8a6a2f" stroke-width="2"/>
+  <path d="M424,150 C418,148 414,150 412,156 M460,152 C466,150 470,154 470,160" stroke="#8a6a2f" stroke-width="1.6"/>
+  <use href="#rhHouse" transform="translate(478,186)"/>
+</g>
+<use href="#rhTrefoil" transform="translate(398,106)"/>
+<text x="215" y="114" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="13" text-anchor="middle">tailings pond</text>
+<text x="40" y="76" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="11">from the refinery</text>
+<text x="448" y="214" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="11" text-anchor="middle">crops nearby</text>
+<text x="260" y="32" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">Refining 1 tonne of rare earths leaves&#8230;</text>
+</svg></template><template data-pp-art="waste_ev"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="For each tonne of rare earths refined with sulfuric acid: about one tonne of radioactive residue, about 75 cubic metres of acidic wastewater and 9,600 to 12,000 cubic metres of waste gas.">
+<text x="260" y="22" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">Waste from refining 1 tonne of rare earths</text>
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <path d="M28,154 V98 H84 V154 Z" fill="#fffdf6"/>
+  <path d="M100,154 V98 H156 V154 Z" fill="url(#ppHatchR)" stroke="#A4373A"/>
+  <path d="M206,154 V92 C206,84 268,84 268,92 V154 C268,162 206,162 206,154 Z" fill="url(#ppHatchT)"/>
+  <path d="M206,92 C206,100 268,100 268,92" stroke-width="1.5"/>
+  <path d="M332,140 C318,140 312,124 326,118 C324,100 348,94 358,106 C366,88 398,88 402,108 C420,104 430,124 416,136 C426,150 404,160 392,150 C380,164 350,162 344,148 C338,152 332,148 332,140 Z" fill="#e8e2d6"/>
+  <path d="M92,126 H96" stroke-width="2.6"/>
+</g>
+<text x="92" y="131" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="14" text-anchor="middle">=</text>
+<use href="#rhTrefoil" transform="translate(128,126) scale(.8)"/>
+<text x="56" y="176" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="12.5" text-anchor="middle">1 t rare earth</text>
+<text x="128" y="176" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="12.5" text-anchor="middle" fill="#A4373A">&#8776; 1 t</text>
+<text x="128" y="191" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="10.5" text-anchor="middle">radioactive residue</text>
+<text x="237" y="176" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="12.5" text-anchor="middle">&#8776; 75 m&#179;</text>
+<text x="237" y="191" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="10.5" text-anchor="middle">acidic wastewater</text>
+<text x="372" y="176" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="12.5" text-anchor="middle">9,600 to 12,000 m&#179;</text>
+<text x="372" y="191" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="10.5" text-anchor="middle">waste gas: dust, HF, SO&#8322;</text>
+<text x="260" y="222" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="10.5" text-anchor="middle" opacity=".85">Bayan Obo&#8217;s 11 km&#178; tailings pond has contaminated nearby soil, groundwater and plants</text>
+</svg></template><template data-pp-art="land"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="A village with fields on rolling hills beside an open-pit mine with a haul truck, with map pins marking mineral projects across the landscape.">
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1">
+  <path d="M6,150 C80,120 160,124 230,146 C300,168 380,140 514,136" stroke-width="2"/>
+  <path d="M6,196 C150,194 380,198 514,195" stroke-width="1.6"/>
+  <use href="#rhHouse" transform="translate(40,160)"/>
+  <use href="#rhHouse" transform="translate(76,154) scale(.85)"/>
+  <use href="#rhHouse" transform="translate(108,160) scale(.95)"/>
+  <path d="M140,176 C170,172 200,174 226,180 M140,186 C170,182 200,184 226,190 M146,166 C172,162 198,164 220,170" stroke="#4f7a45" stroke-width="1.6"/>
+  <path d="M270,152 H300 L312,166 H344 L356,180 H404 L416,166 H448 L460,152 H490" stroke-width="2"/>
+  <path d="M300,152 L306,160 M344,166 L350,174 M404,180 L410,188" stroke-width="1.1" opacity=".5"/>
+  <path d="M360,178 V166 H390 L398,174 V178 Z" fill="#efe3c4" stroke-width="1.6"/>
+  <circle cx="368" cy="180" r="4" fill="#fffdf6" stroke-width="1.4"/><circle cx="392" cy="180" r="4" fill="#fffdf6" stroke-width="1.4"/>
+  <path d="M250,118 V200" stroke-dasharray="6 6" stroke-width="1.5"/>
+</g>
+<use href="#rhPin" transform="translate(300,148)"/>
+<use href="#rhPin" transform="translate(432,148)"/>
+<use href="#rhPin" transform="translate(190,140)"/>
+<use href="#rhPin" transform="translate(62,124)"/>
+<text x="120" y="216" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="11.5" text-anchor="middle">community land</text>
+<text x="380" y="216" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="11.5" text-anchor="middle">mineral project</text>
+<text x="260" y="34" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">Where do the transition&#8217;s minerals lie?</text>
+</svg></template><template data-pp-art="land_ev"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="Half-donut chart, drawn at just over half: more than half of the energy-transition mineral resource base lies on or near the lands of Indigenous and peasant peoples. 5,097 projects were mapped. For rare earths, 42 percent overlaps both.">
+<text x="260" y="22" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">Energy-transition mineral resources, 5,097 projects mapped</text>
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1">
+  <path d="M60,186 A110,110 0 0 1 187.2,77.4 L181.0,116.9 A70,70 0 0 0 100,186 Z" fill="url(#ppHatchR)" stroke="#A4373A"/>
+  <path d="M187.2,77.4 A110,110 0 0 1 280,186 L240,186 A70,70 0 0 0 181.0,116.9 Z" fill="#efe9dc"/>
+  <path d="M60,186 H280" stroke-width="2.4"/>
+  <path d="M190,72 C230,58 272,62 304,68" stroke-width="1.5"/>
+</g>
+<text x="170" y="174" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="24" text-anchor="middle" fill="#A4373A">&gt; &#189;</text>
+<text x="310" y="76" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="15" fill="#A4373A">more than half</text>
+<text x="310" y="96" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12.5">lies on or near the lands of</text>
+<text x="310" y="113" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12.5">Indigenous and peasant peoples</text>
+<text x="310" y="148" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="13">Rare earths: 42%</text>
+<text x="310" y="165" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="11.5">overlap both kinds of territory</text>
+<text x="170" y="210" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="11" text-anchor="middle" opacity=".8">Owen et al. 2023, Nature Sustainability</text>
+</svg></template><template data-pp-art="ewaste"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="A heap of discarded electronics: a laptop, an old monitor, phones and tangled cables, under a recycling loop with a large gap in it.">
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1">
+  <path d="M60,200 C140,150 380,150 460,200 Z" fill="#efe3c4"/>
+  <path d="M150,176 L176,150 H252 L232,176 Z" fill="#fffdf6"/>
+  <path d="M150,176 H236 L240,184 H146 Z" fill="#e7d6b0"/>
+  <path d="M276,170 V128 H346 V170 Z" fill="#e8eef1"/>
+  <path d="M284,136 H338 V162 H284 Z" fill="#cfe0e6" stroke-width="1.4"/>
+  <path d="M302,170 L298,180 H324 L320,170" fill="#e7d6b0" stroke-width="1.6"/>
+  <rect x="200" y="182" width="16" height="28" rx="3" fill="#3b4750" transform="rotate(-20 208 196)"/>
+  <rect x="352" y="174" width="15" height="27" rx="3" fill="#3b4750" transform="rotate(24 360 188)"/>
+  <rect x="110" y="182" width="15" height="26" rx="3" fill="#3b4750" transform="rotate(60 118 196)"/>
+  <path d="M90,192 C110,178 130,200 150,190 C170,180 186,196 196,186 M330,196 C350,182 380,200 400,186 C412,178 424,190 430,184" stroke-width="2"/>
+  <path d="M216,102 A44,28 0 1 1 302,108" stroke="#2D6A4F" stroke-width="3"/>
+  <path d="M294,100 L303,110 L289,113" stroke="#2D6A4F" stroke-width="3"/>
+</g>
+<text x="258" y="132" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12" text-anchor="middle" fill="#2D6A4F">recycling loop</text>
+<text x="212" y="118" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="22" text-anchor="middle" fill="#A4373A">?</text>
+<text x="260" y="34" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">62 million tonnes of e-waste in 2022</text>
+</svg></template><template data-pp-art="ewaste_ev"><svg class="pp-svg" viewBox="0 0 520 230" role="img"
+  aria-label="A grid of 100 squares with one filled: no more than 1 percent of rare earth demand is met by recycling e-waste. The IEA estimates recycling could cut new mining needs by up to 35 percent by 2050.">
+<text x="260" y="24" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">Rare earth demand met by recycling e-waste</text>
+<rect x="150" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="40" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="57" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="74" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="91" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="108" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="125" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="142" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="159" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="167" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="176" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="150" y="193" width="14" height="14" rx="2" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="1"/><rect x="167" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="184" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="201" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="218" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="235" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="252" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="269" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="286" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/><rect x="303" y="193" width="14" height="14" rx="2" fill="#fbf6ea" stroke="#3b3222" stroke-opacity=".45" stroke-width="1"/>
+<g filter="url(#ppNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"><path d="M144,218 C152,214 158,210 156,206"/></g>
+<text x="138" y="222" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="18" text-anchor="end" fill="#2D6A4F">&#8804; 1%</text>
+<text x="330" y="94" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="13">Today: no more than</text>
+<text x="330" y="111" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="13">1 square in 100</text>
+<text x="330" y="150" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12">IEA: recycling could cut</text>
+<text x="330" y="166" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12">new mining needs by up to</text>
+<text x="330" y="182" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12">35% by 2050</text>
+</svg></template>
+<script>
+(function(){
+  var SEC=document.currentScript.closest('.pp-slide');
+  if(!SEC || SEC.__ppWired) return; SEC.__ppWired=true;
+  if(!window.__deckLiveReady){ window.__deckLiveReady=new Promise(function(r){ window.__deckLiveResolve=r; }); }
+  var GID='ch9-ree-hidden', NW='five', LETTERS=['A','B','C','D'];
+  var Q=JSON.parse(SEC.querySelector('[data-pp-qs]').textContent);
+  var ART={}; SEC.querySelectorAll('template[data-pp-art]').forEach(function(t){ ART[t.dataset.ppArt]=t.innerHTML; });
+  var root=SEC.querySelector('[data-pp-root]'), cards=SEC.querySelectorAll('.bleed-text .bullets > li');
+  var backend=null, HOST=false, st={}, viewKey=null;
+
+  function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
+  function g(){ return st.g||0; }
+  function q(){ return (typeof st.q==='number') ? st.q : -1; }
+  function rev(){ return !!st.rev; }
+  function running(){ return q()>=0 && q()<Q.length; }
+  function counts(i){ var v=((st.v||{})['g'+g()]||{})['q'+i]||{}; return [0,1,2,3].map(function(k){ return +v['o'+k]||0; }); }
+  function total(c){ return c.reduce(function(a,b){ return a+b; },0); }
+  function myVote(i){ var x=ls('pp:'+GID+':'+g()+':'+i); return x===null ? null : +x; }
+  function pct(i){ var c=counts(i), n=total(c); return n ? Math.round(c[Q[i].a]/n*100) : null; }
+  function thumb(k){ return ART[k].replace('class="pp-svg"','class="pp-svg pp-thumb"'); }
+
+  // host actions; the main doc only ever holds {g, q, rev}
+  function start(){ backend.setDoc('polls', GID, {g:g()+1, q:0, rev:false}); }   // also clears every vote shard
+  function reveal(){ backend.mergeDoc('polls', GID, {rev:true}); }
+  function go(i, r){ backend.mergeDoc('polls', GID, {q:i, rev:!!r}); }
+  function vote(k){
+    var i=q(); if(!backend || !running() || rev() || myVote(i)!==null) return;
+    ls('pp:'+GID+':'+g()+':'+i, String(k));
+    var o={}; o['o'+k]=backend.inc(1); var qq={}; qq['q'+i]=o; var gg={}; gg['g'+g()]=qq;
+    backend.mergeDocShard('polls', GID, {v:gg});
+    viewKey=null; render();
+  }
+
+  // the clicker drives the questions on the host's screen only, while they run
+  SEC.__deckNext=function(){
+    if(!HOST || !backend || !running()) return false;
+    if(!rev()) reveal(); else if(q()<Q.length-1) go(q()+1,false); else go(Q.length,false);
+    return true;
+  };
+  SEC.__deckPrev=function(){
+    if(!HOST || !backend) return false;
+    if(running() && rev()){ go(q(), false); return true; }
+    if(running() && q()>0){ go(q()-1, true); return true; }
+    if(q()===Q.length){ go(Q.length-1, true); return true; }
+    return false;
+  };
+
+  function lightCards(){
+    var i=running() ? Q[q()].card : -1;
+    cards.forEach(function(c,k){ c.classList.toggle('pp-lit', k===i); c.classList.toggle('pp-dim', i>-1 && k!==i); });
+  }
+
+  function introHTML(){
+    var grid=Q.map(function(x){ return '<div class="pp-tile"><div class="pp-tart">'+thumb(x.art)+'</div><span>'+x.tag+'</span></div>'; }).join('');
+    return '<div class="pp-intro"><div class="pp-kick">'+NW.charAt(0).toUpperCase()+NW.slice(1)+' research findings</div><div class="pp-title">Behind the Screen</div>'
+      + '<p class="pp-lead">Rare earths make phones, motors and wind turbines work. The '+NW+' findings ahead are '
+      + '<b>interesting but concerning</b>. '
+      + (HOST ? 'Students predict on their own devices; you reveal the evidence.' : 'Make your prediction on your device, then see the evidence.')+'</p>'
+      + '<div class="pp-tiles">'+grid+'</div>'
+      + (HOST ? '<button class="pp-btn" data-pp="start">Begin &rarr;</button><div class="pp-hint">After you start, your clicker reveals each answer and moves to the next question.</div>'
+              : '<div class="pp-wait">Waiting for your instructor to start&hellip;</div>')
+      + '</div>';
+  }
+
+  function questionHTML(){
+    var i=q(), x=Q[i], r=rev(), c=counts(i), n=total(c), mine=myVote(i);
+    var opts=x.opts.map(function(o,k){
+      var cls='pp-opt'+(r ? (k===x.a?' right':' wrong') : '')+(mine===k?' mine':'');
+      var share=n ? Math.round(c[k]/n*100) : 0;
+      var bar = r ? '<i class="pp-bar" style="width:'+share+'%"></i><b class="pp-share">'+share+'%</b>' : '';
+      var tick = (r && k===x.a) ? '<svg class="pp-tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 13c1.9 1.6 3.4 3.3 4.8 5.1 3-4.7 6.4-8.9 10.6-12.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>' : '';
+      var dis = (HOST || r || mine!==null) ? ' disabled' : '';
+      return '<button class="'+cls+'" data-ppv="'+k+'"'+dis+'><span class="pp-l">'+LETTERS[k]+'</span><span class="pp-t">'+o+'</span>'+tick+bar+'</button>';
+    }).join('');
+    var top='<div class="pp-top"><span class="pp-tag">'+(i+1)+' of '+Q.length+' &middot; '+x.tag+'</span>'
+      + '<span class="pp-count">'+(n ? '<b>'+n+'</b> '+(n===1?'vote':'votes')+(r?'':' in') : (r?'':'Waiting for votes'))+'</span></div>';
+    var art='<div class="pp-art'+(r?' ev':'')+'">'+(r ? ART[x.art+'_ev'] : ART[x.art])+'</div>';
+    var foot='';
+    if(r){
+      var p=pct(i);
+      foot='<div class="pp-exp"><p>'+x.exp+'</p>'
+        + (p!==null ? '<p class="pp-class"><b>'+p+'%</b> of the class got it right.</p>' : '')
+        + '<p class="pp-cite">'+x.cite+'</p></div>';
+    } else if(!HOST){
+      foot='<div class="pp-me">'+(mine===null ? 'Tap your prediction.' : 'Prediction recorded: <b>'+LETTERS[mine]+'</b>. Waiting for the evidence&hellip;')+'</div>';
+    }
+    var ctl='';
+    if(HOST){
+      ctl='<div class="pp-ctl">'
+        + (r ? (i<Q.length-1 ? '<button class="pp-btn" data-pp="next">Next question &rarr;</button>' : '<button class="pp-btn" data-pp="sum">See all '+NW+' &rarr;</button>')
+             : '<button class="pp-btn" data-pp="reveal">Reveal the answer</button>')
+        + '<span class="pp-hint">or press your clicker</span></div>';
+    }
+    return top+art+'<div class="pp-q">'+x.q+'</div><div class="pp-opts">'+opts+'</div>'+foot+ctl;
+  }
+
+  function summaryHTML(){
+    var rows=Q.map(function(x,i){ var p=pct(i);
+      return '<div class="pp-sum"><div class="pp-tart">'+thumb(x.art)+'</div><div><div class="pp-sumtag">'+x.tag+'</div>'
+        + '<div class="pp-sumans">'+x.short+'</div>'
+        + '<div class="pp-sumpct">'+(p===null ? '' : p+'% of the class got it right')+'</div></div></div>'; }).join('');
+    return '<div class="pp-intro"><div class="pp-kick">Behind the Screen</div><div class="pp-title sm">Rare earths: not rare, but costly</div>'
+      + '<div class="pp-sums">'+rows+'</div>'
+      + (HOST ? '<div class="pp-ctl"><button class="pp-btn ghost" data-pp="back">&larr; Back to the last answer</button><button class="pp-btn ghost" data-pp="again">Start over</button></div>' : '')
+      + '</div>';
+  }
+
+  function render(){
+    lightCards();
+    var i=q();
+    var key=[g(), i, rev()?1:0, HOST?1:0, running()?JSON.stringify(counts(i)):'', running()?String(myVote(i)):'',
+             i===Q.length ? Q.map(function(x,k){ return pct(k); }).join(',') : ''].join('|');
+    if(key===viewKey) return; viewKey=key;
+    root.className='pp-panel'+(running()?' play':'')+(rev()?' rev':'');
+    root.innerHTML = running() ? questionHTML() : (i===Q.length ? summaryHTML() : introHTML());
+  }
+
+  root.addEventListener('click', function(e){
+    var v=e.target.closest('[data-ppv]'); if(v){ vote(+v.dataset.ppv); return; }
+    var b=e.target.closest('[data-pp]'); if(!b || !backend || !HOST) return;
+    var a=b.dataset.pp;
+    if(a==='start') start();
+    else if(a==='reveal') reveal();
+    else if(a==='next') go(q()+1, false);
+    else if(a==='sum') go(Q.length, false);
+    else if(a==='back') go(Q.length-1, true);
+    else if(a==='again') backend.setDoc('polls', GID, {g:g()+1, q:-1, rev:false});
+  });
+
+  window.__deckLiveReady.then(function(live){
+    backend=live.backend; HOST=live.HOST;
+    if(HOST) SEC.classList.add('pp-host');
+    backend.subscribeDoc('polls', GID, function(d){ st=d||{}; render(); });
+  });
+  render();
+})();
+</script></div>
   </div>
   <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
 </section>
@@ -1636,15 +2189,30 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
         '<text x="62" y="120" text-anchor="middle" font-size="10" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">color</text>'+
         '<text x="62" y="133" text-anchor="middle" font-size="10" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">display</text>'+
         '<path d="M86 126 L118 126" stroke="#5b6a63" stroke-width="2"/>';
-      A.ev='<path d="M40 190 q10 -46 54 -50 q22 -34 78 -34 q52 0 74 36 q46 6 54 48 q2 16 -14 16 L54 206 q-16 0 -14 -16 Z" fill="#4a7fa5" stroke="#264a63" stroke-width="3"/>'+
-        '<path d="M104 142 q16 -22 62 -22 q46 0 60 24 z" fill="#cfe6f2" stroke="#264a63" stroke-width="2"/>'+
-        '<rect x="70" y="176" width="200" height="24" rx="8" fill="#2f5d46" stroke="#1d3a2c" stroke-width="2.5"/>'+
-        '<text x="170" y="193" text-anchor="middle" font-size="12" font-weight="900" fill="#bfe6cf" font-family="Inter,sans-serif">BATTERY</text>'+
-        '<circle cx="104" cy="212" r="22" fill="#33413c" stroke="#1b241f" stroke-width="3"/><circle cx="104" cy="212" r="8" fill="#9aa8a0"/>'+
-        '<circle cx="238" cy="212" r="22" fill="#33413c" stroke="#1b241f" stroke-width="3"/><circle cx="238" cy="212" r="8" fill="#9aa8a0"/>'+
-        '<circle cx="238" cy="160" r="17" fill="#f6e6c8" stroke="#8a6a2f" stroke-width="2"/>'+
-        '<text x="238" y="165" text-anchor="middle" font-size="12" font-weight="900" fill="#8a6a2f" font-family="Inter,sans-serif">M</text>'+
-        '<text x="238" y="132" text-anchor="middle" font-size="10" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">motor magnets</text>';
+      // EV: the charging station and its cord say "electric car" at a glance; the rare earths
+      // themselves sit in the drive motor's permanent magnets, drawn beside it
+      A.ev='<path d="M24 248 q150 -4 296 0" fill="none" stroke="#7d8b85" stroke-width="2.5"/>'+
+        '<rect x="40" y="236" width="104" height="12" rx="3" fill="#cfd8dc" stroke="#4a5c66" stroke-width="2.5"/>'+
+        '<path d="M52 236 V66 q0 -14 14 -14 h52 q14 0 14 14 V236 Z" fill="#e8eef1" stroke="#4a5c66" stroke-width="3"/>'+
+        '<rect x="64" y="70" width="56" height="36" rx="6" fill="#8fd0e8" stroke="#26313a" stroke-width="2"/>'+
+        '<path d="M74 84 h22 M74 94 h34" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".8"/>'+
+        '<path d="M98 122 l-18 32 h15 l-10 30 l30 -40 h-15 l11 -22 z" fill="#ffcf4d" stroke="#8a6a2f" stroke-width="2" stroke-linejoin="round"/>'+
+        '<rect x="130" y="138" width="14" height="30" rx="4" fill="#cfd8dc" stroke="#4a5c66" stroke-width="2.5"/>'+
+        '<path d="M144 154 C186 160 170 236 214 234 C252 232 250 196 262 178" fill="none" stroke="#33413c" stroke-width="8" stroke-linecap="round"/>'+
+        '<path d="M144 154 C186 160 170 236 214 234 C252 232 250 196 262 178" fill="none" stroke="#6b7a82" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>'+
+        '<g transform="translate(266 172) rotate(32)">'+
+          '<rect x="-11" y="-36" width="22" height="40" rx="9" fill="#3b4750" stroke="#26313a" stroke-width="2.5"/>'+
+          '<circle cx="0" cy="-44" r="14" fill="#e8eef1" stroke="#26313a" stroke-width="2.5"/>'+
+          '<circle cx="-5" cy="-46" r="2.6" fill="#26313a"/><circle cx="5" cy="-46" r="2.6" fill="#26313a"/><circle cx="0" cy="-38" r="2.2" fill="#26313a"/>'+
+        '</g>'+
+        '<circle cx="262" cy="78" r="40" fill="#f6e6c8" stroke="#8a6a2f" stroke-width="3"/>'+
+        '<path d="M262 42 v8 M262 106 v8 M226 78 h8 M290 78 h8 M237 53 l6 6 M281 97 l6 6 M287 53 l-6 6 M243 97 l-6 6" stroke="#b5653d" stroke-width="4" stroke-linecap="round"/>'+
+        '<circle cx="262" cy="78" r="22" fill="#fffdf6" stroke="#8a6a2f" stroke-width="2"/>'+
+        '<path d="M262 78 L262 56 A22 22 0 0 1 284 78 Z" fill="#A4373A"/><path d="M262 78 L284 78 A22 22 0 0 1 262 100 Z" fill="#2F5D8A"/>'+
+        '<path d="M262 78 L262 100 A22 22 0 0 1 240 78 Z" fill="#A4373A"/><path d="M262 78 L240 78 A22 22 0 0 1 262 56 Z" fill="#2F5D8A"/>'+
+        '<circle cx="262" cy="78" r="5" fill="#3b4750"/>'+
+        '<text x="262" y="28" text-anchor="middle" font-size="11" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">drive-motor magnets</text>'+
+        '<text x="92" y="270" text-anchor="middle" font-size="11" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">charging station</text>';
       A.turbine='<path d="M158 250 L182 250 L176 96 L164 96 Z" fill="#e8eef1" stroke="#4a5c66" stroke-width="2.5"/>'+
         '<rect x="150" y="76" width="44" height="24" rx="9" fill="#dfe8ec" stroke="#4a5c66" stroke-width="2.5"/>'+
         '<g stroke="#4a5c66" stroke-width="2.5" fill="#f4f9fb">'+
@@ -1690,24 +2258,33 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
       return A;
     }
     var ART=art();
+    // hand-drawn tab icons (they inherit the tab's text colour, so the active tab stays legible)
+    var ICON={
+      phone:'<path d="M8.6 2.6c2.4-.2 4.6-.2 6.9 0 .9.1 1.4.7 1.4 1.6.1 5.2.1 10.4 0 15.6 0 .9-.6 1.5-1.5 1.6-2.3.2-4.5.2-6.8 0-.9-.1-1.4-.7-1.5-1.6-.1-5.2-.1-10.4 0-15.6.1-.9.6-1.5 1.5-1.6z"/><path d="M10.6 18.4c1-.1 1.9-.1 2.9 0"/>',
+      ev:'<path d="M5.4 21.2V4.4c0-.8.5-1.3 1.3-1.3h5.9c.8 0 1.3.5 1.3 1.3v16.8"/><path d="M4 21.3c3.6-.1 7.2-.1 10.8 0"/><path d="M10.4 6.6 8.1 11h3l-2.4 4.5"/><path d="M13.9 9.2h2.3c.8 0 1.3.5 1.3 1.3v6.1c0 .9.6 1.5 1.4 1.5s1.4-.6 1.4-1.5v-5.2"/><path d="M19.1 11.4c.1-.9.1-1.8 0-2.6"/>',
+      turbine:'<path d="M11.6 11.6c.1 3.4.2 6.8.4 10M9.8 21.6c1.5-.1 3-.1 4.5 0"/><circle cx="12" cy="9.6" r="1.4"/><path d="M12 8.2c-.3-1.9-.6-3.8-.9-5.7M13.3 10.3c1.7.8 3.4 1.5 5.1 2.2M10.7 10.3c-1.6.8-3.3 1.6-5 2.3"/>',
+      led:'<path d="M8.6 14.7C6.9 13.4 6 11.6 6 9.6 6 6.2 8.7 3.4 12 3.4s6 2.8 6 6.2c0 2-.9 3.8-2.6 5.1v2.2H8.6z"/><path d="M9.5 19.4c1.7-.1 3.3-.1 5 0M10.5 21.6c1-.1 2-.1 3 0"/><path d="M12 8v3.6" opacity=".6"/>',
+      mri:'<path d="M5.4 5.2c4.4-.2 8.8-.2 13.2 0 1.6.1 2.6 1.1 2.7 2.7.1 2.1.1 4.2 0 6.3-.1 1.6-1.1 2.6-2.7 2.7-4.4.2-8.8.2-13.2 0-1.6-.1-2.6-1.1-2.7-2.7-.1-2.1-.1-4.2 0-6.3.1-1.6 1.1-2.6 2.7-2.7z"/><circle cx="12" cy="11" r="3.3"/><path d="M5 19.8c4.7-.1 9.3-.1 14 0"/>',
+      fiber:'<path d="M3 18.6C6.6 10.4 11.9 6.6 20.6 6.2"/><path d="M3.4 21.4c3.8-7.6 8.9-10.6 17.2-11" opacity=".55"/><circle cx="20.8" cy="6.2" r="1.3"/><path d="M18.6 3.6l1 1M22.4 8.4l-1-.6" opacity=".7"/>'
+    };
     var DEV=[
-      {id:'phone', tab:'📱 Smartphone', cap:'Display, glass, speakers and the vibration motor',
+      {id:'phone', tab:'Smartphone', cap:'Display, glass, speakers and the vibration motor',
        els:['Y','Ce','Pr','Nd','Eu','Tb','Dy']},
-      {id:'ev', tab:'🚗 Electric vehicle', cap:'Drive motor magnets, battery, catalytic converter',
+      {id:'ev', tab:'Electric vehicle', cap:'Drive motor magnets, battery, catalytic converter',
        els:['La','Ce','Pr','Nd','Sm','Dy']},
-      {id:'turbine', tab:'💨 Wind turbine', cap:'Permanent-magnet generator in the nacelle',
+      {id:'turbine', tab:'Wind turbine', cap:'Permanent-magnet generator in the nacelle',
        els:['Pr','Nd','Tb','Dy']},
-      {id:'led', tab:'💡 LED lighting', cap:'Phosphors that turn blue LED light white',
+      {id:'led', tab:'LED lighting', cap:'Phosphors that turn blue LED light white',
        els:['Y','Eu','Tb','Dy']},
-      {id:'mri', tab:'🏥 MRI & X-ray', cap:'Scanner magnets, contrast agents, portable X-ray',
+      {id:'mri', tab:'MRI & X-ray', cap:'Scanner magnets, contrast agents, portable X-ray',
        els:['Nd','Gd','Tm']},
-      {id:'fiber', tab:'🌐 Fibre-optic internet', cap:'Optical glass, doped fibres and the lasers that drive them',
+      {id:'fiber', tab:'Fibre-optic internet', cap:'Optical glass, doped fibres and the lasers that drive them',
        els:['Y','La','Pr','Eu','Ho','Er','Tm','Yb']}
     ];
     var cur=DEV[0], sel=null;
     var tabs=sec.querySelector('[data-re-tabs]'), grid=sec.querySelector('[data-re-grid]');
     DEV.forEach(function(d){
-      var b=document.createElement('button'); b.className='re-tab'+(d===cur?' on':''); b.textContent=d.tab;
+      var b=document.createElement('button'); b.className='re-tab'+(d===cur?' on':''); b.innerHTML='<svg class="re-ico" viewBox="0 0 24 24" aria-hidden="true">'+(ICON[d.id]||'')+'</svg><span>'+d.tab.replace(/&/g,'&amp;')+'</span>';
       b.addEventListener('click',function(){
         cur=d; sel=null;
         tabs.querySelectorAll('.re-tab').forEach(function(x){x.classList.remove('on');});
@@ -1821,7 +2398,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 <div class="pairs"><div class="pair"><div class="pair-head">CL: Climate</div><div class="pair-desc">Temperature and moisture shape weathering rates</div></div><div class="pair"><div class="pair-head">O: Organisms</div><div class="pair-desc">Plants, animals, microbes contribute organic matter</div></div><div class="pair"><div class="pair-head">R: Relief</div><div class="pair-desc">Topography affects drainage and erosion</div></div><div class="pair"><div class="pair-head">P: Parent Material</div><div class="pair-desc">The rock or sediment from which soil forms</div></div><div class="pair"><div class="pair-head">T: Time</div><div class="pair-desc">Centuries to millennia needed for mature soil development</div></div></div>
 <p class="note">CLORPT: The Soil Formation Framework</p>
     </div>
-    <div class="bleed-media contain"><img loading="lazy" decoding="async" data-src="media/image16.jpg" alt=""></div>
+    <div class="bleed-media contain sus-media"><img loading="lazy" decoding="async" data-src="media/image16.jpg" alt=""><p class="sus-callout"><b>Sustainability:</b> <u>Healthy soil supports plant growth and nutrient cycling.</u></p></div>
   </div>
   <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
 </section>
@@ -2110,14 +2687,46 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
     lb.addEventListener('click',function(){ lb.classList.remove('on'); lbImg.src=''; });
   })();</script>
 </section>
-<section class="slide" data-type="content" style="--accent:#2D6A4F">
+<section class="slide er-slide" data-type="content" style="--accent:#2D6A4F">
   <div class="bleed-grid">
     <div class="bleed-text">
 <div class="eyebrow">9.7  ·  How Can Humans Repair and Sustain the Land?</div>
-<h2 class="heading">Land Degradation</h2>
-<div class="pairs"><div class="pair"><div class="pair-head">Agriculture &amp; Erosion</div><div class="pair-desc"><u>Soil erosion is soil loss caused by weathering, wind, and water removing soil.</u> Tillage exposes soil to wind and water erosion. Overgrazing, over-irrigation, and excess chemicals further degrade soil. Plow-based farming on Roman upland slopes ultimately reached bedrock.</div></div><div class="pair"><div class="pair-head">Pesticide and Herbicides</div><div class="pair-desc">Overuse of pesticides, herbicides, or fertilizers, overirrigation, and overgrazing can also damage land.</div></div></div>
+<h2 class="heading">Soil Erosion</h2>
+<div class="pairs"><div class="pair"><div class="pair-head">Agriculture &amp; Erosion</div><div class="pair-desc"><u>Soil erosion is soil loss caused by weathering, wind, and water removing soil.</u> Tillage exposes soil to wind and water erosion. Overgrazing, over-irrigation, and excess chemicals further degrade soil. Plow-based farming on Roman upland slopes ultimately reached bedrock.</div></div></div>
     </div>
-    <div class="bleed-media cover sidestack"><img loading="lazy" decoding="async" data-src="media/image22.jpg" alt=""><img loading="lazy" decoding="async" data-src="media/image23.jpg" alt=""></div>
+    <div class="bleed-media er-media">
+  <div class="er-grid">
+    <div class="er-photos">
+      <button class="er-ph" type="button" aria-label="Enlarge photo"><img data-src="media/erosion_cutbank.jpg" alt="A tall cutbank of reddish soil carved by erosion, with cholla cacti along its rim and desert hills behind."></button>
+      <button class="er-ph" type="button" aria-label="Enlarge photo"><img data-src="media/erosion_bike.jpg" alt="A bicycle leaning against an eroded soil wall beside a sandy desert wash."></button>
+    </div>
+    <div class="er-vid"><video class="er-video" muted loop playsinline controls preload="none"
+      data-vsrc="media/erosion_wash.mp4" data-vposter="media/erosion_wash_poster.jpg"
+      aria-label="Video walking along an eroded desert wash"></video></div>
+  </div>
+  <div class="er-lb" hidden><img alt=""><span class="er-x" aria-hidden="true">&times;</span></div>
+  <script>(function(){
+    var sec=document.currentScript.closest('section'); if(!sec||sec.__er) return; sec.__er=1;
+    var v=sec.querySelector('.er-video'), lb=sec.querySelector('.er-lb'), big=lb.querySelector('img');
+    sec.appendChild(lb);   // the photo dialog covers the whole slide, not just the media column
+    function on(){
+      if(!v.getAttribute('src')){ v.poster=v.dataset.vposter; v.src=v.dataset.vsrc; }
+      var p=v.play(); if(p && p.catch) p.catch(function(){});
+    }
+    function off(){ if(!v.paused) v.pause(); lb.hidden=true; }
+    new MutationObserver(function(){ sec.classList.contains('active') ? on() : off(); })
+      .observe(sec, {attributes:true, attributeFilter:['class']});
+    if(sec.classList.contains('active')) on();
+    // browsers pause video in a hidden tab; pick it back up when the deck is in view again
+    document.addEventListener('visibilitychange', function(){ if(!document.hidden && sec.classList.contains('active')) on(); });
+    sec.querySelectorAll('.er-ph').forEach(function(b){
+      b.addEventListener('click', function(){
+        var im=b.querySelector('img'); big.src=im.currentSrc || im.src || im.getAttribute('data-src'); lb.hidden=false;
+      });
+    });
+    lb.addEventListener('click', function(){ lb.hidden=true; });
+  })();</script>
+</div>
   </div>
   <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
 </section>
@@ -2204,7 +2813,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 
 <div class="hud">
   <button onclick="prev()" title="Previous (left arrow)">&#8249;</button>
-  <span class="counter" id="counter">1 / 25</span>
+  <span class="counter" id="counter">1 / 26</span>
   <button onclick="next()" title="Next (right arrow)">&#8250;</button>
   <button onclick="toggleMenu()" title="Slide menu (O)">&#9776;</button>
   <button onclick="toggleFs()" title="Fullscreen (F)">&#9974;</button>
@@ -2213,7 +2822,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 <div class="menu" id="menu">
   <button class="menu-close" onclick="toggleMenu(false)" aria-label="Close menu">&times;</button>
   <h3>Chapter 9 &middot; Jump to a slide</h3>
-  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>▶ Mine to Phone</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>9.1 Internal Structure</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>9.1 Magnetic Navigation</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>9.2 The Rock Cycle</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>9.3 Rare Earth Elements</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>9.3 ▶ What's in Your Tech?</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>9.3 ▶ Mine Production (OWID)</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>9.3 ▶ Copper &amp; Lithium (OWID)</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>9.3 Case Study: Baotou</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>9.4 Landscapes &amp; Watersheds</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>9.4 Processes</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>9.5 Soil Horizons</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>9.6 CLORPT</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>9.6 ▶ CLORPT Soil Builder</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>9.5 Soil Examples</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>9.7 Land Degradation</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>9.7 Restoration</button><button class="menu-item" data-go="20"><span class="menu-num">21</span>9.7 ▶ Rank: Material Use</button><button class="menu-item" data-go="21"><span class="menu-num">22</span>9.7 Mining ▶ OWID</button><button class="menu-item" data-go="22"><span class="menu-num">23</span>9.7 Forestry &amp; Urbanization</button><button class="menu-item" data-go="23"><span class="menu-num">24</span>9.8 What Can I Do?</button><button class="menu-item" data-go="24"><span class="menu-num">25</span>Key Concepts</button></div>
+  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Book: Material World</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>▶ Mine to Phone</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>9.1 Internal Structure</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>9.1 Magnetic Navigation</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>9.2 The Rock Cycle</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>9.3 ▶ Rare Earths: Behind the Screen</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>9.3 ▶ What's in Your Tech?</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>9.3 ▶ Mine Production (OWID)</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>9.3 ▶ Copper &amp; Lithium (OWID)</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>9.3 Case Study: Baotou</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>9.4 Landscapes &amp; Watersheds</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>9.4 Processes</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>9.5 Soil Horizons</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>9.6 CLORPT</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>9.6 ▶ CLORPT Soil Builder</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>9.5 Soil Examples</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>9.7 Soil Erosion</button><button class="menu-item" data-go="20"><span class="menu-num">21</span>9.7 Restoration</button><button class="menu-item" data-go="21"><span class="menu-num">22</span>9.7 ▶ Rank: Material Use</button><button class="menu-item" data-go="22"><span class="menu-num">23</span>9.7 Mining ▶ OWID</button><button class="menu-item" data-go="23"><span class="menu-num">24</span>9.7 Forestry &amp; Urbanization</button><button class="menu-item" data-go="24"><span class="menu-num">25</span>9.8 What Can I Do?</button><button class="menu-item" data-go="25"><span class="menu-num">26</span>Key Concepts</button></div>
 </div>
 
 <script>
