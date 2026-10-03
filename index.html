@@ -371,6 +371,65 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .bleed-media.cover.sidestack img{width:100%; height:50%; max-height:none; object-fit:cover;
   position:static; border-radius:0;}
 
+/* ── 10-03: What's in Your Tech? as a pop-up on the Rare Earth Elements slide ── */
+.re-open{position:absolute; left:clamp(1rem,2.4vw,2.2rem); bottom:clamp(.9rem,2.2vh,1.5rem); z-index:6;
+  display:inline-flex; align-items:center; gap:.45rem; font:inherit; cursor:pointer;
+  font-size:clamp(.7rem,1.1vw,.86rem); font-weight:800; color:#fff; background:#8a6a2f; border:0;
+  border-radius:999px; padding:.42rem .95rem .42rem .6rem; box-shadow:0 6px 16px -6px rgba(60,40,10,.55);
+  transition:transform .15s, box-shadow .15s;}
+.re-open:hover{transform:translateY(-1px); box-shadow:0 9px 20px -6px rgba(60,40,10,.6);}
+.re-open svg{width:1.25em; height:1.25em; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round;}
+.re-open b{font-size:.9em; opacity:.85;}
+.re-pop{position:absolute; inset:0; z-index:50; display:flex; align-items:center; justify-content:center;
+  background:rgba(59,50,34,.38); backdrop-filter:blur(2px); padding:clamp(.6rem,2vh,1.4rem) clamp(.8rem,2.4vw,2rem) clamp(3rem,7vh,3.8rem);}
+.re-pop[hidden]{display:none;}
+.re-pop-card{position:relative; width:min(1240px,100%); height:100%; overflow:auto; border-radius:16px;
+  background:linear-gradient(158deg,#faf7f0,#f1ebdd); border:1px solid rgba(120,100,60,.35);
+  box-shadow:0 22px 60px rgba(40,30,10,.38); animation:rePopIn .28s cubic-bezier(.2,1.1,.4,1) both;}
+@keyframes rePopIn{from{opacity:0; transform:translateY(10px) scale(.98)} to{opacity:1; transform:none}}
+.re-pop-card .slide-inner{max-width:none; height:100%;}
+.re-pop-x{position:absolute; top:.8rem; right:1rem; z-index:2; font:inherit; font-size:clamp(.66rem,1vw,.8rem); font-weight:800;
+  cursor:pointer; color:#7a7260; background:#fffdf6; border:1.5px solid rgba(120,100,60,.4); border-radius:999px; padding:.22rem .7rem;}
+.re-pop-x:hover{color:#3b3222; border-color:#8a6a2f;}
+.re-ico{width:1.05em; height:1.05em; vertical-align:-.15em; margin-right:.3em; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round;}
+@media(prefers-reduced-motion:reduce){ .re-pop-card{animation:none;} }
+@media(max-width:900px){ .re-pop{position:fixed; padding:0 0 3.4rem;} .re-pop-card{border-radius:0;} }
+
+/* ── 10-03: Flagstaff burn-scar flooding clippings board (Forestry and Urbanization) ── */
+.bleed-media.fl-media{background:radial-gradient(900px 420px at 50% -10%, #f3efe4, transparent), linear-gradient(160deg,#efe9db,#e3dbc9);
+  display:flex; align-items:center; justify-content:center; padding:clamp(.8rem,2.2vh,1.6rem) clamp(.8rem,1.8vw,1.6rem) clamp(2.6rem,6vh,3.4rem);}
+.fl-board{width:100%; height:100%; display:flex; flex-direction:column; gap:.5rem; min-height:0;}
+.fl-head{display:flex; align-items:baseline; justify-content:space-between; gap:.8rem; flex-wrap:wrap;
+  border-bottom:2px solid #3b3222; padding-bottom:.3rem;}
+.fl-head span{font-family:'Inter',sans-serif; font-weight:900; font-size:clamp(.62rem,1vw,.78rem); letter-spacing:.14em; text-transform:uppercase; color:#a4373a;}
+.fl-head em{font-family:'Merriweather',serif; font-style:italic; font-size:clamp(.66rem,1.02vw,.82rem); color:#5e5340;}
+.fl-grid{flex:1; min-height:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(3,minmax(0,1fr));
+  gap:clamp(.55rem,1.3vw,1rem); padding:.5rem .2rem .1rem;}
+.fl-grid .clip{position:relative; margin:0; min-height:0; transition:transform .18s ease;}
+.fl-grid .clip:nth-child(2){transform:rotate(1.2deg);} .fl-grid .clip:nth-child(3){transform:rotate(-1.1deg);}
+.fl-grid .clip:nth-child(4){transform:rotate(.9deg);} .fl-grid .clip:nth-child(5){transform:rotate(-1.3deg);}
+.fl-grid .clip:nth-child(6){transform:rotate(1deg);}
+.fl-grid .clip:hover,.fl-photo:hover{transform:rotate(0) scale(1.03); z-index:5;}
+.fl-grid .clip-paper{height:100%; overflow:hidden; background:#faf7ee; border:1px solid #e6dcc4; border-radius:3px;
+  padding:.5rem .6rem .45rem; box-shadow:0 8px 18px rgba(40,30,10,.16);
+  background-image:radial-gradient(rgba(120,100,60,.06) 1px, transparent 1px); background-size:4px 4px; display:flex; flex-direction:column;}
+.fl-board .clip-tape{position:absolute; top:-8px; left:50%; width:60px; height:17px; transform:translateX(-50%) rotate(-3deg);
+  background:rgba(212,197,150,.55); border:1px solid rgba(180,160,110,.32); box-shadow:0 1px 3px rgba(0,0,0,.08); z-index:2;}
+.fl-grid .clip-kicker{font-family:'Inter',sans-serif; font-weight:800; font-size:clamp(.46rem,.74vw,.58rem); letter-spacing:.09em;
+  text-transform:uppercase; color:#a4373a; border-bottom:2px solid #1A3C34; padding-bottom:.18rem; margin-bottom:.22rem;}
+.fl-grid .clip-hed{font-family:'Merriweather',Georgia,serif; font-weight:800; color:#1a1a17; font-size:clamp(.68rem,1.1vw,.88rem); line-height:1.16; margin-bottom:.2rem;}
+.fl-grid .clip-deck{font-family:'Merriweather',Georgia,serif; color:#3a352c; font-size:clamp(.54rem,.82vw,.66rem); line-height:1.32; flex:1; min-height:0;}
+.fl-grid .clip-src{font-family:'Inter',sans-serif; font-style:italic; color:#7a7060; font-size:clamp(.44rem,.68vw,.55rem);
+  border-top:1px solid #e6dcc4; padding-top:.2rem; margin-top:.2rem; line-height:1.25;}
+.fl-photo{position:relative; margin:0; min-height:0; transform:rotate(-1.8deg); background:#fffdf8; padding:.42rem .42rem 0;
+  box-shadow:0 10px 22px rgba(40,30,10,.22); border:1px solid #e6dcc4; display:flex; flex-direction:column; transition:transform .18s ease;}
+.fl-photo img{flex:1; min-height:0; width:100%; object-fit:cover; display:block; position:static;}
+.fl-photo figcaption{font-family:'Caveat','Merriweather',cursive; font-style:italic; font-size:clamp(.66rem,1vw,.84rem); color:#5e5340;
+  text-align:center; padding:.22rem 0 .3rem;}
+@media(max-width:900px){ .bleed-media.fl-media{padding:1rem 1rem 4rem; height:auto !important; min-height:0; max-height:none; overflow:visible;}
+  .fl-board{height:auto;} .fl-grid{flex:none; grid-template-rows:none; grid-auto-rows:auto; grid-template-columns:1fr;}
+  .fl-grid .clip-paper{height:auto; overflow:visible;} .fl-photo{height:240px; flex:none;} }
+
 /* ── Water Footprint Face-Off (live class game) ─────────────────────────── */
 .slide.fp-slide{background:linear-gradient(158deg,#faf7f0,#f1ebdd);}
 .slide.fp-slide .eyebrow{color:#8a6a2f;} .slide.fp-slide .eyebrow::before{background:#8a6a2f;}
@@ -3108,8 +3167,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 </script></div>
   </div>
   <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
-</section>
-<section class="slide re-slide" data-type="content" style="--accent:#1C7293">
+<button type="button" class="re-open" data-re-open><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2.4"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2.5v2.5M15 2.5v2.5M9 19v2.5M15 19v2.5M2.5 9h2.5M2.5 15h2.5M19 9h2.5M19 15h2.5"/></svg><span>What&rsquo;s in your tech?</span><b>&#9656;</b></button><div class="re-pop" data-re-pop hidden role="dialog" aria-modal="true" aria-label="What&rsquo;s in Your Tech?"><div class="re-pop-card re-slide" style="--accent:#1C7293"><button type="button" class="re-pop-x" data-re-close>Close &times;</button>
   <style>
     .re-slide .slide-inner{height:100%;}
     .re-inner{display:flex; flex-direction:column; height:100%; gap:.4rem;}
@@ -3147,7 +3205,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
     @media(max-width:900px){.re-body{grid-template-columns:1fr;} .re-scene{min-height:180px;}}
   </style>
   <div class="slide-inner col re-inner">
-    <div class="eyebrow">9.3  ·  Why Are Minerals Important, and How Do We Get Them?  ·  Interactive</div>
+    <div class="eyebrow">9.3  ·  Rare Earth Elements  ·  Interactive</div>
     <h2 class="heading">What&rsquo;s in Your Tech?</h2><p class="tl-sub">The rare earth elements behind everyday things.</p>
     <div class="re-tabs" data-re-tabs></div>
     <div class="re-body">
@@ -3169,7 +3227,6 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
       </div>
     </div>
   </div>
-  <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
   <script>(function(){
     var sec=document.currentScript.closest('.re-slide');
     if(!sec||sec.dataset.wired)return; sec.dataset.wired='1';
@@ -3206,30 +3263,46 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
         '<text x="62" y="120" text-anchor="middle" font-size="10" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">color</text>'+
         '<text x="62" y="133" text-anchor="middle" font-size="10" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">display</text>'+
         '<path d="M86 126 L118 126" stroke="#5b6a63" stroke-width="2"/>';
-      // EV: the charging station and its cord say "electric car" at a glance; the rare earths
-      // themselves sit in the drive motor's permanent magnets, drawn beside it
-      A.ev='<path d="M24 248 q150 -4 296 0" fill="none" stroke="#7d8b85" stroke-width="2.5"/>'+
-        '<rect x="40" y="236" width="104" height="12" rx="3" fill="#cfd8dc" stroke="#4a5c66" stroke-width="2.5"/>'+
-        '<path d="M52 236 V66 q0 -14 14 -14 h52 q14 0 14 14 V236 Z" fill="#e8eef1" stroke="#4a5c66" stroke-width="3"/>'+
-        '<rect x="64" y="70" width="56" height="36" rx="6" fill="#8fd0e8" stroke="#26313a" stroke-width="2"/>'+
-        '<path d="M74 84 h22 M74 94 h34" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".8"/>'+
-        '<path d="M98 122 l-18 32 h15 l-10 30 l30 -40 h-15 l11 -22 z" fill="#ffcf4d" stroke="#8a6a2f" stroke-width="2" stroke-linejoin="round"/>'+
-        '<rect x="130" y="138" width="14" height="30" rx="4" fill="#cfd8dc" stroke="#4a5c66" stroke-width="2.5"/>'+
-        '<path d="M144 154 C186 160 170 236 214 234 C252 232 250 196 262 178" fill="none" stroke="#33413c" stroke-width="8" stroke-linecap="round"/>'+
-        '<path d="M144 154 C186 160 170 236 214 234 C252 232 250 196 262 178" fill="none" stroke="#6b7a82" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>'+
-        '<g transform="translate(266 172) rotate(32)">'+
-          '<rect x="-11" y="-36" width="22" height="40" rx="9" fill="#3b4750" stroke="#26313a" stroke-width="2.5"/>'+
-          '<circle cx="0" cy="-44" r="14" fill="#e8eef1" stroke="#26313a" stroke-width="2.5"/>'+
-          '<circle cx="-5" cy="-46" r="2.6" fill="#26313a"/><circle cx="5" cy="-46" r="2.6" fill="#26313a"/><circle cx="0" cy="-38" r="2.2" fill="#26313a"/>'+
+      // EV (10-03 redraw): a side-view hatchback plugged into a charger, with the floor battery and
+      // the front drive motor shown in cutaway; the rare earths sit in that motor's permanent magnets
+      A.ev='<ellipse cx="136" cy="219" rx="118" ry="7" fill="#26313a" opacity=".12"/>'+
+        '<path d="M8 220 q160 -3 324 0" fill="none" stroke="#7d8b85" stroke-width="2.5"/>'+
+        '<g transform="translate(4 30) scale(.8)">'+
+          '<path d="M34 212 L28 205 Q24 190 34 182 Q60 172 112 166 Q130 146 154 131 Q192 121 234 126 Q264 136 292 161 Q303 176 302 198 L300 212 L275 212 A30 30 0 0 0 215 212 L115 212 A30 30 0 0 0 55 212 Z" fill="#5d93b8" stroke="#26313a" stroke-width="3.2" stroke-linejoin="round"/>'+
+          '<path d="M40 190 Q120 178 296 186" fill="none" stroke="#ffffff" stroke-width="2.5" opacity=".35"/>'+
+          '<path d="M123 164 L154 137 Q170 132 186 132 L186 164 Z" fill="#cfeaf5" stroke="#26313a" stroke-width="2.4" stroke-linejoin="round"/>'+
+          '<path d="M193 164 L193 132 Q218 131 236 136 Q256 146 271 164 Z" fill="#cfeaf5" stroke="#26313a" stroke-width="2.4" stroke-linejoin="round"/>'+
+          '<path d="M131 158 L152 140" stroke="#ffffff" stroke-width="3" opacity=".7" stroke-linecap="round"/>'+
+          '<path d="M189 168 V208 M121 168 Q120 190 124 208" fill="none" stroke="#26313a" stroke-width="2" opacity=".7"/>'+
+          '<rect x="166" y="176" width="14" height="4" rx="2" fill="#26313a"/><rect x="232" y="176" width="14" height="4" rx="2" fill="#26313a"/>'+
+          '<path d="M30 186 q6 -6 16 -6" fill="none" stroke="#fff3c4" stroke-width="5" stroke-linecap="round"/>'+
+          '<rect x="294" y="168" width="8" height="12" rx="3" fill="#c0453a"/>'+
+          /* cutaway: the floor battery and the front motor */
+          '<rect x="112" y="194" width="106" height="13" rx="3" fill="#f6e6c8" stroke="#8a6a2f" stroke-width="2" stroke-dasharray="4 3"/>'+
+          '<path d="M128 196 v9 M144 196 v9 M160 196 v9 M176 196 v9 M192 196 v9 M208 196 v9" stroke="#8a6a2f" stroke-width="1.6" opacity=".7"/>'+
+          '<circle cx="85" cy="194" r="11" fill="#f6e6c8" stroke="#8a6a2f" stroke-width="2" stroke-dasharray="4 3"/>'+
+          /* wheels */
+          '<circle cx="85" cy="212" r="25" fill="#26313a"/><circle cx="85" cy="212" r="13" fill="#cfd8dc" stroke="#4a5c66" stroke-width="2"/><circle cx="85" cy="212" r="4" fill="#4a5c66"/>'+
+          '<circle cx="245" cy="212" r="25" fill="#26313a"/><circle cx="245" cy="212" r="13" fill="#cfd8dc" stroke="#4a5c66" stroke-width="2"/><circle cx="245" cy="212" r="4" fill="#4a5c66"/>'+
+          '<rect x="281" y="160" width="9" height="9" rx="2" fill="#26313a"/>'+
         '</g>'+
-        '<circle cx="262" cy="78" r="40" fill="#f6e6c8" stroke="#8a6a2f" stroke-width="3"/>'+
-        '<path d="M262 42 v8 M262 106 v8 M226 78 h8 M290 78 h8 M237 53 l6 6 M281 97 l6 6 M287 53 l-6 6 M243 97 l-6 6" stroke="#b5653d" stroke-width="4" stroke-linecap="round"/>'+
-        '<circle cx="262" cy="78" r="22" fill="#fffdf6" stroke="#8a6a2f" stroke-width="2"/>'+
-        '<path d="M262 78 L262 56 A22 22 0 0 1 284 78 Z" fill="#A4373A"/><path d="M262 78 L284 78 A22 22 0 0 1 262 100 Z" fill="#2F5D8A"/>'+
-        '<path d="M262 78 L262 100 A22 22 0 0 1 240 78 Z" fill="#A4373A"/><path d="M262 78 L240 78 A22 22 0 0 1 262 56 Z" fill="#2F5D8A"/>'+
-        '<circle cx="262" cy="78" r="5" fill="#3b4750"/>'+
-        '<text x="262" y="28" text-anchor="middle" font-size="11" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">drive-motor magnets</text>'+
-        '<text x="92" y="270" text-anchor="middle" font-size="11" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">charging station</text>';
+        /* the charger and its cord into the charge port */
+        '<path d="M282 214 V96 q0 -10 10 -10 h24 q10 0 10 10 V214 Z" fill="#e8eef1" stroke="#4a5c66" stroke-width="2.6"/>'+
+        '<rect x="276" y="212" width="56" height="8" rx="2" fill="#cfd8dc" stroke="#4a5c66" stroke-width="2"/>'+
+        '<rect x="289" y="96" width="30" height="22" rx="4" fill="#8fd0e8" stroke="#26313a" stroke-width="1.8"/>'+
+        '<path d="M306 124 l-9 15 h7 l-5 14 l14 -19 h-7 l5 -10 z" fill="#ffcf4d" stroke="#8a6a2f" stroke-width="1.6" stroke-linejoin="round"/>'+
+        '<path d="M283 160 C262 162 262 190 244 180 C236 176 236 166 236 164" fill="none" stroke="#33413c" stroke-width="5" stroke-linecap="round"/>'+
+        /* callouts */
+        '<circle cx="64" cy="66" r="34" fill="#f6e6c8" stroke="#8a6a2f" stroke-width="2.5"/>'+
+        '<circle cx="64" cy="66" r="20" fill="#fffdf6" stroke="#8a6a2f" stroke-width="2"/>'+
+        '<path d="M64 66 L64 46 A20 20 0 0 1 84 66 Z" fill="#A4373A"/><path d="M64 66 L84 66 A20 20 0 0 1 64 86 Z" fill="#2F5D8A"/>'+
+        '<path d="M64 66 L64 86 A20 20 0 0 1 44 66 Z" fill="#A4373A"/><path d="M64 66 L44 66 A20 20 0 0 1 64 46 Z" fill="#2F5D8A"/>'+
+        '<circle cx="64" cy="66" r="4.5" fill="#3b4750"/>'+
+        '<path d="M70 100 L72 176" stroke="#5b6a63" stroke-width="1.8" stroke-dasharray="4 3"/>'+
+        '<text x="64" y="22" text-anchor="middle" font-size="11" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">drive-motor magnets</text>'+
+        '<text x="134" y="250" text-anchor="middle" font-size="11" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">battery pack under the floor</text>'+
+        '<path d="M134 240 L134 196" stroke="#5b6a63" stroke-width="1.6" stroke-dasharray="4 3"/>'+
+        '<text x="304" y="250" text-anchor="middle" font-size="11" font-weight="800" fill="#5b6a63" font-family="Inter,sans-serif">charger</text>';
       A.turbine='<path d="M158 250 L182 250 L176 96 L164 96 Z" fill="#e8eef1" stroke="#4a5c66" stroke-width="2.5"/>'+
         '<rect x="150" y="76" width="44" height="24" rx="9" fill="#dfe8ec" stroke="#4a5c66" stroke-width="2.5"/>'+
         '<g stroke="#4a5c66" stroke-width="2.5" fill="#f4f9fb">'+
@@ -3287,7 +3360,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
     var DEV=[
       {id:'phone', tab:'Smartphone', cap:'Display, glass, speakers and the vibration motor',
        els:['Y','Ce','Pr','Nd','Eu','Tb','Dy']},
-      {id:'ev', tab:'Electric vehicle', cap:'Drive motor magnets, battery, catalytic converter',
+      {id:'ev', tab:'Electric vehicle', cap:'Drive-motor magnets, the dashboard display, and nickel-metal-hydride batteries in hybrids',
        els:['La','Ce','Pr','Nd','Sm','Dy']},
       {id:'turbine', tab:'Wind turbine', cap:'Permanent-magnet generator in the nacelle',
        els:['Pr','Nd','Tb','Dy']},
@@ -3332,6 +3405,22 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
     }
     paint();
   })();</script>
+</div></div><script>(function(){
+  var s=document.currentScript.closest('.slide'); if(!s||s.dataset.rePop) return; s.dataset.rePop='1';
+  var pop=s.querySelector('[data-re-pop]'), btn=s.querySelector('[data-re-open]');
+  function open(){ pop.hidden=false; var x=pop.querySelector('[data-re-close]'); if(x) x.focus({preventScroll:true}); }
+  function close(){ if(!pop.hidden){ pop.hidden=true; btn.focus({preventScroll:true}); } }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); open(); });
+  pop.addEventListener('click', function(e){ if(e.target===pop || (e.target.closest && e.target.closest('[data-re-close]'))) close(); e.stopPropagation(); });
+  /* while it is open, Escape, the arrow keys and a clicker close it instead of changing slides */
+  window.addEventListener('keydown', function(e){
+    if(pop.hidden) return;
+    if(['Escape','ArrowRight','ArrowLeft','PageDown','PageUp',' '].indexOf(e.key)>-1){
+      if(e.key===' ' && e.target && e.target.closest && e.target.closest('button')) return;
+      e.preventDefault(); e.stopImmediatePropagation(); close(); }
+  }, true);
+  new MutationObserver(function(){ if(!s.classList.contains('active')) close(); }).observe(s, {attributes:true, attributeFilter:['class']});
+})();</script>
 </section>
 <section class="slide embed" data-type="embed" style="--accent:#1C7293">
   <div class="embed-head">
@@ -3346,31 +3435,6 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
     <iframe class="embed-frame" data-src="https://ourworldindata.org/grapher/global-mine-production-minerals?tab=chart" title="Global mine production of minerals" loading="lazy" allow="web-share; clipboard-write"></iframe>
   </div>
 </section>
-<section class="slide embed" data-type="embed" style="--accent:#1C7293">
-  <div class="embed-head">
-    <div class="embed-head-text">
-      <div class="eyebrow">9.3  ·  Why Are Minerals Important, and How Do We Get Them?</div>
-      <h2 class="embed-title">Copper and lithium</h2>
-      <div class="embed-sub">The same mine-production data, filtered to the two metals the book highlights. Note the y-axes: copper is mined in the tens of millions of tonnes, lithium in the hundreds of thousands.</div>
-    </div>
-    <a class="embed-open" href="https://ourworldindata.org/grapher/global-mine-production-minerals?country=Copper~Lithium" target="_blank" rel="noopener">Open ↗</a>
-  </div>
-  <div class="embed-wrap">
-    <iframe class="embed-frame" data-src="https://ourworldindata.org/grapher/global-mine-production-minerals?tab=chart&country=Copper~Lithium&facet=entity&uniformYAxis=0" title="Copper and lithium" loading="lazy" allow="web-share; clipboard-write"></iframe>
-  </div>
-</section>
-<section class="slide" data-type="content" style="--accent:#1C7293">
-  <div class="bleed-grid">
-    <div class="bleed-text">
-<div class="eyebrow">9.3  ·  Case Study: The Costs of Rare Earth Mining in Baotou</div>
-<h2 class="heading">The Hidden Cost of Clean Tech</h2>
-<ul class="bullets"><li>Baotou is a leading producer of the rare earth metals used in wind turbines and electric cars.</li><li>Refining these metals generates waste sludge (“mill tailings”) that contains hazardous and radioactive elements.</li><li>The waste sits in large toxic ponds; nearby crops have died and local livestock and residents have become sick.</li><li><strong>Takeaway:</strong> the clean-energy transition carries its own environmental-justice costs at the point of extraction.</li></ul>
-<p class="note">Tailings pipeline near Baotou, Inner Mongolia</p>
-    </div>
-    <div class="bleed-media cover"><img loading="lazy" decoding="async" data-src="media/image10.jpg" alt=""></div>
-  </div>
-  <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
-</section>
 <section class="slide" data-type="content" style="--accent:#2F5D8A">
   <div class="bleed-grid">
     <div class="bleed-text">
@@ -3380,17 +3444,6 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 <p class="note">Hudson River School landscape (T. Cole)</p>
     </div>
     <div class="bleed-media cover sidestack"><img loading="lazy" decoding="async" data-src="media/image11.jpg" alt=""><img loading="lazy" decoding="async" data-src="media/image12.jpg" alt=""></div>
-  </div>
-  <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
-</section>
-<section class="slide" data-type="content" style="--accent:#2F5D8A">
-  <div class="bleed-grid">
-    <div class="bleed-text">
-<div class="eyebrow">9.4  ·  Processes That Shape the Land</div>
-<h2 class="heading">Moving Sediment, Ice &amp; Water</h2>
-<div class="pairs"><div class="pair"><div class="pair-head">Sediment &amp; Headwaters</div><div class="pair-desc">Sediment originates in elevated headwaters and is carried by river networks to depositional environments (floodplains, deltas, and estuaries).</div></div><div class="pair"><div class="pair-head">Landslides</div><div class="pair-desc">Large mass movements reshape landscapes quickly. Forestry and excavation can trigger them.</div></div><div class="pair"><div class="pair-head">Glaciers</div><div class="pair-desc">A glacier is a mass of ice that flows over land and persists year-round, sculpting valleys as it moves.</div></div><div class="pair"><div class="pair-head">Overland Flow &amp; Runoff</div><div class="pair-desc">When soil is saturated or rain falls too fast, water runs off. Impervious paved surfaces send even more water as runoff.</div></div></div>
-    </div>
-    <div class="bleed-media contain"><img loading="lazy" decoding="async" data-src="media/image1.jpg" alt=""></div>
   </div>
   <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
 </section>
@@ -3989,13 +4042,26 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 <section class="slide" data-type="content" style="--accent:#2D6A4F">
   <div class="bleed-grid">
     <div class="bleed-text">
-<div class="eyebrow">9.7  ·  Forestry, Urbanization, and Sustainable Land Use</div>
-<h2 class="heading">Forestry, Urbanization, and Sustainable Land Use</h2>
-<div class="pairs"><div class="pair"><div class="pair-head">Deforestation</div><div class="pair-desc">Humans deforest 13 million hectares per year (larger than Pennsylvania). <u>Deforestation causes land degradation.</u> <u>Deforestation is incredibly consequential and directly impacts all life-support systems.</u></div></div><div class="pair"><div class="pair-head">Urbanization</div><div class="pair-desc"><u>Land-use change: converting forests into urban areas.</u> Cities reclaim brownfields (contaminated industrial sites) for new use. San Antonio's River Walk restored a waterfront as a community amenity.</div></div><div class="pair"><div class="pair-head">Green Urban Design</div><div class="pair-desc">Rain gardens, permeable surfaces, and vegetation-based stormwater management reduce runoff and restore infiltration.</div></div><div class="pair"><div class="pair-head">Values &amp; Land Use</div><div class="pair-desc">Sustainable urban planning integrates economic and political choiceshose values shape how land is used?</div></div></div>
+<div class="eyebrow">9.7  ·  Forestry and Urbanization</div>
+<h2 class="heading">Forestry and Urbanization</h2>
+<div class="pairs"><div class="pair"><div class="pair-head">Deforestation</div><div class="pair-desc">Humans deforest 13 million hectares per year (larger than Pennsylvania). <u>Deforestation can lead to land degradation.</u> <u>Deforestation is incredibly consequential and directly impacts all life-support systems.</u></div></div><div class="pair"><div class="pair-head">Urbanization</div><div class="pair-desc"><u>Land-use change: converting forests into urban areas.</u> Cities reclaim brownfields (contaminated industrial sites) for new use. San Antonio's River Walk restored a waterfront as a community amenity.</div></div></div>
     </div>
-    <div class="bleed-media cover sidestack"><img loading="lazy" decoding="async" data-src="media/image27.jpg" alt=""><img loading="lazy" decoding="async" data-src="media/image26.jpg" alt=""></div>
+    <div class="bleed-media fl-media"><div class="fl-board"><div class="fl-head"><span>Flagstaff in the headlines</span><em>When the forest burns, the town floods</em></div><div class="fl-grid"><figure class="fl-photo"><div class="clip-tape"></div><img loading="lazy" decoding="async" data-src="media/flagstaff_forest.jpg" alt="Ponderosa pines, a gravel path and mountains under summer clouds in Flagstaff, Arizona."><figcaption>Flagstaff, Arizona</figcaption></figure><figure class="clip"><div class="clip-tape"></div><div class="clip-paper"><div class="clip-kicker">FLAGSTAFF · JULY 2010</div><div class="clip-hed">Floods Pour Off the Schultz Fire Burn Scar</div><div class="clip-deck">A month after fire burned more than 15,000 acres of forest, 1 to 3 inches of monsoon rain flooded about 85 homes in Timberline and Doney Park. One person died.</div><div class="clip-src">Source: National Weather Service Flagstaff, “2010 Doney Park Flooding”</div></div></figure><figure class="clip"><div class="clip-tape"></div><div class="clip-paper"><div class="clip-kicker">FLAGSTAFF · NOV. 2012</div><div class="clip-hed">Voters Approve $10 Million to Thin the Forest</div><div class="clip-deck">74% of city voters backed the Flagstaff Watershed Protection Project, to cut the risk of severe wildfire and the floods that follow.</div><div class="clip-src">Source: Flagstaff Watershed Protection Project</div></div></figure><figure class="clip"><div class="clip-tape"></div><div class="clip-paper"><div class="clip-kicker">SUNNYSIDE · AUG. 2021</div><div class="clip-hed">A 200-to-500-Year Storm Hits the Museum Fire Burn Scar</div><div class="clip-deck">More than 3 inches of rain in an hour fell on slopes burned in 2019, and floodwater ran into the Sunnyside neighborhood.</div><div class="clip-src">Source: KNAU, “200-500 Year Rainfall Event Hits Flagstaff’s Museum Fire Burn Scar,” Aug. 17, 2021</div></div></figure><figure class="clip"><div class="clip-tape"></div><div class="clip-paper"><div class="clip-kicker">FLAGSTAFF · 2021</div><div class="clip-hed">One Fire’s Bill Reaches About $100 Million</div><div class="clip-deck">Ten years of firefighting, flood repair and flood control after the Schultz Fire cost an estimated $96 to $101 million.</div><div class="clip-src">Source: Ecological Restoration Institute, Northern Arizona University, 2021</div></div></figure><figure class="clip"><div class="clip-tape"></div><div class="clip-paper"><div class="clip-kicker">COCONINO ESTATES · JULY 2022</div><div class="clip-hed">Burn Scars Flood Neighborhoods for the Third Time in a Week</div><div class="clip-deck">Bare, water-repellent soil on the new Pipeline Fire scar sent mud and debris into neighborhoods and closed Highway 180.</div><div class="clip-src">Source: KNAU, “Monsoon, wildfire burn scars wreak flooding havoc on Flagstaff neighborhoods,” July 30, 2022</div></div></figure></div></div></div>
   </div>
   <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
+</section>
+<section class="slide embed" data-type="embed" style="--accent:#1C7293">
+  <div class="embed-head">
+    <div class="embed-head-text">
+      <div class="eyebrow">9.3  ·  Why Are Minerals Important, and How Do We Get Them?</div>
+      <h2 class="embed-title">Copper and lithium</h2>
+      <div class="embed-sub">The same mine-production data, filtered to the two metals the book highlights. Note the y-axes: copper is mined in the tens of millions of tonnes, lithium in the hundreds of thousands.</div>
+    </div>
+    <a class="embed-open" href="https://ourworldindata.org/grapher/global-mine-production-minerals?country=Copper~Lithium" target="_blank" rel="noopener">Open ↗</a>
+  </div>
+  <div class="embed-wrap">
+    <iframe class="embed-frame" data-src="https://ourworldindata.org/grapher/global-mine-production-minerals?tab=chart&country=Copper~Lithium&facet=entity&uniformYAxis=0" title="Copper and lithium" loading="lazy" allow="web-share; clipboard-write"></iframe>
+  </div>
 </section>
 <section class="slide cg-slide rm-slide" data-type="game"
          data-game-id="ch9-reclaim" style="--accent:#8a6a2f">
@@ -5784,17 +5850,6 @@ window.__deckLiveReady.then(function(live){
 
 })();</script>
 </section>
-<section class="slide" data-type="content" style="--accent:#BC8A2E">
-  <div class="bleed-grid">
-    <div class="bleed-text">
-<div class="eyebrow">9.8  ·  What Can I Do?</div>
-<h2 class="heading">Sustaining the Land</h2>
-<ul class="bullets"><li>Recycle and conserve rare earth mineral. Avoid unnecessary electronics upgrades; recycle old devices properly.</li><li>Know how your food affects soil health and choose sustainably grown products. <u>Healthy soil supports plant growth and nutrient cycling.</u></li><li>Get informed about development decisions in your area by attending city planning meetings.</li><li>Be prepared for natural hazards. Learn about local risks from earthquakes, landslides, and flooding.</li></ul>
-    </div>
-    <div class="bleed-media cover"><img loading="lazy" decoding="async" data-src="media/image28.jpg" alt=""></div>
-  </div>
-  <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
-</section>
 <section class="slide" data-type="grid" style="--accent:#36454F">
   <div class="slide-inner col">
     <div class="eyebrow">Chapter 9  ·  Key Concepts</div>
@@ -5811,7 +5866,7 @@ window.__deckLiveReady.then(function(live){
 
 <div class="hud">
   <button onclick="prev()" title="Previous (left arrow)">&#8249;</button>
-  <span class="counter" id="counter">1 / 26</span>
+  <span class="counter" id="counter">1 / 22</span>
   <button onclick="next()" title="Next (right arrow)">&#8250;</button>
   <button onclick="toggleMenu()" title="Slide menu (O)">&#9776;</button>
   <button onclick="toggleFs()" title="Fullscreen (F)">&#9974;</button>
@@ -5820,7 +5875,7 @@ window.__deckLiveReady.then(function(live){
 <div class="menu" id="menu">
   <button class="menu-close" onclick="toggleMenu(false)" aria-label="Close menu">&times;</button>
   <h3>Chapter 9 &middot; Jump to a slide</h3>
-  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Book: Material World</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>▶ Mine to Phone</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>9.1 Internal Structure</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>9.1 Magnetic Navigation</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>9.2 The Rock Cycle</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>9.3 ▶ Rare Earths: Behind the Screen</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>9.3 ▶ What's in Your Tech?</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>9.3 ▶ Mine Production (OWID)</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>9.3 ▶ Copper &amp; Lithium (OWID)</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>9.3 Case Study: Baotou</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>9.4 Landscapes &amp; Watersheds</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>9.4 Processes</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>9.5 Soil Horizons</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>9.6 ▶ CLORPT Soil Builder</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>9.5 ▶ Soil Examples: Where in the World?</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>9.7 Soil Erosion</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>9.7 Restoration</button><button class="menu-item" data-go="20"><span class="menu-num">21</span>9.7 ▶ Rank: Material Use</button><button class="menu-item" data-go="21"><span class="menu-num">22</span>9.7 Mining ▶ OWID</button><button class="menu-item" data-go="22"><span class="menu-num">23</span>9.7 Forestry &amp; Urbanization</button><button class="menu-item" data-go="23"><span class="menu-num">24</span>9.7 ▶ Game: Reclaim the Mine</button><button class="menu-item" data-go="24"><span class="menu-num">25</span>9.8 What Can I Do?</button><button class="menu-item" data-go="25"><span class="menu-num">26</span>Key Concepts</button></div>
+  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Book: Material World</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>▶ Mine to Phone</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>9.1 Internal Structure</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>9.1 Magnetic Navigation</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>9.2 The Rock Cycle</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>9.3 ▶ Rare Earths: Behind the Screen</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>9.3 ▶ Mine Production (OWID)</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>9.4 Landscapes &amp; Watersheds</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>9.5 Soil Horizons</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>9.6 ▶ CLORPT Soil Builder</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>9.5 ▶ Soil Examples: Where in the World?</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>9.7 Soil Erosion</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>9.7 Restoration</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>9.7 ▶ Rank: Material Use</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>9.7 Mining ▶ OWID</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>9.7 Forestry &amp; Urbanization</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>9.3 ▶ Copper &amp; Lithium (OWID)</button><button class="menu-item" data-go="20"><span class="menu-num">21</span>9.7 ▶ Game: Reclaim the Mine</button><button class="menu-item" data-go="21"><span class="menu-num">22</span>Key Concepts</button></div>
 </div>
 
 <script>
