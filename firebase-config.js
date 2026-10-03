@@ -26,6 +26,10 @@ window.FIREBASE_CONFIG = {
   measurementId: "G-0G7T944VXS"
 };
 
+// Exit-survey mailer for the live games (Apps Script, see _deck-builder/survey-mail.gs).
+window.SURVEY_MAIL_URL = "https://script.google.com/macros/s/AKfycbyrRNrQjbAiYugFw131rfJMIt2E2fneUnx9ryatdU98DMdyC4NkZI2LP8dnqQK3E2LZ/exec";
+
+
 // ─────────────────────────────────────────────────────────────────────────
 // LIVE ATTENDANCE (same endpoint + form as Chapter 1; see
 // _deck-builder/ATTENDANCE-SETUP.md).
