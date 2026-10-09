@@ -7941,7 +7941,7 @@ show(start);
     const trueRank=new Array(N); if(answer) answer.forEach((idx,p)=>trueRank[idx]=p+1);
     let unit = rich ? rich.units[0].key : null;
     const escH = s=>String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-    const fmtN = (v,r)=>{ const x=Math.round(v/r)*r; return x.toLocaleString('en-US',{maximumFractionDigits: r<1? String(r).split('.')[1].length : 0}); };
+    const fmtN = (v,r)=>{ r=+r||1; const x=Math.round(v/r)*r; return x.toLocaleString('en-US',{maximumFractionDigits: r<1? (String(r).split('.')[1]||'').length : 0}); };   // round:0 means whole numbers
     function unitOf(){ return rich.units.find(u=>u.key===unit) || rich.units[0]; }
     function shown(i){ const u=unitOf(); return fmtN(rich.amt[i]*u.factor, u.round); }
     const pct = x=> Math.round(x*100)+'%';
