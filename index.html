@@ -1099,6 +1099,82 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   .sx-vig{max-height:none;}
 }
 
+/* ── Dig Deeper (ch9_dig.py) ── */
+.slide.dg-slide{background:linear-gradient(158deg,#faf7f0,#f1ebdd);}
+.dg-slide > *{--accent:#8a6a2f;}
+.dg-wrap{position:absolute; inset:0; display:flex; flex-direction:column; padding:clamp(1rem,2.6vh,2rem) clamp(1.2rem,2.6vw,2.4rem) clamp(2.8rem,6vh,3.4rem);}
+.dg-head .eyebrow{color:#8a6a2f;} .dg-head .eyebrow::before{background:#8a6a2f;}
+.dg-head .heading{color:#3b3222; margin-bottom:0;}
+.dg-panel{flex:1; min-height:0; display:flex; flex-direction:column; margin-top:.4rem;}
+.dg-btn{font:inherit; cursor:pointer; font-weight:800; font-size:clamp(.74rem,1.1vw,.9rem); color:#fff; background:#8a6a2f; border:0; border-radius:999px; padding:.5rem 1.2rem;}
+.dg-btn.ghost{background:transparent; color:#7a7260; border:1.5px solid rgba(120,100,60,.4);}
+.dg-ctl{display:flex; align-items:center; gap:.7rem; margin-top:.7rem;}
+.dg-hint{font-size:clamp(.62rem,.9vw,.74rem); color:#8a8069; font-style:italic;}
+.dg-wait{margin-top:.8rem; font:italic 700 clamp(.85rem,1.3vw,1.05rem) 'Merriweather',serif; color:#5e5340;}
+.dg-intro{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;}
+.dg-cards{display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; width:min(900px,100%);}
+.dg-card{background:#fbf5e6; border:1px solid rgba(120,100,60,.32); outline:1px solid rgba(138,106,47,.4); outline-offset:-6px; border-radius:10px; padding:.8rem 1rem 1rem; text-align:center;}
+.dg-card b{font:900 clamp(1rem,1.6vw,1.25rem) 'Merriweather',serif; color:#3b3222;}
+.dg-cart{filter:blur(5px) saturate(.6); opacity:.55;}
+.dg-ck{font:800 clamp(.56rem,.84vw,.66rem) 'Inter',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:#8a6a2f; margin-top:.3rem;}
+.dg-art{display:block; width:100%; height:auto;}
+.dg-play{flex:1; min-height:0; display:grid; grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); gap:clamp(1rem,2vw,1.8rem);}
+.dg-left{display:flex; flex-direction:column; min-width:0; min-height:0; overflow:auto;}
+.dg-tag{font:800 clamp(.6rem,.9vw,.72rem) 'Inter',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:#8a6a2f;}
+.dg-q{font:900 clamp(1rem,1.65vw,1.32rem) 'Merriweather',serif; color:#2a2418; line-height:1.3; margin:.35rem 0 .7rem;}
+.dg-opts{display:flex; flex-direction:column; gap:.4rem;}
+.dg-opt{display:flex; align-items:center; gap:.7rem; font:inherit; text-align:left; cursor:pointer; background:#fffdf6; border:1.5px solid rgba(120,100,60,.32);
+  border-radius:10px; padding:.5rem .8rem; transition:border-color .15s, background .15s, opacity .3s;}
+.dg-opt:hover:not(:disabled){border-color:#8a6a2f; background:#f6ecd4;}
+.dg-opt:disabled{cursor:default;}
+.dg-l{flex:none; width:1.7rem; height:1.7rem; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:#efe6d2; color:#5e5340; font:900 .8rem 'Inter',sans-serif;}
+.dg-t{font-size:clamp(.78rem,1.15vw,.94rem); font-weight:700; color:#3b3222;}
+.dg-opt.mine{border-color:#2f5f84; box-shadow:0 0 0 2px rgba(47,95,132,.25);} .dg-opt.mine .dg-l{background:#2f5f84; color:#fff;}
+.dg-opt.right{border-color:#8a6a2f; background:linear-gradient(90deg,#f6e3b4,#fffdf6 70%);} .dg-opt.right .dg-l{background:#8a6a2f; color:#fff;}
+.dg-opt.wrong{opacity:.5;}
+.dg-live,.dg-me{margin-top:.8rem; font:italic 700 clamp(.78rem,1.15vw,.92rem) 'Merriweather',serif; color:#5e5340;}
+.dg-live b{font-style:normal; font-size:1.5em; color:#8a6a2f;}
+.dg-ans{margin-top:.7rem; animation:dgIn .5s ease .9s both;}
+.dg-big{font:900 clamp(1.1rem,1.9vw,1.5rem) 'Merriweather',serif; color:#a8483f; line-height:1.15;}
+.dg-ans p{margin:.3rem 0 0; font-size:clamp(.72rem,1.05vw,.86rem); color:#3b3222; line-height:1.45;}
+.dg-ans .dg-cite{font-size:clamp(.62rem,.86vw,.72rem); color:#6f6450;}
+.dg-right{display:flex; flex-direction:column; gap:.6rem; min-width:0; min-height:0;}
+.dg-viz{position:relative; flex:1; min-height:0; display:flex; align-items:center; justify-content:center; background:#fbf5e6; border:1px solid rgba(120,100,60,.32);
+  outline:1px solid rgba(138,106,47,.4); outline-offset:-6px; border-radius:10px; padding:.4rem .6rem; box-shadow:0 10px 24px -16px rgba(60,40,10,.45);}
+.dg-viz svg{width:100%; height:100%; max-height:100%;}
+.dg-viz.ev{animation:dgIn .6s ease 1.4s both;}
+.dg-viz.tease{flex:1;}
+.dg-blur{filter:blur(7px) saturate(.5); opacity:.45;}
+.dg-veil{position:absolute; inset:auto 0 1rem 0; text-align:center; font:italic 700 clamp(.78rem,1.1vw,.92rem) 'Merriweather',serif; color:#5e5340;}
+.dg-core.ok .dg-rim{filter:url(#dgNib) drop-shadow(0 0 6px rgba(217,164,65,.8));}
+.dg-seal{animation:dgIn .5s ease 1.4s both;}
+.dg-grow{transform-box:fill-box; transform-origin:50% 100%; animation:dgGrow 1s cubic-bezier(.2,1.1,.4,1) var(--d,0s) both;}
+.dg-fade{animation:dgIn .6s ease var(--d,0s) both;}
+.dg-beam{transform-origin:260px 96px; animation:dgLevel 2.2s cubic-bezier(.35,.1,.25,1) .3s both;}
+.dg-pan{transition:none;}
+.dg-pan.l{transform-origin:100px 96px; animation:dgCounterL 2.2s cubic-bezier(.35,.1,.25,1) .3s both;}
+.dg-pan.r{transform-origin:420px 96px; animation:dgCounterL 2.2s cubic-bezier(.35,.1,.25,1) .3s both;}
+@keyframes dgGrow{from{transform:scale(.05); opacity:0} to{transform:none; opacity:1}}
+@keyframes dgIn{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+@keyframes dgLevel{from{transform:rotate(-17deg)} to{transform:rotate(0)}}
+@keyframes dgCounterL{from{transform:rotate(17deg)} to{transform:rotate(0)}}
+.dg-sums{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; width:min(1000px,100%);}
+.dg-sum{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:.8rem; align-items:center; background:#fbf5e6; border:1px solid rgba(120,100,60,.32); border-radius:10px; padding:.7rem;}
+.dg-sum .dg-cart{filter:none; opacity:1;}
+.dg-sumbig{font:900 clamp(.92rem,1.4vw,1.12rem) 'Merriweather',serif; color:#a8483f; line-height:1.2; margin-top:.2rem;}
+.dg-sump{font-size:clamp(.66rem,.95vw,.78rem); color:#5e5340; margin-top:.3rem;}
+.dg-bridge{margin:1.2rem 0 0; font:italic clamp(.95rem,1.5vw,1.2rem) 'Merriweather',serif; color:#3b3222;}
+@media(prefers-reduced-motion:reduce){ .dg-grow,.dg-fade,.dg-beam,.dg-pan,.dg-ans,.dg-viz.ev,.dg-seal{animation:none;} }
+@media(max-width:900px){ .dg-wrap{position:static;} .dg-play,.dg-cards,.dg-sums{grid-template-columns:1fr;} }
+
+/* ── the delta plate: sediment drifting downstream, plumes slowly spreading (subtle on purpose) ── */
+.dl-flow{animation:dlFlow 6s linear infinite; opacity:.85;}
+.dl-flow.sm{animation-duration:5s; opacity:.75;}
+@keyframes dlFlow{to{stroke-dashoffset:-165;}}
+.dl-plume{transform-box:fill-box; transform-origin:center; opacity:0; animation:dlPlume 7s ease-out infinite;}
+@keyframes dlPlume{0%{opacity:0; scale:.6} 25%{opacity:.32} 100%{opacity:0; scale:1.45}}
+@media(prefers-reduced-motion:reduce){ .dl-flow,.dl-plume{animation:none;} .dl-plume{opacity:0;} }
+
 
 /* announcements / upcoming assignments */
 .slide[data-type="announce"]{background:linear-gradient(160deg,#f7faf8,#eaf1ed);}
@@ -1202,150 +1278,6 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .at-close{margin-top:1rem; font-family:inherit; font-weight:700; color:var(--muted); background:#fff;
   border:1.5px solid var(--line); border-radius:11px; padding:.5rem 1.2rem; cursor:pointer;}
 .at-close:hover{border-color:var(--accent); color:var(--accent);}
-
-
-/* live ranking slide */
-.slide.ranking{background:linear-gradient(160deg,#f4f6f8,#e7edf1);}
-.rk-root{position:absolute; inset:0; display:flex; flex-direction:column;
-  padding:clamp(1.1rem,2.8vh,2rem) clamp(1.5rem,3.4vw,3.4rem) clamp(1rem,2.4vh,1.6rem);}
-.rk-head{margin-bottom:.3rem;}
-.rk-head .heading{margin-bottom:.2rem;}
-.rk-sub{font-size:clamp(.85rem,1.35vw,1rem); color:var(--muted); max-width:78ch;}
-.rk-toolbar{display:flex; justify-content:flex-end;}
-.rk-toolbar:empty{display:none;}
-.rk-revealbtn{font-family:inherit; font-weight:800; font-size:clamp(.78rem,1.25vw,.92rem);
-  padding:.4rem 1rem; border:none; border-radius:9px; cursor:pointer; color:#fff; background:#A4373A;
-  transition:filter .15s; margin:.2rem 0;}
-.rk-revealbtn:hover{filter:brightness(1.12);}
-.rk-revealbtn.on{background:#6b7f77;}
-.rk-revealbtn[hidden]{display:none;}
-.rk-list{list-style:none; flex:1; min-height:0; display:flex; flex-direction:column;
-  gap:clamp(.4rem,1.2vh,.7rem); justify-content:center; max-width:900px; width:100%; margin:.3rem auto 0;
-  counter-reset:none; padding:0;}
-.rk-list > :first-child{margin-top:auto;} .rk-list > :last-child{margin-bottom:auto;}
-.rk-list{overflow-y:auto; justify-content:flex-start;}
-/* 7+ items: tighter rows so the list fits a 16:9 screen */
-.rk-list.many{gap:clamp(.22rem,.75vh,.45rem);}
-.rk-list.many .rk-item{padding:clamp(.22rem,.7vh,.5rem) clamp(.7rem,1.4vw,1.1rem);}
-.rk-list.many .rk-moves{flex-direction:row; gap:.3rem;}
-.rk-list.many .rk-moves button{width:2.2rem; height:1.75rem; font-size:.8rem;}
-.slide.ranking.host .rk-list.many .rk-moves{display:none;}
-.rk-list.many .rk-rank{width:clamp(1.55rem,2.8vw,2.15rem); height:clamp(1.55rem,2.8vw,2.15rem); font-size:clamp(.85rem,1.4vw,1.1rem);}
-.rk-item{display:flex; align-items:center; gap:clamp(.7rem,1.6vw,1.2rem);
-  background:#fff; border:1px solid var(--line); border-left:5px solid var(--accent); border-radius:12px;
-  padding:clamp(.5rem,1.4vh,.85rem) clamp(.8rem,1.6vw,1.2rem); transition:transform .35s cubic-bezier(.22,.61,.36,1);}
-.rk-item.correct{border-left-color:#2D6A4F; box-shadow:0 4px 14px rgba(45,106,79,.18);}
-.rk-rank{flex:none; width:clamp(1.8rem,3.4vw,2.6rem); height:clamp(1.8rem,3.4vw,2.6rem);
-  display:flex; align-items:center; justify-content:center; border-radius:50%;
-  background:var(--accent); color:#fff; font-family:'Merriweather',serif; font-weight:900;
-  font-size:clamp(.95rem,1.7vw,1.3rem);}
-.rk-item.correct .rk-rank{background:#2D6A4F;}
-.rk-name{flex:1; min-width:0; font-weight:700; color:var(--forest); font-size:clamp(.92rem,1.55vw,1.15rem);
-  line-height:1.25;}
-.rk-avg{flex:none; font-family:'Inter',sans-serif; font-weight:600; color:var(--muted);
-  font-size:clamp(.7rem,1.15vw,.86rem); white-space:nowrap;}
-.rk-val{flex:none; font-family:'Merriweather',serif; font-weight:800; color:#2D6A4F;
-  font-size:clamp(.85rem,1.5vw,1.1rem); white-space:nowrap;}
-.rk-val[hidden]{display:none;}
-.rk-moves{flex:none; display:flex; flex-direction:column; gap:.15rem;}
-.rk-moves button{font-family:inherit; border:1px solid var(--line); background:#f5f8f7; color:var(--forest);
-  width:1.9rem; height:1.15rem; line-height:1; border-radius:5px; cursor:pointer; font-size:.7rem; padding:0;
-  transition:background .12s;}
-.rk-moves button:hover:not(:disabled){background:var(--accent); color:#fff; border-color:var(--accent);}
-.rk-moves button:disabled{opacity:.35; cursor:default;}
-.slide.ranking.host .rk-moves,.rk-list.locked .rk-moves{visibility:hidden;}
-.rk-foot{display:flex; align-items:center; gap:1rem; margin-top:clamp(.5rem,1.3vh,.9rem);
-  max-width:900px; width:100%; margin-left:auto; margin-right:auto;}
-.rk-total{font-size:clamp(.82rem,1.3vw,.98rem); color:#33453d;}
-.rk-total strong{font-family:'Merriweather',serif; color:var(--forest); font-size:1.15em;}
-.rk-hint{font-size:clamp(.78rem,1.2vw,.9rem); color:var(--muted); font-style:italic;}
-.rk-submit{font-family:inherit; font-weight:800; color:#fff; border:none; cursor:pointer;
-  background:var(--forest-mid); border-radius:10px; padding:.6rem 1.5rem;
-  font-size:clamp(.9rem,1.5vw,1.08rem); transition:filter .15s, transform .08s;}
-.rk-submit:hover:not(:disabled){filter:brightness(1.1);}
-.rk-submit:active:not(:disabled){transform:translateY(1px);}
-.rk-submit:disabled{background:#bcc7c2; cursor:not-allowed;}
-.slide.ranking.host .rk-submit{display:none;}
-.rk-note{text-align:center; font-size:clamp(.72rem,1.15vw,.86rem); color:var(--muted); font-style:italic;
-  margin-top:.3rem;}
-.rk-note[hidden]{display:none;}
-.rk-reset{margin-left:auto; background:#fff; border:1.5px solid var(--line); color:var(--muted);
-  font-family:inherit; font-size:.82rem; font-weight:600; padding:.5rem .9rem; border-radius:9px; cursor:pointer;}
-.rk-reset:hover{border-color:var(--accent); color:var(--accent);}
-/* rich reveal: animated results board (ranking_slide amounts=...) */
-.rk-replay{font-family:inherit; font-weight:700; font-size:clamp(.72rem,1.1vw,.86rem); margin:.2rem 0 .2rem .5rem;
-  padding:.38rem .9rem; border-radius:9px; cursor:pointer; background:#fff; color:var(--accent); border:1.5px solid var(--line);}
-.rk-replay:hover{border-color:var(--accent);}
-.rk-replay[hidden]{display:none;}
-.rk-list[hidden]{display:none;}
-.slide.ranking.rk-revealed .rk-sub{display:none;}
-.slide.ranking.rk-revealed .rk-toolbar{position:absolute; top:clamp(1.1rem,2.8vh,2rem); right:clamp(1.5rem,3.4vw,3.4rem);}
-.rk-res{flex:1; min-height:0; display:flex; flex-direction:column; overflow-y:auto; max-width:min(1400px, calc(100% - 6rem)); width:100%; margin:0 auto;}
-.rk-res > :first-child{margin-top:auto;} .rk-res > :last-child{margin-bottom:auto;}
-.rk-res[hidden]{display:none;}
-.rk-res-top{display:flex; align-items:center; justify-content:space-between; gap:.6rem 1rem; flex-wrap:wrap;}
-.rk-res-kicker{font-size:clamp(.64rem,1vw,.92rem); font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
-.rk-you-head{font-family:'Merriweather',serif; font-size:clamp(.95rem,1.6vw,1.5rem); color:var(--forest);}
-.rk-units{display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:#fff;}
-.rk-units button{font-family:inherit; font-size:clamp(.66rem,1vw,.95rem); font-weight:700; border:0; background:transparent;
-  color:var(--muted); padding:.28rem .8rem; cursor:pointer;}
-.rk-units button.on{background:var(--accent); color:#fff;}
-.rk-legend{display:flex; gap:1rem; font-size:clamp(.66rem,1vw,.95rem); color:var(--muted); margin:.2rem 0 .15rem;}
-.rk-legend i{display:inline-block; width:.8em; height:.8em; border-radius:3px; margin-right:.35em; vertical-align:-.05em;}
-.rk-res .g0{background:#6f8a5a;} .rk-res .g1{background:#b5643c;} .rk-res .g2{background:#4f86b0;} .rk-res .gx{background:var(--accent);}
-.rk-grid{display:grid; grid-template-columns:2.1em minmax(0,1fr) 6.4em 11em; column-gap:clamp(.5rem,1.2vw,1.1rem);
-  row-gap:clamp(.16rem,.75vh,.6rem); align-items:center; font-size:clamp(.72rem,1.28vw,1.3rem);}
-.rk-grid.you{grid-template-columns:2.1em minmax(0,1fr) 5em 6.4em 11em;}
-.rk-grid.noclass{grid-template-columns:2.1em minmax(0,1fr);}
-.rk-grid.noclass.you{grid-template-columns:2.1em minmax(0,1fr) 5em;}
-.rk-gh{font-size:.68em; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); align-self:end; line-height:1.2;}
-.rk-gh.c{text-align:center;}
-.rk-gh-sub{display:block; font-weight:600; letter-spacing:0; text-transform:none; font-size:.95em;}
-.rk-rn span{width:1.85em; height:1.85em; border-radius:50%; background:var(--accent); color:#fff; display:flex;
-  align-items:center; justify-content:center; font-family:'Merriweather',serif; font-weight:900;}
-.rk-rb{display:flex; align-items:center; gap:.7em; min-width:0;}
-.rk-rname{flex:0 0 8.6em; font-weight:800; color:var(--forest); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-.rk-rname small{font-weight:600; color:var(--muted); font-size:.8em;}
-.rk-bar{flex:1; min-width:0; display:flex; align-items:center; gap:.45em; height:1.45em;}
-.rk-bar i{display:block; height:100%; flex:0 0 calc(var(--w) * .74); border-radius:2px 7px 7px 2px; transform-origin:left center;}
-.rk-bar b{font-family:'Merriweather',serif; font-weight:900; color:var(--forest); white-space:nowrap; font-variant-numeric:tabular-nums;}
-.rk-bar em{font-style:normal; color:var(--muted); font-size:.82em; white-space:nowrap;}
-.rk-rc{display:flex; flex-direction:column; align-items:center; line-height:1.1;}
-.rk-rc span{font-family:'Merriweather',serif; font-weight:900; font-size:1.05em; color:var(--forest);}
-.rk-rc small{font-size:.7em; font-weight:700; white-space:nowrap;}
-.rk-rc.ok span,.rk-rc.ok small{color:#2D6A4F;}
-.rk-rc.near small{color:#9a7a2a;}
-.rk-rc.far span,.rk-rc.far small{color:#b3412f;}
-.rk-rx{display:flex; align-items:center; gap:.55em;}
-.rk-rx b{font-family:'Merriweather',serif; font-weight:900; min-width:2.5em; text-align:right; color:var(--forest); font-variant-numeric:tabular-nums;}
-.rk-strip{display:flex; gap:2px;}
-.rk-strip span{width:.8em; height:1.3em; border-radius:2px; background:rgba(138,106,47,var(--a));}
-.rk-strip span.hit{background:rgba(45,106,79,var(--a)); outline:2px solid #2D6A4F; outline-offset:1px;}
-.rk-calls{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.5rem,1vw,.9rem); margin-top:clamp(.4rem,1.2vh,.8rem);}
-.rk-call{background:#fff; border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:10px;
-  padding:.45em .75em .5em; font-size:clamp(.68rem,1.08vw,1.1rem); line-height:1.35; color:#3b3222;}
-.rk-call-h{font-size:.76em; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:.15em;}
-.rk-call.surprise{border-top-color:#b3412f;} .rk-call.surprise .rk-call-h{color:#b3412f;}
-.rk-call.good{border-top-color:#2D6A4F;} .rk-call.good .rk-call-h{color:#2D6A4F;}
-.rk-res.anim .rk-r{opacity:0; animation:rkIn .5s cubic-bezier(.22,.61,.36,1) var(--d) forwards;}
-.rk-res.anim .rk-bar i{transform:scaleX(0); animation:rkGrow .95s cubic-bezier(.22,.61,.36,1) calc(var(--d) + .12s) forwards;}
-@keyframes rkIn{from{opacity:0; transform:translateX(-14px);} to{opacity:1; transform:none;}}
-@keyframes rkGrow{to{transform:scaleX(1);}}
-@media (prefers-reduced-motion:reduce){ .rk-res.anim .rk-r,.rk-res.anim .rk-bar i{animation-duration:.01s; animation-delay:0s;} }
-@media (max-width:760px){
-  .rk-res{max-width:100%;}
-  .rk-foot{flex-wrap:wrap; gap:.4rem .8rem;}
-  .rk-hint{order:3; flex-basis:100%;}
-  .rk-sub{font-size:.8rem;}
-  .slide.ranking.rk-revealed .rk-toolbar{position:static;}
-  .rk-grid{grid-template-columns:1.7em minmax(0,1fr) 4.4em 3.2em; font-size:.8rem;}
-  .rk-grid.you{grid-template-columns:1.7em minmax(0,1fr) 3.6em 3.9em 3em;}
-  .rk-rb{flex-direction:column; align-items:stretch; gap:.05em;}
-  .rk-rname{flex:none;}
-  .rk-bar{height:1.1em;}
-  .rk-strip,.rk-gh-sub{display:none;}
-  .rk-calls{grid-template-columns:1fr;}
-}
 </style>
 </head>
 <body>
@@ -1388,7 +1320,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   if(window.__connWired) return; window.__connWired=1;
   var w=document.querySelector('[data-conn-warn]'); document.body.appendChild(w);
   var kind=null;
-  function live(sl){ return !!sl && (sl.getAttribute('data-type')==='game' || !!sl.querySelector('[data-pp-root],[data-wh-map],.ac-live,[data-attendance],[data-poll-id]')); }
+  function live(sl){ return !!sl && (sl.getAttribute('data-type')==='game' || !!sl.querySelector('[data-pp-root],[data-wh-map],[data-dg-root],.ac-live,[data-attendance],[data-poll-id]')); }
   function paint(){ var sl=document.querySelector('.slide.active');
     var bad = kind && (kind!=='firestore' || !navigator.onLine);
     w.hidden = !(bad && live(sl)); }
@@ -3210,31 +3142,214 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   <div class="bleed-grid">
     <div class="bleed-text">
 <h2 class="heading">What Shapes Earth's Surface?</h2>
-<ul class="bullets"><li>A landscape is built from landforms (its surface features) and topography (the shape of the land).</li><li>Floodplains slow rivers and let sediment settle; <u>a delta is a landform formed by the deposition of sediments at a river's mouth</u>.</li></ul><div class="wk-book"><img data-src="media/under_a_white_sky.jpg" alt="Cover of Under a White Sky: The Nature of the Future, by Elizabeth Kolbert"><div class="wk-txt"><div class="wk-k">From the book</div><div class="wk-t"><b>Under a White Sky</b> <span>Elizabeth Kolbert, 2021</span></div><ul class="wk-facts"><li>&ldquo;Every hour and a half, Louisiana sheds another football field&rsquo;s worth of land.&rdquo;</li><li>The levees that keep the Mississippi from flooding also keep its mud from rebuilding the delta.</li><li>Isle de Jean Charles shrank from about 35 square miles to half a square mile in one resident&rsquo;s lifetime.</li></ul></div></div>
+<ul class="bullets"><li>A landscape is built from landforms (its surface features) and topography (the shape of the land).</li><li>Floodplains slow rivers and let sediment settle; <u>a delta is a landform formed by the deposition of sediments at a river's mouth</u>.</li></ul><div class="wk-book"><img data-src="media/under_a_white_sky.jpg" alt="Cover of Under a White Sky: The Nature of the Future, by Elizabeth Kolbert"><div class="wk-txt"><div class="wk-k">From the book</div><div class="wk-t"><b>Under a White Sky</b> <span>Elizabeth Kolbert, 2021</span></div><ul class="wk-facts"><li>&ldquo;Every hour and a half, Louisiana sheds another football field&rsquo;s worth of land.&rdquo;</li><li>The levees that keep the Mississippi from flooding also keep its mud from rebuilding the delta.</li><li>Isle de Jean Charles shrank from about 35 square miles to half a square mile in one resident&rsquo;s lifetime.</li><li>Kolbert traces the loss mostly to people: flood control that walls the river off from its delta, and canals that oil and gas companies cut through the marsh.</li></ul></div></div>
     </div>
-    <div class="bleed-media cp-draw pk-draw"><svg class="cp-svg" viewBox="0 0 600 700" role="img" aria-label="A hand-drawn delta: a river meanders across its floodplain, leaving an oxbow lake, then splits into distributaries that build a bird's-foot delta with sediment plumes in open water. Below, two cross-sections: when the river floods it spreads mud and the marsh builds; when levees hold it in, no new mud arrives and the marsh sinks."><defs><filter id="d9r" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter><filter id="d9w" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="fractalNoise" baseFrequency=".022" numOctaves="3" seed="13"/><feDisplacementMap in="SourceGraphic" scale="10"/><feGaussianBlur stdDeviation=".8"/></filter><filter id="d9g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .36  0 0 0 0 .29  0 0 0 0 .18  0 0 0 .085 0"/></filter><pattern id="d9h" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><path d="M0 0 V5" stroke="#3b3222" stroke-width=".8" opacity=".3"/></pattern><pattern id="d9hx" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><path d="M0 0 V7" stroke="#3b3222" stroke-width=".7" opacity=".22"/></pattern><pattern id="d9d" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#3b3222" opacity=".35"/><circle cx="6.5" cy="6" r=".7" fill="#3b3222" opacity=".3"/></pattern><clipPath id="d9c"><rect x="26" y="26" width="548" height="648" rx="9"/></clipPath><marker id="d9m3b3222" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#3b3222"/></marker><marker id="d9ma8483f" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#a8483f"/></marker><marker id="d9m3f6f3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#3f6f3a"/></marker><marker id="d9m2f5f84" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#2f5f84"/></marker><marker id="d9m7a5a3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#7a5a3a"/></marker><marker id="d9mc0582a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#c0582a"/></marker><marker id="d9m8a6a2f" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#8a6a2f"/></marker><marker id="d9m4f7a3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#4f7a3a"/></marker><marker id="d9m6f9fc2" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#6f9fc2"/></marker></defs><rect width="600" height="700" fill="#fbf5e6"/><g clip-path="url(#d9c)"><g filter="url(#d9w)"><rect x="26" y="26" width="548" height="452" fill="#a9c9d6"/><ellipse cx="312" cy="392" rx="190" ry="96" fill="#c6dde0"/></g><path d="M26,300 H574 V478 H26 Z" fill="url(#d9hx)" opacity=".35"/><g filter="url(#d9w)"><path d="M26,26 H574 V292 C500,286 440,300 396,306 C360,310 336,312 320,312 C300,312 280,308 250,304 C190,296 120,300 26,296 Z" fill="#dccf9e"/></g><g filter="url(#d9w)"><path d="M246,26 C236,60 300,70 296,100 C292,132 220,128 218,162 C216,196 300,196 304,228 C308,258 276,272 290,300 L304,318" fill="none" stroke="#bfd29a" stroke-width="78" stroke-linecap="round"/></g><g filter="url(#d9w)"><path d="M304,318 C290,350 262,380 236,430" fill="none" stroke="#b9cf8e" stroke-width="24" stroke-linecap="round"/><path d="M304,318 C306,360 304,400 306,454" fill="none" stroke="#b9cf8e" stroke-width="24" stroke-linecap="round"/><path d="M304,318 C330,350 356,382 386,424" fill="none" stroke="#b9cf8e" stroke-width="24" stroke-linecap="round"/><path d="M310,326 C350,338 392,350 432,374" fill="none" stroke="#b9cf8e" stroke-width="24" stroke-linecap="round"/><path d="M262,300 C280,330 330,330 352,302 Z" fill="#b9cf8e"/></g><g filter="url(#d9w)"><ellipse cx="226" cy="446" rx="30" ry="18" fill="#c9a66e" opacity=".75" transform="rotate(-30 226 446)"/><ellipse cx="306" cy="470" rx="22" ry="24" fill="#c9a66e" opacity=".75"/><ellipse cx="398" cy="440" rx="30" ry="18" fill="#c9a66e" opacity=".75" transform="rotate(40 398 440)"/><ellipse cx="450" cy="384" rx="28" ry="15" fill="#c9a66e" opacity=".7" transform="rotate(25 450 384)"/></g><g filter="url(#d9w)"><path d="M34,104 C52,70 76,62 98,84 C112,64 140,56 168,96 C150,100 120,98 96,102 C76,104 54,106 34,104 Z M396,108 C420,72 448,64 468,90 C486,66 516,60 556,104 C530,108 500,106 470,108 C446,110 420,110 396,108 Z" fill="#c9b07a"/></g><path d="M98,84 C112,64 140,56 168,96 C150,100 128,99 112,100 Z M468,90 C486,66 516,60 556,104 C534,107 510,106 488,107 Z" fill="url(#d9h)" opacity=".55"/><path d="M70,118 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M92,126 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M140,116 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M440,124 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M468,132 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M512,120 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M60,250 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M520,250 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M540,262 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><g filter="url(#d9w)"><path d="M188,134 C150,140 146,188 186,196" fill="none" stroke="#86b2cf" stroke-width="9" stroke-linecap="round"/></g><path d="M246,26 C236,60 300,70 296,100 C292,132 220,128 218,162 C216,196 300,196 304,228 C308,258 276,272 290,300 L304,318" fill="none" stroke="#6f9fc2" stroke-width="7" stroke-linecap="round"/><path d="M304,318 C290,350 262,380 236,430" fill="none" stroke="#6f9fc2" stroke-width="3.6" stroke-linecap="round"/><path d="M304,318 C306,360 304,400 306,454" fill="none" stroke="#6f9fc2" stroke-width="3.6" stroke-linecap="round"/><path d="M304,318 C330,350 356,382 386,424" fill="none" stroke="#6f9fc2" stroke-width="3.6" stroke-linecap="round"/><path d="M310,326 C350,338 392,350 432,374" fill="none" stroke="#6f9fc2" stroke-width="3.6" stroke-linecap="round"/><g filter="url(#d9r)" fill="none" stroke="#3f6f3a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M276.0,352.0 l-3,-6 M276.0,352.0 l0,-7 M276.0,352.0 l3,-6"/><path d="M290.0,384.0 l-3,-6 M290.0,384.0 l0,-7 M290.0,384.0 l3,-6"/><path d="M318.0,380.0 l-3,-6 M318.0,380.0 l0,-7 M318.0,380.0 l3,-6"/><path d="M324.0,410.0 l-3,-6 M324.0,410.0 l0,-7 M324.0,410.0 l3,-6"/><path d="M344.0,362.0 l-3,-6 M344.0,362.0 l0,-7 M344.0,362.0 l3,-6"/><path d="M360.0,392.0 l-3,-6 M360.0,392.0 l0,-7 M360.0,392.0 l3,-6"/><path d="M376.0,352.0 l-3,-6 M376.0,352.0 l0,-7 M376.0,352.0 l3,-6"/><path d="M402.0,360.0 l-3,-6 M402.0,360.0 l0,-7 M402.0,360.0 l3,-6"/><path d="M288.0,326.0 l-3,-6 M288.0,326.0 l0,-7 M288.0,326.0 l3,-6"/><path d="M334.0,330.0 l-3,-6 M334.0,330.0 l0,-7 M334.0,330.0 l3,-6"/></g><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M26,296 C120,300 190,296 250,304 C280,308 300,312 320,312 C336,312 360,310 396,306 C440,300 500,286 574,292"/><path d="M34,104 C52,70 76,62 98,84 C112,64 140,56 168,96 C150,100 120,98 96,102 C76,104 54,106 34,104 Z M396,108 C420,72 448,64 468,90 C486,66 516,60 556,104 C530,108 500,106 470,108 C446,110 420,110 396,108 Z"/></g><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M188,134 C150,140 146,188 186,196" stroke="#4f7fa0" stroke-width="1.2"/></g><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M246,26 C236,60 300,70 296,100 C292,132 220,128 218,162 C216,196 300,196 304,228 C308,258 276,272 290,300 L304,318" stroke-width="10" stroke="#3b3222" opacity=".14"/></g><text x="300.0" y="52.0" text-anchor="middle" class="pk-tag">A RIVER BUILDS A DELTA</text><text x="110.0" y="54.0" text-anchor="middle" class="pk-lab sm">uplands</text><path d="M296.0,102.0 L384.0,126.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="296.0" cy="102.0" r="2" fill="#3b3222"/><text x="388.0" y="131.0" text-anchor="start" class="pk-lab sm">meander</text><path d="M338.0,206.0 L410.0,206.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="338.0" cy="206.0" r="2" fill="#3b3222"/><text x="414.0" y="211.0" text-anchor="start" class="pk-lab sm">floodplain</text><path d="M156.0,170.0 L100.0,190.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="156.0" cy="170.0" r="2" fill="#3b3222"/><text x="96.0" y="204.0" text-anchor="middle" class="pk-lab sm b">oxbow lake</text><path d="M296.0,286.0 L400.0,266.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="296.0" cy="286.0" r="2" fill="#3b3222"/><text x="404.0" y="262.0" text-anchor="start" class="pk-lab sm">natural levees</text><text x="404.0" y="278.0" text-anchor="start" class="pk-sm">raised banks of the river</text><path d="M374.0,400.0 L470.0,330.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="374.0" cy="400.0" r="2" fill="#3b3222"/><text x="474.0" y="326.0" text-anchor="start" class="pk-lab sm">distributaries</text><path d="M400.0,446.0 L470.0,462.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="400.0" cy="446.0" r="2" fill="#3b3222"/><text x="474.0" y="466.0" text-anchor="start" class="pk-lab sm o">sediment plume</text><text x="160.0" y="352.0" text-anchor="middle" class="pk-tag lg">DELTA</text><text x="160.0" y="370.0" text-anchor="middle" class="pk-sm">sediment dropped where</text><text x="160.0" y="384.0" text-anchor="middle" class="pk-sm">the river meets the sea</text><text x="110.0" y="440.0" text-anchor="middle" class="pk-geo">open water</text><rect x="26" y="478" width="548" height="2" fill="#8a6a2f" opacity=".5"/><g filter="url(#d9w)"><rect x="40" y="582" width="250" height="78" fill="#c9a66e"/><rect x="40" y="574" width="250" height="8" fill="#8a6a3e"/><rect x="40" y="568" width="250" height="6" fill="#b9cf8e"/></g><g filter="url(#d9w)"><rect x="60" y="558" width="210" height="10" fill="#a9c9d6" opacity=".85"/><path d="M139.0,568 C145.0,604 185.0,604 191.0,568 Z" fill="#6f9fc2"/></g><path d="M147.0,560 C125.0,538 95.0,542 69.0,556" fill="none" stroke="#7a5a3a" stroke-width="2.2" stroke-linecap="round" marker-end="url(#d9m7a5a3a)"/><path d="M183.0,560 C205.0,538 235.0,542 261.0,556" fill="none" stroke="#7a5a3a" stroke-width="2.2" stroke-linecap="round" marker-end="url(#d9m7a5a3a)"/><text x="165.0" y="506.0" text-anchor="middle" class="pk-tag">WHEN THE RIVER FLOODS</text><text x="165.0" y="656.0" text-anchor="middle" class="pk-lab sm g">floods spread mud: the marsh builds</text><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40,568 H290"/></g><g filter="url(#d9w)"><rect x="310" y="592" width="250" height="68" fill="#c9a66e"/><rect x="310" y="586" width="250" height="6" fill="#b9cf8e"/></g><g filter="url(#d9w)"><rect x="310" y="574" width="250" height="12" fill="#a9c9d6"/></g><path d="M377.0,586 L393.0,528 L403.0,528 L415.0,586 Z" fill="#b59a6a"/><path d="M455.0,586 L467.0,528 L477.0,528 L493.0,586 Z" fill="#b59a6a"/><path d="M413.0,602 L405.0,536 L465.0,536 L457.0,602 Z" fill="#6f9fc2"/><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M377.0,586 L393.0,528 L403.0,528 L415.0,586 M455.0,586 L467.0,528 L477.0,528 L493.0,586"/></g><path d="M340,556 L340,578" fill="none" stroke="#a8483f" stroke-width="2" stroke-linecap="round" marker-end="url(#d9ma8483f)"/><path d="M374,556 L374,578" fill="none" stroke="#a8483f" stroke-width="2" stroke-linecap="round" marker-end="url(#d9ma8483f)"/><path d="M496,556 L496,578" fill="none" stroke="#a8483f" stroke-width="2" stroke-linecap="round" marker-end="url(#d9ma8483f)"/><path d="M530,556 L530,578" fill="none" stroke="#a8483f" stroke-width="2" stroke-linecap="round" marker-end="url(#d9ma8483f)"/><text x="435.0" y="506.0" text-anchor="middle" class="pk-tag">WHEN LEVEES HOLD IT IN</text><text x="435.0" y="656.0" text-anchor="middle" class="pk-lab sm r">no new mud: the marsh sinks</text><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M310,586 H560"/></g></g><path d="M0 0 H600 V700 H0 Z M35 26 H565 A9 9 0 0 1 574 35 V665 A9 9 0 0 1 565 674 H35 A9 9 0 0 1 26 665 V35 A9 9 0 0 1 35 26 Z" fill="#fbf5e6" fill-rule="evenodd"/><rect width="600" height="700" fill="#000" filter="url(#d9g)" pointer-events="none"/><rect x="5" y="5" width="590" height="690" rx="17" fill="none" stroke="#3b3222" stroke-width="2.2" filter="url(#d9r)"/><rect x="15" y="15" width="570" height="670" rx="12" fill="none" stroke="#8a6a2f" stroke-width="1.3"/><rect x="26" y="26" width="548" height="648" rx="9" fill="none" stroke="#8a6a2f" stroke-width=".6"/><path d="M15,9 L21,15 L15,21 L9,15 Z" fill="#8a6a2f"/><path d="M585,9 L591,15 L585,21 L579,15 Z" fill="#8a6a2f"/><path d="M15,679 L21,685 L15,691 L9,685 Z" fill="#8a6a2f"/><path d="M585,679 L591,685 L585,691 L579,685 Z" fill="#8a6a2f"/></svg></div>
+    <div class="bleed-media cp-draw pk-draw"><svg class="cp-svg" viewBox="0 0 600 700" role="img" aria-label="A hand-drawn delta: a river meanders across its floodplain, leaving an oxbow lake, then splits into distributaries that build a bird's-foot delta with sediment plumes in open water. Below, two cross-sections: when the river floods it spreads mud and the marsh builds; when levees hold it in, no new mud arrives and the marsh sinks."><defs><filter id="d9r" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter><filter id="d9w" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="fractalNoise" baseFrequency=".022" numOctaves="3" seed="13"/><feDisplacementMap in="SourceGraphic" scale="10"/><feGaussianBlur stdDeviation=".8"/></filter><filter id="d9g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .36  0 0 0 0 .29  0 0 0 0 .18  0 0 0 .085 0"/></filter><pattern id="d9h" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><path d="M0 0 V5" stroke="#3b3222" stroke-width=".8" opacity=".3"/></pattern><pattern id="d9hx" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><path d="M0 0 V7" stroke="#3b3222" stroke-width=".7" opacity=".22"/></pattern><pattern id="d9d" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#3b3222" opacity=".35"/><circle cx="6.5" cy="6" r=".7" fill="#3b3222" opacity=".3"/></pattern><clipPath id="d9c"><rect x="26" y="26" width="548" height="648" rx="9"/></clipPath><marker id="d9m3b3222" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#3b3222"/></marker><marker id="d9ma8483f" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#a8483f"/></marker><marker id="d9m3f6f3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#3f6f3a"/></marker><marker id="d9m2f5f84" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#2f5f84"/></marker><marker id="d9m7a5a3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#7a5a3a"/></marker><marker id="d9mc0582a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#c0582a"/></marker><marker id="d9m8a6a2f" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#8a6a2f"/></marker><marker id="d9m4f7a3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#4f7a3a"/></marker><marker id="d9m6f9fc2" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#6f9fc2"/></marker></defs><rect width="600" height="700" fill="#fbf5e6"/><g clip-path="url(#d9c)"><g filter="url(#d9w)"><rect x="26" y="26" width="548" height="452" fill="#a9c9d6"/><ellipse cx="312" cy="392" rx="190" ry="96" fill="#c6dde0"/></g><path d="M26,300 H574 V478 H26 Z" fill="url(#d9hx)" opacity=".35"/><g filter="url(#d9w)"><path d="M26,26 H574 V292 C500,286 440,300 396,306 C360,310 336,312 320,312 C300,312 280,308 250,304 C190,296 120,300 26,296 Z" fill="#dccf9e"/></g><g filter="url(#d9w)"><path d="M246,26 C236,60 300,70 296,100 C292,132 220,128 218,162 C216,196 300,196 304,228 C308,258 276,272 290,300 L304,318" fill="none" stroke="#bfd29a" stroke-width="78" stroke-linecap="round"/></g><g filter="url(#d9w)"><path d="M304,318 C290,350 262,380 236,430" fill="none" stroke="#b9cf8e" stroke-width="24" stroke-linecap="round"/><path d="M304,318 C306,360 304,400 306,454" fill="none" stroke="#b9cf8e" stroke-width="24" stroke-linecap="round"/><path d="M304,318 C330,350 356,382 386,424" fill="none" stroke="#b9cf8e" stroke-width="24" stroke-linecap="round"/><path d="M310,326 C350,338 392,350 432,374" fill="none" stroke="#b9cf8e" stroke-width="24" stroke-linecap="round"/><path d="M262,300 C280,330 330,330 352,302 Z" fill="#b9cf8e"/></g><g filter="url(#d9w)"><ellipse cx="226" cy="446" rx="30" ry="18" fill="#c9a66e" opacity=".75" transform="rotate(-30 226 446)"/><ellipse cx="306" cy="470" rx="22" ry="24" fill="#c9a66e" opacity=".75"/><ellipse cx="398" cy="440" rx="30" ry="18" fill="#c9a66e" opacity=".75" transform="rotate(40 398 440)"/><ellipse cx="450" cy="384" rx="28" ry="15" fill="#c9a66e" opacity=".7" transform="rotate(25 450 384)"/></g><g filter="url(#d9w)"><path d="M34,104 C52,70 76,62 98,84 C112,64 140,56 168,96 C150,100 120,98 96,102 C76,104 54,106 34,104 Z M396,108 C420,72 448,64 468,90 C486,66 516,60 556,104 C530,108 500,106 470,108 C446,110 420,110 396,108 Z" fill="#c9b07a"/></g><path d="M98,84 C112,64 140,56 168,96 C150,100 128,99 112,100 Z M468,90 C486,66 516,60 556,104 C534,107 510,106 488,107 Z" fill="url(#d9h)" opacity=".55"/><path d="M70,118 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M92,126 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M140,116 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M440,124 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M468,132 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M512,120 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M60,250 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M520,250 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><path d="M540,262 l-6,0 l6,-14 l6,14 z" fill="#6f8f4f" stroke="#3b3222" stroke-width=".9"/><g filter="url(#d9w)"><path d="M188,134 C150,140 146,188 186,196" fill="none" stroke="#86b2cf" stroke-width="9" stroke-linecap="round"/></g><path d="M246,26 C236,60 300,70 296,100 C292,132 220,128 218,162 C216,196 300,196 304,228 C308,258 276,272 290,300 L304,318" fill="none" stroke="#6f9fc2" stroke-width="7" stroke-linecap="round"/><path d="M304,318 C290,350 262,380 236,430" fill="none" stroke="#6f9fc2" stroke-width="3.6" stroke-linecap="round"/><path d="M304,318 C306,360 304,400 306,454" fill="none" stroke="#6f9fc2" stroke-width="3.6" stroke-linecap="round"/><path d="M304,318 C330,350 356,382 386,424" fill="none" stroke="#6f9fc2" stroke-width="3.6" stroke-linecap="round"/><path d="M310,326 C350,338 392,350 432,374" fill="none" stroke="#6f9fc2" stroke-width="3.6" stroke-linecap="round"/><path class="dl-flow" d="M246,26 C236,60 300,70 296,100 C292,132 220,128 218,162 C216,196 300,196 304,228 C308,258 276,272 290,300 L304,318" fill="none" stroke="#efdcae" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1.5 15"/><path class="dl-flow sm" d="M304,318 C290,350 262,380 236,430" fill="none" stroke="#efdcae" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="1.2 12" style="animation-delay:-0.0s"/><path class="dl-flow sm" d="M304,318 C306,360 304,400 306,454" fill="none" stroke="#efdcae" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="1.2 12" style="animation-delay:-0.7s"/><path class="dl-flow sm" d="M304,318 C330,350 356,382 386,424" fill="none" stroke="#efdcae" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="1.2 12" style="animation-delay:-1.4s"/><path class="dl-flow sm" d="M310,326 C350,338 392,350 432,374" fill="none" stroke="#efdcae" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="1.2 12" style="animation-delay:-2.1s"/><ellipse class="dl-plume" cx="226" cy="446" rx="40" ry="24" fill="#c9a66e" transform="rotate(-30 226 446)" style="animation-delay:-0.0s"/><ellipse class="dl-plume" cx="306" cy="472" rx="30" ry="32" fill="#c9a66e" transform="rotate(0 306 472)" style="animation-delay:-1.6s"/><ellipse class="dl-plume" cx="398" cy="440" rx="40" ry="24" fill="#c9a66e" transform="rotate(40 398 440)" style="animation-delay:-3.2s"/><ellipse class="dl-plume" cx="450" cy="384" rx="36" ry="20" fill="#c9a66e" transform="rotate(25 450 384)" style="animation-delay:-4.8s"/><g filter="url(#d9r)" fill="none" stroke="#3f6f3a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M276.0,352.0 l-3,-6 M276.0,352.0 l0,-7 M276.0,352.0 l3,-6"/><path d="M290.0,384.0 l-3,-6 M290.0,384.0 l0,-7 M290.0,384.0 l3,-6"/><path d="M318.0,380.0 l-3,-6 M318.0,380.0 l0,-7 M318.0,380.0 l3,-6"/><path d="M324.0,410.0 l-3,-6 M324.0,410.0 l0,-7 M324.0,410.0 l3,-6"/><path d="M344.0,362.0 l-3,-6 M344.0,362.0 l0,-7 M344.0,362.0 l3,-6"/><path d="M360.0,392.0 l-3,-6 M360.0,392.0 l0,-7 M360.0,392.0 l3,-6"/><path d="M376.0,352.0 l-3,-6 M376.0,352.0 l0,-7 M376.0,352.0 l3,-6"/><path d="M402.0,360.0 l-3,-6 M402.0,360.0 l0,-7 M402.0,360.0 l3,-6"/><path d="M288.0,326.0 l-3,-6 M288.0,326.0 l0,-7 M288.0,326.0 l3,-6"/><path d="M334.0,330.0 l-3,-6 M334.0,330.0 l0,-7 M334.0,330.0 l3,-6"/></g><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M26,296 C120,300 190,296 250,304 C280,308 300,312 320,312 C336,312 360,310 396,306 C440,300 500,286 574,292"/><path d="M34,104 C52,70 76,62 98,84 C112,64 140,56 168,96 C150,100 120,98 96,102 C76,104 54,106 34,104 Z M396,108 C420,72 448,64 468,90 C486,66 516,60 556,104 C530,108 500,106 470,108 C446,110 420,110 396,108 Z"/></g><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M188,134 C150,140 146,188 186,196" stroke="#4f7fa0" stroke-width="1.2"/></g><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M246,26 C236,60 300,70 296,100 C292,132 220,128 218,162 C216,196 300,196 304,228 C308,258 276,272 290,300 L304,318" stroke-width="10" stroke="#3b3222" opacity=".14"/></g><text x="300.0" y="52.0" text-anchor="middle" class="pk-tag">A RIVER BUILDS A DELTA</text><text x="110.0" y="54.0" text-anchor="middle" class="pk-lab sm">uplands</text><path d="M296.0,102.0 L384.0,126.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="296.0" cy="102.0" r="2" fill="#3b3222"/><text x="388.0" y="131.0" text-anchor="start" class="pk-lab sm">meander</text><path d="M338.0,206.0 L410.0,206.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="338.0" cy="206.0" r="2" fill="#3b3222"/><text x="414.0" y="211.0" text-anchor="start" class="pk-lab sm">floodplain</text><path d="M156.0,170.0 L100.0,190.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="156.0" cy="170.0" r="2" fill="#3b3222"/><text x="96.0" y="204.0" text-anchor="middle" class="pk-lab sm b">oxbow lake</text><path d="M296.0,286.0 L400.0,266.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="296.0" cy="286.0" r="2" fill="#3b3222"/><text x="404.0" y="262.0" text-anchor="start" class="pk-lab sm">natural levees</text><text x="404.0" y="278.0" text-anchor="start" class="pk-sm">raised banks of the river</text><path d="M374.0,400.0 L470.0,330.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="374.0" cy="400.0" r="2" fill="#3b3222"/><text x="474.0" y="326.0" text-anchor="start" class="pk-lab sm">distributaries</text><path d="M400.0,446.0 L470.0,462.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="400.0" cy="446.0" r="2" fill="#3b3222"/><text x="474.0" y="466.0" text-anchor="start" class="pk-lab sm o">sediment plume</text><text x="160.0" y="352.0" text-anchor="middle" class="pk-tag lg">DELTA</text><text x="160.0" y="370.0" text-anchor="middle" class="pk-sm">sediment dropped where</text><text x="160.0" y="384.0" text-anchor="middle" class="pk-sm">the river meets the sea</text><text x="110.0" y="440.0" text-anchor="middle" class="pk-geo">open water</text><rect x="26" y="478" width="548" height="2" fill="#8a6a2f" opacity=".5"/><g filter="url(#d9w)"><rect x="40" y="582" width="250" height="78" fill="#c9a66e"/><rect x="40" y="574" width="250" height="8" fill="#8a6a3e"/><rect x="40" y="568" width="250" height="6" fill="#b9cf8e"/></g><g filter="url(#d9w)"><rect x="60" y="558" width="210" height="10" fill="#a9c9d6" opacity=".85"/><path d="M139.0,568 C145.0,604 185.0,604 191.0,568 Z" fill="#6f9fc2"/></g><path d="M147.0,560 C125.0,538 95.0,542 69.0,556" fill="none" stroke="#7a5a3a" stroke-width="2.2" stroke-linecap="round" marker-end="url(#d9m7a5a3a)"/><path class="dl-flow sm" d="M147.0,560 C125.0,538 95.0,542 69.0,556" fill="none" stroke="#f6e6c4" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="1.2 10"/><path d="M183.0,560 C205.0,538 235.0,542 261.0,556" fill="none" stroke="#7a5a3a" stroke-width="2.2" stroke-linecap="round" marker-end="url(#d9m7a5a3a)"/><path class="dl-flow sm" d="M183.0,560 C205.0,538 235.0,542 261.0,556" fill="none" stroke="#f6e6c4" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="1.2 10"/><text x="165.0" y="506.0" text-anchor="middle" class="pk-tag">WHEN THE RIVER FLOODS</text><text x="165.0" y="656.0" text-anchor="middle" class="pk-lab sm g">floods spread mud: the marsh builds</text><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40,568 H290"/></g><g filter="url(#d9w)"><rect x="310" y="592" width="250" height="68" fill="#c9a66e"/><rect x="310" y="586" width="250" height="6" fill="#b9cf8e"/></g><g filter="url(#d9w)"><rect x="310" y="574" width="250" height="12" fill="#a9c9d6"/></g><path d="M377.0,586 L393.0,528 L403.0,528 L415.0,586 Z" fill="#b59a6a"/><path d="M455.0,586 L467.0,528 L477.0,528 L493.0,586 Z" fill="#b59a6a"/><path d="M413.0,602 L405.0,536 L465.0,536 L457.0,602 Z" fill="#6f9fc2"/><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M377.0,586 L393.0,528 L403.0,528 L415.0,586 M455.0,586 L467.0,528 L477.0,528 L493.0,586"/></g><path d="M340,556 L340,578" fill="none" stroke="#a8483f" stroke-width="2" stroke-linecap="round" marker-end="url(#d9ma8483f)"/><path d="M374,556 L374,578" fill="none" stroke="#a8483f" stroke-width="2" stroke-linecap="round" marker-end="url(#d9ma8483f)"/><path d="M496,556 L496,578" fill="none" stroke="#a8483f" stroke-width="2" stroke-linecap="round" marker-end="url(#d9ma8483f)"/><path d="M530,556 L530,578" fill="none" stroke="#a8483f" stroke-width="2" stroke-linecap="round" marker-end="url(#d9ma8483f)"/><text x="435.0" y="506.0" text-anchor="middle" class="pk-tag">WHEN LEVEES HOLD IT IN</text><text x="435.0" y="656.0" text-anchor="middle" class="pk-lab sm r">no new mud: the marsh sinks</text><g filter="url(#d9r)" fill="none" stroke="#3b3222" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M310,586 H560"/></g></g><path d="M0 0 H600 V700 H0 Z M35 26 H565 A9 9 0 0 1 574 35 V665 A9 9 0 0 1 565 674 H35 A9 9 0 0 1 26 665 V35 A9 9 0 0 1 35 26 Z" fill="#fbf5e6" fill-rule="evenodd"/><rect width="600" height="700" fill="#000" filter="url(#d9g)" pointer-events="none"/><rect x="5" y="5" width="590" height="690" rx="17" fill="none" stroke="#3b3222" stroke-width="2.2" filter="url(#d9r)"/><rect x="15" y="15" width="570" height="670" rx="12" fill="none" stroke="#8a6a2f" stroke-width="1.3"/><rect x="26" y="26" width="548" height="648" rx="9" fill="none" stroke="#8a6a2f" stroke-width=".6"/><path d="M15,9 L21,15 L15,21 L9,15 Z" fill="#8a6a2f"/><path d="M585,9 L591,15 L585,21 L579,15 Z" fill="#8a6a2f"/><path d="M15,679 L21,685 L15,691 L9,685 Z" fill="#8a6a2f"/><path d="M585,679 L591,685 L585,691 L579,685 Z" fill="#8a6a2f"/></svg></div>
   </div>
   <div class="footer"></div>
 </section>
-<section class="slide ac-live ranking" data-type="ranking" data-rk-id="ch9-material-rank" data-rk-answer='[1, 2, 0, 3, 7, 4, 5, 6]' data-rk-rich='{"amt": [47.83, 56.21, 54.32, 26.66, 11.86, 6.13, 3.66, 22.59], "grp": [0, 0, 0, 0, 1, 1, 1, 0], "gnames": ["Above the world average (13.1 t)", "Below the world average"], "tags": ["mining exporter", "mining and energy", "copper mining", "", "", "", "", ""], "units": [{"key": "t", "label": "tonnes / year", "factor": 1, "suffix": " t", "round": 1, "head": "Tonnes per person, per year"}, {"key": "kg", "label": "kg / day", "factor": 2.73972602739726, "suffix": " kg", "round": 0, "head": "Kilograms per person, per day"}]}' style="--accent:#8a6a2f">
-  <div class="rk-root">
-    <div class="rk-head">
-      <div class="eyebrow">9.7  ·  Mining</div>
-      <h2 class="heading">Domestic Material Consumption per Person</h2>
-      <div class="rk-sub">DMC: biomass, fossil fuels, metal ores and other minerals extracted in a country, plus imports, minus exports, per person each year. It counts materials where they enter an economy, not the full footprint of what people buy.</div>
-    </div>
-    <div class="rk-toolbar"><button class="rk-revealbtn" type="button" data-rk-revealbtn hidden>Reveal answer</button><button class="rk-replay" type="button" data-rk-replay hidden>Replay reveal</button></div>
-    <ol class="rk-list many" data-rk-list><li class="rk-item" data-idx="0" draggable="false"><span class="rk-rank" data-rk-rank>1</span><span class="rk-name">Australia</span><span class="rk-val" data-rk-val hidden></span><span class="rk-moves"><button class="rk-up" type="button" data-rk-up aria-label="Move up">▲</button><button class="rk-down" type="button" data-rk-down aria-label="Move down">▼</button></span></li><li class="rk-item" data-idx="1" draggable="false"><span class="rk-rank" data-rk-rank>2</span><span class="rk-name">Canada</span><span class="rk-val" data-rk-val hidden></span><span class="rk-moves"><button class="rk-up" type="button" data-rk-up aria-label="Move up">▲</button><button class="rk-down" type="button" data-rk-down aria-label="Move down">▼</button></span></li><li class="rk-item" data-idx="2" draggable="false"><span class="rk-rank" data-rk-rank>3</span><span class="rk-name">Chile</span><span class="rk-val" data-rk-val hidden></span><span class="rk-moves"><button class="rk-up" type="button" data-rk-up aria-label="Move up">▲</button><button class="rk-down" type="button" data-rk-down aria-label="Move down">▼</button></span></li><li class="rk-item" data-idx="3" draggable="false"><span class="rk-rank" data-rk-rank>4</span><span class="rk-name">China</span><span class="rk-val" data-rk-val hidden></span><span class="rk-moves"><button class="rk-up" type="button" data-rk-up aria-label="Move up">▲</button><button class="rk-down" type="button" data-rk-down aria-label="Move down">▼</button></span></li><li class="rk-item" data-idx="4" draggable="false"><span class="rk-rank" data-rk-rank>5</span><span class="rk-name">Germany</span><span class="rk-val" data-rk-val hidden></span><span class="rk-moves"><button class="rk-up" type="button" data-rk-up aria-label="Move up">▲</button><button class="rk-down" type="button" data-rk-down aria-label="Move down">▼</button></span></li><li class="rk-item" data-idx="5" draggable="false"><span class="rk-rank" data-rk-rank>6</span><span class="rk-name">India</span><span class="rk-val" data-rk-val hidden></span><span class="rk-moves"><button class="rk-up" type="button" data-rk-up aria-label="Move up">▲</button><button class="rk-down" type="button" data-rk-down aria-label="Move down">▼</button></span></li><li class="rk-item" data-idx="6" draggable="false"><span class="rk-rank" data-rk-rank>7</span><span class="rk-name">Nigeria</span><span class="rk-val" data-rk-val hidden></span><span class="rk-moves"><button class="rk-up" type="button" data-rk-up aria-label="Move up">▲</button><button class="rk-down" type="button" data-rk-down aria-label="Move down">▼</button></span></li><li class="rk-item" data-idx="7" draggable="false"><span class="rk-rank" data-rk-rank>8</span><span class="rk-name">United States</span><span class="rk-val" data-rk-val hidden></span><span class="rk-moves"><button class="rk-up" type="button" data-rk-up aria-label="Move up">▲</button><button class="rk-down" type="button" data-rk-down aria-label="Move down">▼</button></span></li></ol>
-    <div class="rk-res" data-rk-res hidden></div>
-    <div class="rk-note" data-rk-note hidden>UN Environment Programme, Global Material Flows Database, via Our World in Data (domestic-material-consumption-per-capita), 2024 data, retrieved October 2026. World average: 13.1 tonnes. Mining exporters such as Chile and Australia rank high partly because the full weight of ore they dig counts at home, while only the lighter exported concentrate is subtracted; DMC is not a material footprint.</div>
-    <div class="rk-foot">
-      <span class="rk-total"><strong data-rk-total>0</strong> rankings in</span>
-      <span class="rk-hint" data-rk-hint>Use the arrows: top = the MOST material per person</span>
-      <button class="rk-submit" type="button" data-rk-submit>Lock in my ranking</button>
-      <button class="rk-reset" type="button" data-rk-reset hidden>Reset rankings</button>
-    </div>
-  </div>
-</section>
+<section class="slide dg-slide" data-type="content" style="--accent:#2D6A4F"><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <filter id="dgNib" filterUnits="userSpaceOnUse" x="-40" y="-40" width="620" height="400"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="11"/><feDisplacementMap in="SourceGraphic" scale="1.8"/></filter>
+  <filter id="dgWash" filterUnits="userSpaceOnUse" x="-40" y="-40" width="620" height="400"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="5"/><feDisplacementMap in="SourceGraphic" scale="8"/><feGaussianBlur stdDeviation=".7"/></filter>
+  <pattern id="dgRock" width="26" height="22" patternUnits="userSpaceOnUse">
+    <rect width="26" height="22" fill="#a68b66"/><rect y="0" width="26" height="6" fill="#b89d76"/><rect y="11" width="26" height="4" fill="#94795a"/>
+    <circle cx="6" cy="17" r="1.2" fill="#6f5a40" opacity=".6"/><circle cx="19" cy="8" r="1" fill="#6f5a40" opacity=".5"/></pattern>
+  <pattern id="dgOre" width="26" height="24" patternUnits="userSpaceOnUse">
+    <rect width="26" height="24" fill="#8a6a3e"/><rect y="2" width="26" height="5" fill="#d9a441"/><rect y="13" width="26" height="3" fill="#e9c766"/>
+    <rect y="18" width="26" height="4" fill="#a8763a"/><circle cx="8" cy="10" r="1.4" fill="#fff3c4"/><circle cx="20" cy="21" r="1" fill="#fff3c4"/></pattern>
+  <pattern id="dgHatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><path d="M0 0 V6" stroke="#3b3222" stroke-width=".7" opacity=".28"/></pattern>
+</defs></svg><script type="application/json" data-dg-qs>[{"tag": "Extraction", "q": "Every year, how much material does humanity dig up, cut down and pump out of the Earth?", "opts": ["About 1 billion tonnes", "About 10 billion tonnes", "About 100 billion tonnes", "About 1 trillion tonnes"], "short": ["1 billion t", "10 billion t", "100 billion t", "1 trillion t"], "a": 2, "art": "heaps", "big": "About 106 billion tonnes a year", "exp": "More than three times as much as in 1970. That is about <b>39 kilograms for every person on Earth, every day</b>, up from 23 in 1970. Much of it is sand, gravel, crushed rock and metal ore: it comes out of mines and quarries.", "cite": "UN Environment Programme, International Resource Panel, <i>Global Resources Outlook 2024</i> (1 March 2024)."}, {"tag": "Human-made mass", "q": "Weigh everything humans have built (concrete, gravel, brick, asphalt, metal, plastic) against every living thing on Earth. Which weighs more?", "opts": ["Living things, about 1,000 to 1", "Living things, about 10 to 1", "They are now about equal", "Human-made things, about 10 to 1"], "short": ["Life ×1,000", "Life ×10", "About equal", "Human-made ×10"], "a": 2, "art": "scale", "big": "About equal, as of about 2020", "exp": "Around 2020, the mass of everything humans have made caught up with all life on Earth: roughly <b>1.1 trillion tonnes</b> each. In 1900 it was about 3% of the weight of life, and it has been doubling about every 20 years. Each week, the world adds more new human-made mass than each person&rsquo;s body weight.", "cite": "Elhacham, E., et al. (2020). Global human-made mass exceeds all living biomass. <i>Nature</i>, 588, 442&ndash;444."}]</script><template data-dg-art="heaps"><svg class="dg-art" viewBox="0 0 520 300" role="img" aria-label="Two spoil heaps drawn to scale: 30 billion tonnes extracted in 1970 and 106 billion tonnes today, more than three times as much. Per person per day: 23 kilograms then, 39 now.">
+  <text x="260" y="26" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">Material taken from the Earth each year</text>
+  <path d="M30,250 H490" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/>
+  <g class="dg-grow" style="--d:.2s"><g filter="url(#dgWash)"><path d="M100.1,250.0 C114.5,200.3 128.8,159.6 140.0,159.6 C152.8,159.6 167.1,204.8 179.9,250.0 Z" fill="#c9b08a"/></g>
+    <path d="M100.1,250.0 C114.5,200.3 128.8,159.6 140.0,159.6 C152.8,159.6 167.1,204.8 179.9,250.0 Z" fill="url(#dgHatch)"/>
+    <path d="M100.1,250.0 C114.5,200.3 128.8,159.6 140.0,159.6 C152.8,159.6 167.1,204.8 179.9,250.0 Z" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></g>
+  <g class="dg-grow" style="--d:.9s"><g filter="url(#dgWash)"><path d="M200.0,250.0 C242.5,145.5 285.0,60.0 318.0,60.0 C355.8,60.0 398.2,155.0 436.0,250.0 Z" fill="#b5895a"/></g>
+    <path d="M200.0,250.0 C242.5,145.5 285.0,60.0 318.0,60.0 C355.8,60.0 398.2,155.0 436.0,250.0 Z" fill="url(#dgHatch)"/>
+    <path d="M200.0,250.0 C242.5,145.5 285.0,60.0 318.0,60.0 C355.8,60.0 398.2,155.0 436.0,250.0 Z" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></g>
+  <g class="dg-fade" style="--d:.4s"><text x="140" y="272" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="14" text-anchor="middle">1970</text>
+    <text x="140" y="290" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12.5" text-anchor="middle">30 billion t</text></g>
+  <g class="dg-fade" style="--d:1.2s"><text x="318" y="272" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="14" text-anchor="middle">Today</text>
+    <text x="318" y="290" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12.5" text-anchor="middle">106 billion t</text>
+    <text x="318" y="132" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="30" text-anchor="middle" fill="#a8483f">&#215;3.5</text></g>
+  <g class="dg-fade" style="--d:1.8s"><g transform="translate(478.0 250.0) scale(0.90)" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="0" cy="-58" r="7"/><path d="M0,-50 V-22 M0,-22 L-8,0 M0,-22 L8,0 M0,-44 L-10,-30 M0,-44 L10,-30"/></g>
+    <rect x="455" y="190" width="46" height="24" rx="3" fill="#fbf5e6" stroke="#3b3222" stroke-width="1.2"/>
+    <text x="478" y="207" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="12.5" text-anchor="middle">39 kg</text>
+    <text x="478" y="168" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="11" text-anchor="middle">per person,</text>
+    <text x="478" y="181" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="11" text-anchor="middle">every day</text></g>
+</svg></template><template data-dg-art="scale"><svg class="dg-art" viewBox="0 0 520 300" role="img" aria-label="A balance scale: all living things on one pan, everything humans have built on the other. In 1900 the human-made side was about 3 percent of the weight of life; by about 2020 the two pans balance at roughly 1.1 trillion tonnes each.">
+  <text x="260" y="26" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="15" text-anchor="middle">The weight of life vs. the weight of what we build</text>
+  <path d="M260,262 V96 M226,264 H294" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"/>
+  <path d="M244,262 L260,240 L276,262" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+  <g class="dg-beam">
+    <path d="M100,96 H420" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <circle cx="260" cy="96" r="6" fill="#fbf5e6" stroke="#3b3222" stroke-width="1.8"/>
+    <g class="dg-pan l"><path d="M100,96 L72,150 M100,96 L128,150" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"/>
+      <path d="M58,150 Q100,174 142,150 Z" fill="#e9dfc4" stroke="#3b3222" stroke-width="1.6"/>
+      <g filter="url(#dgWash)"><circle cx="86" cy="134" r="14" fill="#6f9a52"/><circle cx="104" cy="128" r="17" fill="#5d8a46"/><circle cx="120" cy="138" r="11" fill="#7fae5c"/></g>
+      <path d="M104,150 V136 M86,150 V140" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/>
+      <path d="M70,146 q8,-6 16,0 q-8,6 -16,0 Z" fill="#6f9fc2" stroke="#3b3222" stroke-width="1"/>
+    </g>
+    <g class="dg-pan r"><path d="M420,96 L392,150 M420,96 L448,150" filter="url(#dgNib)" fill="none" stroke="#3b3222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"/>
+      <path d="M378,150 Q420,174 462,150 Z" fill="#e9dfc4" stroke="#3b3222" stroke-width="1.6"/>
+      <g fill="#c8c2b4" stroke="#3b3222" stroke-width="1.2"><rect x="392" y="118" width="14" height="32"/><rect x="408" y="104" width="16" height="46"/><rect x="426" y="124" width="12" height="26"/><rect x="440" y="134" width="12" height="16"/></g>
+      <path d="M394,126 h10 M394,134 h10 M410,112 h12 M410,122 h12 M410,132 h12" stroke="#3b3222" stroke-width=".8" opacity=".6"/>
+    </g>
+  </g>
+  <text x="100" y="204" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="13" text-anchor="middle">All living things</text>
+  <text x="100" y="222" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12" text-anchor="middle">plants, animals, microbes</text>
+  <text x="420" y="204" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="13" text-anchor="middle">Everything we&#8217;ve built</text>
+  <text x="420" y="222" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12" text-anchor="middle">concrete, gravel, metal, plastic</text>
+  <g class="dg-year"><text x="260" y="62" font-family="Inter,system-ui,sans-serif" font-weight="800" fill="#3b3222" font-size="24" text-anchor="middle" fill="#a8483f" data-dg-year>1900</text></g>
+  <text x="260" y="292" font-family="Merriweather,Georgia,serif" font-style="italic" fill="#3b3222" font-size="12" text-anchor="middle" class="dg-fade" style="--d:2.4s">about 1.1 trillion tonnes on each side</text>
+</svg></template><div class="dg-wrap"><div class="dg-head"><div class="eyebrow">9.7  ·  Mining  ·  Live</div><h2 class="heading">Dig Deeper</h2><p class="tl-sub">Two questions before we talk about mining. Make your guess on your laptop.</p></div><div class="dg-panel" data-dg-root aria-live="polite"></div></div><div class="footer"></div><script>(function(){
+  var SEC=document.currentScript.closest('.dg-slide'); if(!SEC||SEC.__dgWired) return; SEC.__dgWired=true;
+  if(!window.__deckLiveReady){ window.__deckLiveReady=new Promise(function(r){ window.__deckLiveResolve=r; }); }
+  var GID='ch9-dig-deeper', L=['A','B','C','D'];
+  var Q=JSON.parse(SEC.querySelector('[data-dg-qs]').textContent);
+  var ART={}; SEC.querySelectorAll('template[data-dg-art]').forEach(function(t){ ART[t.dataset.dgArt]=t.innerHTML; });
+  var root=SEC.querySelector('[data-dg-root]');
+  var backend=null, HOST=false, st={}, viewKey=null, played={};
+
+  function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
+  function g(){ return st.g||0; }
+  function q(){ return (typeof st.q==='number') ? st.q : -1; }
+  function rev(){ return !!st.rev; }
+  function running(){ return q()>=0 && q()<Q.length; }
+  function counts(i){ var v=((st.v||{})['g'+g()]||{})['q'+i]||{}; return [0,1,2,3].map(function(k){ return +v['o'+k]||0; }); }
+  function total(c){ return c.reduce(function(a,b){ return a+b; },0); }
+  function myVote(i){ var x=ls('dg:'+GID+':'+g()+':'+i); return x===null ? null : +x; }
+
+  function start(){ backend.setDoc('polls', GID, {g:g()+1, q:0, rev:false}); }
+  function reveal(){ backend.mergeDoc('polls', GID, {rev:true}); }
+  function go(i, r){ backend.mergeDoc('polls', GID, {q:i, rev:!!r}); }
+  function vote(k){
+    var i=q(); if(!backend || !running() || rev() || myVote(i)!==null || HOST) return;
+    ls('dg:'+GID+':'+g()+':'+i, String(k));
+    var o={}; o['o'+k]=backend.inc(1); var qq={}; qq['q'+i]=o; var gg={}; gg['g'+g()]=qq;
+    backend.mergeDocShard('polls', GID, {v:gg});
+    viewKey=null; render();
+  }
+  SEC.__deckNext=function(){
+    if(!HOST || !backend || !running()) return false;
+    if(!rev()) reveal(); else go(q()+1, false);
+    return true;
+  };
+  SEC.__deckPrev=function(){
+    if(!HOST || !backend) return false;
+    if(running() && rev()){ go(q(), false); return true; }
+    if(running() && q()>0){ go(q()-1, true); return true; }
+    if(q()===Q.length){ go(Q.length-1, true); return true; }
+    return false;
+  };
+
+  /* the class's answers as four drill cores: height = share; the right answer is ore with a gold seam */
+  function coresSVG(i){
+    var x=Q[i], c=counts(i), n=total(c), mine=HOST? null : myVote(i), top=-1, best=-1;
+    c.forEach(function(v,k){ if(v>best){ best=v; top=k; } });
+    var W=520, H=300, base=226, maxH=150, cw=62, gap=(W-80-4*cw)/3, s='';
+    s+='<svg class="dg-cores" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="How the class answered">';
+    s+='<text x="260" y="26" font-family="Merriweather,Georgia,serif" font-style="italic" font-size="15" text-anchor="middle" fill="#3b3222">How the class answered'+(n? ' ('+n+' '+(n===1?'vote':'votes')+')' : '')+'</text>';
+    /* bedrock strata under the cores */
+    s+='<rect x="24" y="'+base+'" width="472" height="'+(H-base)+'" fill="#e7dcc3"/>'
+      +'<path d="M24,'+(base+16)+' C140,'+(base+10)+' 300,'+(base+22)+' 496,'+(base+14)+'" stroke="#c9b48c" stroke-width="7" fill="none" opacity=".7"/>'
+      +'<path d="M24,'+(base+44)+' C160,'+(base+52)+' 340,'+(base+38)+' 496,'+(base+48)+'" stroke="#b9a07a" stroke-width="9" fill="none" opacity=".55"/>';
+    s+='<path d="M24,'+base+' H496" stroke="#3b3222" stroke-width="1.6" filter="url(#dgNib)"/>';
+    for(var k=0;k<4;k++){
+      var X=40+k*(cw+gap), share=n? c[k]/n : 0, h=Math.max(3, share*maxH), ok=(k===x.a);
+      var fill= ok? 'url(#dgOre)' : 'url(#dgRock)';
+      s+='<g class="dg-core'+(ok?' ok':'')+'" data-k="'+k+'">';
+      /* the empty core barrel */
+      s+='<rect x="'+X+'" y="'+(base-maxH)+'" width="'+cw+'" height="'+maxH+'" rx="10" fill="#fbf5e6" stroke="rgba(59,50,34,.28)" stroke-width="1.2" stroke-dasharray="4 4"/>';
+      /* the sample: drawn full height, revealed by a clip that rises */
+      s+='<clipPath id="dgc'+i+k+'"><rect class="dg-clip" x="'+(X-2)+'" y="'+(base-h)+'" width="'+(cw+4)+'" height="'+h+'" data-h="'+h+'" rx="10"/></clipPath>';
+      s+='<g clip-path="url(#dgc'+i+k+')"><rect x="'+X+'" y="'+(base-maxH)+'" width="'+cw+'" height="'+maxH+'" rx="10" fill="'+fill+'"/>'
+        +'<rect x="'+X+'" y="'+(base-maxH)+'" width="'+(cw*.28)+'" height="'+maxH+'" fill="#fff" opacity=".18"/></g>';
+      s+='<rect class="dg-rim" x="'+X+'" y="'+(base-h)+'" width="'+cw+'" height="'+h+'" rx="10" fill="none" stroke="'+(ok?'#8a6a2f':'#3b3222')+'" stroke-width="'+(ok?2.6:1.6)+'" filter="url(#dgNib)" data-h="'+h+'"/>';
+      s+='<text class="dg-pct" x="'+(X+cw/2)+'" y="'+(base-h-10)+'" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-weight="900" font-size="20" fill="'+(ok?'#8a4a14':'#5e5340')+'" data-v="'+Math.round(share*100)+'" data-h="'+h+'">'+Math.round(share*100)+'%</text>';
+      s+='<text x="'+(X+cw/2)+'" y="'+(base+22)+'" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="900" font-size="15" fill="'+(ok?'#8a4a14':'#3b3222')+'">'+L[k]+'</text>';
+      s+='<text x="'+(X+cw/2)+'" y="'+(base+40)+'" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="600" font-size="11.5" fill="#5e5340">'+x.short[k]+'</text>';
+      if(ok) s+='<g class="dg-seal"><circle cx="'+(X+cw/2)+'" cy="'+(base+64)+'" r="0" fill="none"/><text x="'+(X+cw/2)+'" y="'+(base+62)+'" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="900" font-size="10.5" letter-spacing="1.6" fill="#8a6a2f">THE ANSWER</text></g>';
+      if(mine===k) s+='<text x="'+(X+cw/2)+'" y="46" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="11" fill="#2f5f84">&#9660; your guess</text>';
+      else if(k===top && n && !ok) s+='<text x="'+(X+cw/2)+'" y="46" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="11" fill="#a8483f">most of the class</text>';
+      s+='</g>';
+    }
+    return s+'</svg>';
+  }
+  function playCores(){
+    var els=root.querySelectorAll('.dg-clip, .dg-rim, .dg-pct'), base=226, t0=null, dur=1500;
+    var reduce=window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce) return;
+    function ease(t){ return 1-Math.pow(1-t,3); }
+    function frame(ts){ if(!t0) t0=ts; var p=Math.min(1,(ts-t0)/dur), e=ease(p);
+      els.forEach(function(el,idx){ var h=+el.dataset.h, hh=Math.max(0.01,h*e);
+        if(el.classList.contains('dg-pct')){ el.setAttribute('y', (base-hh-10).toFixed(1)); el.textContent=Math.round(+el.dataset.v*e)+'%'; }
+        else { el.setAttribute('y', (base-hh).toFixed(1)); el.setAttribute('height', hh.toFixed(1)); } });
+      if(p<1) requestAnimationFrame(frame); }
+    els.forEach(function(el){ if(el.classList.contains('dg-pct')){ el.textContent='0%'; el.setAttribute('y', base-10); } else { el.setAttribute('y', base); el.setAttribute('height', .01); } });
+    requestAnimationFrame(frame);
+  }
+  function playYear(){
+    var el=root.querySelector('[data-dg-year]'); if(!el) return; var t0=null, dur=2200;
+    function frame(ts){ if(!t0) t0=ts; var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,2);
+      el.textContent=String(Math.round(1900+120*e)); if(p<1) requestAnimationFrame(frame); }
+    requestAnimationFrame(frame);
+  }
+
+  function introHTML(){
+    var cards=Q.map(function(x,i){ return '<div class="dg-card"><div class="dg-cart">'+ART[x.art]+'</div><div class="dg-ck">Question '+(i+1)+'</div><b>'+x.tag+'</b></div>'; }).join('');
+    return '<div class="dg-intro"><div class="dg-cards">'+cards+'</div>'
+      + (HOST ? '<div class="dg-ctl"><button class="dg-btn" data-dg="start">Begin &rarr;</button><span class="dg-hint">Then your clicker reveals each answer and moves on.</span></div>'
+              : '<div class="dg-wait">Waiting for your instructor to start&hellip;</div>')+'</div>';
+  }
+  function questionHTML(){
+    var i=q(), x=Q[i], r=rev(), c=counts(i), n=total(c), mine=myVote(i);
+    var opts=x.opts.map(function(o,k){
+      var cls='dg-opt'+(r ? (k===x.a?' right':' wrong') : '')+(mine===k?' mine':'');
+      var dis=(HOST || r || mine!==null) ? ' disabled' : '';
+      return '<button class="'+cls+'" data-dgv="'+k+'"'+dis+'><span class="dg-l">'+L[k]+'</span><span class="dg-t">'+o+'</span></button>';
+    }).join('');
+    var left='<div class="dg-left"><div class="dg-tag">Question '+(i+1)+' of '+Q.length+' &middot; '+x.tag+'</div><div class="dg-q">'+x.q+'</div>'
+      + '<div class="dg-opts">'+opts+'</div>'
+      + (r ? '<div class="dg-ans"><div class="dg-big">'+x.big+'</div><p>'+x.exp+'</p><p class="dg-cite">'+x.cite+'</p></div>'
+           : (HOST ? '<div class="dg-live"><b>'+n+'</b> '+(n===1?'guess':'guesses')+' in</div>'
+                   : '<div class="dg-me">'+(mine===null ? 'Pick your guess.' : 'Guess recorded: <b>'+L[mine]+'</b>. Waiting for the reveal&hellip;')+'</div>'))
+      + (HOST ? '<div class="dg-ctl">'+(r ? '<button class="dg-btn" data-dg="next">'+(i<Q.length-1?'Next question':'Wrap up')+' &rarr;</button>' : '<button class="dg-btn" data-dg="reveal">Reveal</button>')
+                +'<span class="dg-hint">or press your clicker</span></div>' : '')
+      + '</div>';
+    var right='<div class="dg-right">'+(r ? '<div class="dg-viz">'+coresSVG(i)+'</div><div class="dg-viz ev">'+ART[x.art]+'</div>'
+                                          : '<div class="dg-viz tease">'+ART[x.art].replace('class="dg-art"','class="dg-art dg-blur"')+'<div class="dg-veil">The evidence appears after the reveal</div></div>')+'</div>';
+    return '<div class="dg-play">'+left+right+'</div>';
+  }
+  function summaryHTML(){
+    var rows=Q.map(function(x,i){ var c=counts(i), n=total(c), p=n? Math.round(c[x.a]/n*100) : null;
+      return '<div class="dg-sum"><div class="dg-cart">'+ART[x.art]+'</div><div><div class="dg-ck">'+x.tag+'</div><div class="dg-sumbig">'+x.big+'</div>'
+        +(p===null?'':'<div class="dg-sump">'+p+'% of the class guessed it</div>')+'</div></div>'; }).join('');
+    return '<div class="dg-intro"><div class="dg-sums">'+rows+'</div><p class="dg-bridge">All of it starts in the ground. <b>Next: mining.</b></p>'
+      + (HOST ? '<div class="dg-ctl"><button class="dg-btn ghost" data-dg="back">&larr; Back</button><button class="dg-btn ghost" data-dg="again">Start over</button></div>' : '')+'</div>';
+  }
+  function render(){
+    var i=q();
+    var key=[g(), i, rev()?1:0, HOST?1:0, running()?JSON.stringify(counts(i)):'', running()?String(myVote(i)):'',
+             i===Q.length ? JSON.stringify([counts(0),counts(1)]) : ''].join('|');
+    if(key===viewKey) return; viewKey=key;
+    root.className='dg-panel'+(running()?' play':'')+(rev()?' rev':'');
+    root.innerHTML = running() ? questionHTML() : (i===Q.length ? summaryHTML() : introHTML());
+    if(running() && rev()){ var pk=g()+':'+i; if(!played[pk]){ played[pk]=1; playCores(); playYear(); } else { var y=root.querySelector('[data-dg-year]'); if(y) y.textContent='2020'; } }
+  }
+  root.addEventListener('click', function(e){
+    var v=e.target.closest('[data-dgv]'); if(v){ vote(+v.dataset.dgv); return; }
+    var b=e.target.closest('[data-dg]'); if(!b || !backend || !HOST) return;
+    var a=b.dataset.dg;
+    if(a==='start') start(); else if(a==='reveal') reveal(); else if(a==='next') go(q()+1, false);
+    else if(a==='back') go(Q.length-1, true); else if(a==='again') backend.setDoc('polls', GID, {g:g()+1, q:-1, rev:false});
+  });
+  window.__deckLiveReady.then(function(live){
+    backend=live.backend; HOST=live.HOST; if(HOST) SEC.classList.add('dg-host');
+    backend.subscribeDoc('polls', GID, function(d){ st=d||{}; render(); });
+  });
+  render();
+})();</script></section>
 <section class="slide et-slide" data-type="content" style="--accent:#2D6A4F">
   <div class="et-grid">
     <div class="et-text">
@@ -3350,7 +3465,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 <div class="menu" id="menu">
   <button class="menu-close" onclick="toggleMenu(false)" aria-label="Close menu">&times;</button>
   <h3>Chapter 9 &middot; Jump to a slide</h3>
-  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Book: Material World</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>▶ Mine to Phone</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>9.1 Internal Structure (▶ magnetic field pop-up)</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>9.2 The Rock Cycle</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>9.3 ▶ Rare Earths: Behind the Screen</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>9.3 ▶ Mine Production (OWID)</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>9.5 ▶ Soil Examples: Where in the World?</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>9.5 Soil Horizons</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>9.6 ▶ Where Soil Was Pushed Too Far</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>9.7 Soil: Erosion &amp; Agriculture</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>9.4 What Shapes Earth's Surface? (delta)</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>9.7 ▶ Rank: Domestic Material Consumption</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>9.7 Mining ▶ OWID</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>9.7 Mining ▶ Copper &amp; Lithium (OWID)</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>9.7 Forestry &amp; Urbanization</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>9.7 Restoration</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>Key Concepts</button></div>
+  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Book: Material World</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>▶ Mine to Phone</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>9.1 Internal Structure (▶ magnetic field pop-up)</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>9.2 The Rock Cycle</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>9.3 ▶ Rare Earths: Behind the Screen</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>9.3 ▶ Mine Production (OWID)</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>9.5 ▶ Soil Examples: Where in the World?</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>9.5 Soil Horizons</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>9.6 ▶ Where Soil Was Pushed Too Far</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>9.7 Soil: Erosion &amp; Agriculture</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>9.4 What Shapes Earth's Surface? (delta)</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>9.7 ▶ Dig Deeper (live)</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>9.7 Mining ▶ OWID</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>9.7 Mining ▶ Copper &amp; Lithium (OWID)</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>9.7 Forestry &amp; Urbanization</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>9.7 Restoration</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>Key Concepts</button></div>
 </div>
 
 <script>
