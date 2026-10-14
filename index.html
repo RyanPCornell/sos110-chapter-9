@@ -475,6 +475,10 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .wk-facts li{font-size:clamp(.66rem,.98vw,.8rem); color:#3b3222; line-height:1.38;}
 .wk-facts li::marker{color:#8a6a2f;}
 
+/* ── 10-13: small source footnote at the bottom of a slide ── */
+.fn-note{position:absolute; left:clamp(1.4rem,3vw,2.6rem); bottom:clamp(.9rem,2.2vh,1.4rem); z-index:3; margin:0; max-width:36%;
+  font-size:clamp(.54rem,.74vw,.64rem); line-height:1.35; color:#7a7260;}
+
 /* ── Water Footprint Face-Off (live class game) ─────────────────────────── */
 .slide.fp-slide{background:linear-gradient(158deg,#faf7f0,#f1ebdd);}
 .slide.fp-slide .eyebrow{color:#8a6a2f;} .slide.fp-slide .eyebrow::before{background:#8a6a2f;}
@@ -1321,7 +1325,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
       <h2 class="heading">Upcoming Assignments</h2>
       <p class="an-sub">Here's what's on deck. Check Canvas for full instructions and submission links.</p>
     </div>
-    <div class="an-list"><div class="an-row"><span class="an-num">1</span><div class="an-main"><div class="an-name">InQuizitive: Chapter 9, Land: How Does It Shape Us?</div><div class="an-detail">Adaptive practice for this chapter.</div></div></div><div class="an-row"><span class="an-num">2</span><div class="an-main"><div class="an-name">InQuizitive: Chapter 10, Systems and Cycles</div><div class="an-detail">Adaptive practice for Chapter 10.</div></div></div></div>
+    <div class="an-list"><div class="an-row"><span class="an-num">1</span><div class="an-main"><div class="an-name">InQuizitive: Chapter 9, Land: How Does It Shape Us?</div><div class="an-detail">Adaptive practice for this chapter.</div></div><div class="an-due"><span class="an-due-lbl">Due</span><span class="an-due-val">Sunday</span></div></div><div class="an-row"><span class="an-num">2</span><div class="an-main"><div class="an-name">InQuizitive: Chapter 10, Systems and Cycles</div><div class="an-detail">Adaptive practice for Chapter 10.</div></div><div class="an-due"><span class="an-due-lbl">Due</span><span class="an-due-val">Sunday</span></div></div></div>
     
     <div class="an-att" data-at-bar hidden><button class="an-att-btn" type="button" data-at-open>Attendance</button><select class="an-att-sel" data-at-section aria-label="Class section"><option value="MWF0905">MWF 9:05 am</option><option value="MWF1220">MWF 12:20 pm</option><option value="TTH1200">TTh 12:00 pm</option></select><button class="an-att-btn go" type="button" data-at-finalize hidden>Submit Attendance</button><button class="an-att-cancel" type="button" data-at-cancel hidden>Cancel</button><button class="an-att-cancel" type="button" data-at-clear hidden>Clear last roll call</button><span class="an-att-status" data-at-status></span></div>
   </div>
@@ -1913,8 +1917,9 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
       show('idle');
       if(HOST){
         el.idle.innerHTML='<div class="fp-setup"><div class="fp-fan"><div class="fp-mini">'+BACK+'</div><div class="fp-mini">'+BACK+'</div></div>'
-          + '<div class="fp-tag">How many rounds?</div>'
+          + (COUNTS.length>1 ? '<div class="fp-tag">How many rounds?</div>'
           + '<div class="fp-pick">'+COUNTS.map(function(c){ return '<button class="fp-cbtn'+(c===pickCount?' on':'')+'" data-cnt="'+c+'">'+c+'</button>'; }).join('')+'</div>'
+            : '<div class="fp-tag">'+COUNTS[0]+' rounds</div>')
           + '<div class="fp-cap">'+CFG.idleCap+' '
           + 'A correct pick earns 100 points plus up to 50 more for speed. You press <b>Next</b> to deal the next pair.</div>'
           + BOUNDS
@@ -2723,40 +2728,6 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   new MutationObserver(function(){ if(!s.classList.contains('active')) close(); }).observe(s, {attributes:true, attributeFilter:['class']});
 })();</script>
 </section>
-<section class="slide et-slide" data-type="content" style="--accent:#1C7293">
-  <div class="et-grid">
-    <div class="et-text">
-      <div class="eyebrow">9.3  ·  Why Are Minerals Important, and How Do We Get Them?</div>
-      <h2 class="heading">Global Mine Production of Minerals</h2>
-      
-      <ul class="bullets"><li>Measured in tonnes of mined, rather than refined, production.</li></ul>
-      <div class="et-note">Source: USGS Mineral Commodity Summaries; USGS Historical Statistics for Mineral and Material Commodities; BGS World Mineral Statistics, via Our World in Data.</div>
-    </div>
-    <div class="et-media"><img class="owid-backup" data-src="media/owid_mine_production.svg" alt="Line chart of global mine production of nine minerals over time, Our World in Data." loading="lazy"><div class="owid-tag" data-when="October 2026">Live from Our World in Data (retrieved October 2026)</div>
-      <iframe src="https://ourworldindata.org/grapher/global-mine-production-minerals?tab=chart" loading="lazy" title="Global mine production of minerals, Our World in Data" allow="web-share; clipboard-write"></iframe>
-    </div>
-  </div>
-  <div class="footer"></div>
-<script>(function(){
-  var sec=document.currentScript.closest('section'); if(!sec||sec.__owid) return; sec.__owid=1;
-  var tag=sec.querySelector('.owid-tag'), timer=null;
-  function off(){ sec.classList.add('owid-off'); if(tag) tag.textContent='Offline: showing the saved copy (retrieved ' + tag.dataset.when + ')'; }
-  function on(){ sec.classList.remove('owid-off'); if(tag) tag.textContent='Live from Our World in Data (retrieved ' + tag.dataset.when + ')'; }
-  function check(){
-    if(!navigator.onLine){ off(); return; }
-    var done=false; clearTimeout(timer);
-    timer=setTimeout(function(){ if(!done) off(); }, 6000);
-    fetch('https://ourworldindata.org/favicon.ico?'+Date.now(), {mode:'no-cors', cache:'no-store'})
-      .then(function(){ done=true; clearTimeout(timer); on(); })
-      .catch(function(){ done=true; clearTimeout(timer); off(); });
-  }
-  var wasActive=sec.classList.contains('active');
-  new MutationObserver(function(){ var a=sec.classList.contains('active'); if(a && !wasActive) check(); wasActive=a; })
-    .observe(sec, {attributes:true, attributeFilter:['class']});
-  window.addEventListener('offline', off); window.addEventListener('online', check);
-  if(wasActive) check();
-})();</script>
-</section>
 <section class="slide wh-slide" data-type="content">
   <div class="slide-inner col wh-inner">
     <div class="eyebrow">9.5  ·  What Is Soil, and Where Does It Come From?</div>
@@ -3108,7 +3079,6 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 <div class="eyebrow">9.7  ·  How Can Humans Repair and Sustain the Land?</div>
 <h2 class="heading">Soil</h2>
 <div class="pairs"><div class="pair"><div class="pair-head">Erosion</div><div class="pair-desc"><u>Soil erosion is soil loss when wind, water, gravity, or tillage move soil away.</u> Weathering breaks rock down; erosion moves it.</div></div><div class="pair"><div class="pair-head">Agriculture</div><div class="pair-desc">Plowing moves soil downhill directly (tillage erosion) and leaves it bare to wind and water erosion; overgrazing strips its protective cover. Over-irrigation and excess chemicals degrade soil in other ways, through salt and contamination. Plow-based farming on Roman upland slopes ultimately reached bedrock.</div></div></div>
-<p class="note">Roman uplands: Montgomery, D. R. (2007), Dirt: The Erosion of Civilizations, ch. 4 (University of California Press).</p>
     </div>
     <div class="bleed-media er-media">
   <div class="er-grid">
@@ -3148,7 +3118,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   })();</script>
 </div>
   </div>
-  <div class="footer"></div>
+  <p class="fn-note">Roman uplands: Montgomery, D. R. (2007), <i>Dirt: The Erosion of Civilizations</i>, ch. 4 (University of California Press).</p><div class="footer"></div>
 </section>
 <section class="slide" data-type="content" style="--accent:#2F5D8A">
   <div class="bleed-grid">
@@ -3521,6 +3491,40 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   if(wasActive) check();
 })();</script>
 </section>
+<section class="slide et-slide" data-type="content" style="--accent:#2D6A4F">
+  <div class="et-grid">
+    <div class="et-text">
+      <div class="eyebrow">9.7  ·  Mining</div>
+      <h2 class="heading">Global Mine Production of Minerals</h2>
+      
+      <ul class="bullets"><li>Measured in tonnes of mined, rather than refined, production.</li></ul>
+      <div class="et-note">Source: USGS Mineral Commodity Summaries; USGS Historical Statistics for Mineral and Material Commodities; BGS World Mineral Statistics, via Our World in Data.</div>
+    </div>
+    <div class="et-media"><img class="owid-backup" data-src="media/owid_mine_production.svg" alt="Line chart of global mine production of nine minerals over time, Our World in Data." loading="lazy"><div class="owid-tag" data-when="October 2026">Live from Our World in Data (retrieved October 2026)</div>
+      <iframe src="https://ourworldindata.org/grapher/global-mine-production-minerals?tab=chart" loading="lazy" title="Global mine production of minerals, Our World in Data" allow="web-share; clipboard-write"></iframe>
+    </div>
+  </div>
+  <div class="footer"></div>
+<script>(function(){
+  var sec=document.currentScript.closest('section'); if(!sec||sec.__owid) return; sec.__owid=1;
+  var tag=sec.querySelector('.owid-tag'), timer=null;
+  function off(){ sec.classList.add('owid-off'); if(tag) tag.textContent='Offline: showing the saved copy (retrieved ' + tag.dataset.when + ')'; }
+  function on(){ sec.classList.remove('owid-off'); if(tag) tag.textContent='Live from Our World in Data (retrieved ' + tag.dataset.when + ')'; }
+  function check(){
+    if(!navigator.onLine){ off(); return; }
+    var done=false; clearTimeout(timer);
+    timer=setTimeout(function(){ if(!done) off(); }, 6000);
+    fetch('https://ourworldindata.org/favicon.ico?'+Date.now(), {mode:'no-cors', cache:'no-store'})
+      .then(function(){ done=true; clearTimeout(timer); on(); })
+      .catch(function(){ done=true; clearTimeout(timer); off(); });
+  }
+  var wasActive=sec.classList.contains('active');
+  new MutationObserver(function(){ var a=sec.classList.contains('active'); if(a && !wasActive) check(); wasActive=a; })
+    .observe(sec, {attributes:true, attributeFilter:['class']});
+  window.addEventListener('offline', off); window.addEventListener('online', check);
+  if(wasActive) check();
+})();</script>
+</section>
 <section class="slide" data-type="content" style="--accent:#2D6A4F">
   <div class="bleed-grid">
     <div class="bleed-text">
@@ -3568,7 +3572,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 <div class="menu" id="menu">
   <button class="menu-close" onclick="toggleMenu(false)" aria-label="Close menu">&times;</button>
   <h3>Chapter 9 &middot; Jump to a slide</h3>
-  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Book: Material World</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>▶ Mine to Phone</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>9.1 Internal Structure (▶ magnetic field pop-up)</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>9.2 The Rock Cycle</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>9.3 ▶ Rare Earths: Behind the Screen</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>9.3 ▶ Mine Production (OWID)</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>9.5 ▶ Soil Examples: Where in the World?</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>9.5 Soil Horizons</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>9.6 ▶ Where Soil Was Pushed Too Far</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>9.7 Soil: Erosion &amp; Agriculture</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>9.4 What Shapes Earth's Surface? (delta)</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>9.7 ▶ Dig Deeper (live)</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>9.7 Mining ▶ OWID</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>9.7 Mining ▶ Copper &amp; Lithium (OWID)</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>9.7 Forestry &amp; Urbanization</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>9.7 Restoration</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>Key Concepts</button></div>
+  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Book: Material World</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>▶ Mine to Phone</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>9.1 Internal Structure (▶ magnetic field pop-up)</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>9.2 The Rock Cycle</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>9.3 ▶ Rare Earths: Behind the Screen</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>9.5 ▶ Soil Examples: Where in the World?</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>9.5 Soil Horizons</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>9.6 ▶ Where Soil Was Pushed Too Far</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>9.7 Soil: Erosion &amp; Agriculture</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>9.4 What Shapes Earth's Surface? (delta)</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>9.7 ▶ Dig Deeper (live)</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>9.7 Mining ▶ OWID</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>9.7 Mining ▶ Copper &amp; Lithium (OWID)</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>9.7 Mining ▶ Mine Production (OWID)</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>9.7 Forestry &amp; Urbanization</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>9.7 Restoration</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>Key Concepts</button></div>
 </div>
 
 <script>
@@ -3578,7 +3582,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 if(!window.__deckLiveReady){
   window.__deckLiveReady = new Promise(function(res){ window.__deckLiveResolve = res; });
 }
-const slides = Array.from(document.querySelectorAll('.slide'));
+const slides = Array.from(document.querySelectorAll('.slide')).filter(s => !s.closest('.sp-pop'));   // slides inside a pop-up are not deck slides
 let cur = 0;
 const progress = document.getElementById('progress');
 const counter  = document.getElementById('counter');
@@ -4194,7 +4198,7 @@ show(start);
         hintEl.textContent = state.game ? 'Roll as many times as you like. Pick a new game to reset.' : 'Choose a game to begin.';
       } else {
         hintEl.textContent = !state.game ? 'Waiting for the instructor to choose a game…'
-          : (myVote!==null ? 'Your pick is locked in — watch the class results and rolls update live.'
+          : (myVote!==null ? 'Your pick is locked in. Watch the class results and rolls update live.'
                            : 'Tap your prediction below.');
       }
     }
@@ -4267,13 +4271,13 @@ show(start);
       if(HOST){
         releaseBtn.textContent = released ? 'Hide results' : 'Release results';
         hintEl.textContent = released ? 'Results are on every screen.'
-          : (total+' secret ballot'+(total===1?'':'s')+' in — release when the class is ready.');
+          : (total+' secret ballot'+(total===1?'':'s')+' in. Release when the class is ready.');
       } else if(released){
         hintEl.textContent = 'The results are in!';
       } else if(myVote!==null){
         hintEl.textContent = 'Your vote is locked in. Results stay secret until your instructor releases them…';
       } else {
-        hintEl.textContent = 'Click your answer — votes stay secret until the instructor releases the results.';
+        hintEl.textContent = 'Select your answer. Votes stay secret until the instructor releases the results.';
       }
     }
 
@@ -5100,7 +5104,7 @@ show(start);
       if(!mine) return;
       ranges.forEach(function(r,i){ if(mine[i]!==undefined){ r.value=mine[i]; if(nums[i]) nums[i].textContent=mine[i]; } r.disabled=true; });
       submitBtn.disabled=true; submitBtn.textContent='Locked in ✓';
-      hintEl.textContent='Your guesses are in — the class distribution is on the instructor’s screen.';
+      hintEl.textContent='Your estimate is in. The class distribution is on the instructor’s screen.';
       updateBudget();
     }
     updateBudget();
@@ -5209,7 +5213,7 @@ show(start);
     if(HOST){
       sec.classList.add('host');
       studentBox.hidden=true; hostBox.hidden=false;
-      hintEl.textContent='Live distributions — students guess on their own screens.';
+      hintEl.textContent='Live distributions. Students submit on their own screens.';
       resetBtn.hidden=false;
       resetBtn.addEventListener('click', function(){
         if(confirm('Reset all guesses for this question?')) backend.reset('polls', id);
@@ -5842,7 +5846,7 @@ show(start);
         revealBtn.hidden=!opened; closeBtn.hidden=!opened; resetBtn.hidden=!opened;
         revealBtn.textContent = released ? 'Hide results' : 'Release results';
         hintEl.textContent = released ? 'Results are on every screen.'
-          : (agg.n+' guess'+(agg.n===1?'':'es')+' in — release when the class is ready.');
+          : (agg.n+' guess'+(agg.n===1?'':'es')+' in. Release when the class is ready.');
       } else {
         studentBox.hidden=released;
         if(released) hintEl.textContent='The results are in!';
